@@ -1,0 +1,10 @@
+{
+  "*": {
+    ">=3142": [
+      "python-jinja2",
+      "requests",
+      "markupsafe",
+      "python-six"
+    ]
+  }
+}

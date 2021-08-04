@@ -1,0 +1,2007 @@
+.
+├── 01
+│   ├── ans1
+│   ├── ans2
+│   ├── gen
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   ├── s.sh
+│   └── testcase
+├── 1000F
+│   ├── sol
+│   └── sol.cpp
+├── 1060C
+│   ├── sol
+│   └── sol.cpp
+├── 1084C
+│   ├── sol
+│   └── sol.cpp
+├── 1096G
+│   ├── sol
+│   └── sol.cpp
+├── 109B
+│   ├── sol
+│   └── sol.cpp
+├── 1101E
+│   ├── sol
+│   └── sol.cpp
+├── 110B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 114B
+│   ├── sol
+│   └── sol.cpp
+├── 1182E
+│   ├── sol
+│   └── sol.cpp
+├── 1184C1
+│   ├── sol
+│   └── sol.cpp
+├── 1188B
+│   ├── sol
+│   └── sol.cpp
+├── 118B
+│   └── sol.py
+├── 118C
+│   └── sol.cpp
+├── 1200D
+│   ├── sol
+│   └── sol.cpp
+├── 1207F
+│   ├── sol
+│   └── sol.cpp
+├── 1210C
+│   ├── sol
+│   └── sol.cpp
+├── 1227D1
+│   ├── sol
+│   └── sol.cpp
+├── 1234D
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 1245B
+│   ├── sol
+│   └── sol.cpp
+├── 1253C
+│   ├── sol
+│   └── sol.cpp
+├── 1296E1
+│   ├── sol
+│   └── sol.cpp
+├── 129B
+│   ├── sol
+│   └── sol.cpp
+├── 13
+│   ├── sol
+│   └── sol.cpp
+├── 1328E
+│   ├── sol
+│   └── sol.cpp
+├── 134A
+│   ├── sol
+│   └── sol.cpp
+├── 1373D
+│   ├── sol
+│   └── sol.cpp
+├── 1374E1
+│   ├── sol
+│   └── sol.cpp
+├── 13C
+│   ├── sol
+│   └── sol.cpp
+├── 1400B
+│   ├── sol
+│   └── sol.cpp
+├── 1400D
+│   ├── sol
+│   └── sol.cpp
+├── 1406A
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 1406B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 1427A
+│   ├── sol
+│   └── sol.cpp
+├── 1427C
+│   ├── sol
+│   └── sol.cpp
+├── 1433G
+│   ├── sol
+│   └── sol.cpp
+├── 1445C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 1447C
+│   ├── sol
+│   └── sol.cpp
+├── 1452A
+│   ├── sol
+│   └── sol.cpp
+├── 1452B
+│   └── sol.cpp
+├── 1452C
+│   ├── sol
+│   └── sol.cpp
+├── 1452E
+│   └── sol.cpp
+├── 1461B
+│   ├── sol
+│   └── sol.cpp
+├── 1469A
+│   ├── sol
+│   └── sol.cpp
+├── 149C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 150B
+│   ├── sol
+│   └── sol.cpp
+├── 161B
+│   ├── sol
+│   └── sol.cpp
+├── 191C
+│   ├── sol
+│   └── sol.cpp
+├── 208D
+│   ├── sol
+│   └── sol.cpp
+├── 209A
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 214B
+│   ├── sol
+│   └── sol.cpp
+├── 234B
+│   ├── output.txt
+│   ├── sol
+│   └── sol.cpp
+├── 234C
+│   ├── gen.cpp
+│   ├── output.txt
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 237C
+│   ├── sol
+│   └── sol.cpp
+├── 243A
+│   ├── a.out
+│   ├── sol2.cpp
+│   └── sol.cpp
+├── 244B
+│   ├── brute
+│   ├── brute.cpp
+│   ├── sol
+│   └── sol.cpp
+├── 248B
+│   ├── sol
+│   └── sol.cpp
+├── 254C
+│   ├── gen.cpp
+│   ├── sol.cpp
+│   └── s.sh
+├── 276C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 279C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 283A
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 295B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 300835B
+│   ├── gen
+│   ├── gen.cpp
+│   ├── sol
+│   └── sol.cpp
+├── 300835C
+│   ├── sol
+│   └── sol.cpp
+├── 301D
+│   ├── sol
+│   └── sol.cpp
+├── 31B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 333D
+│   ├── sol
+│   └── sol.cpp
+├── 34C
+│   ├── sol
+│   └── sol.cpp
+├── 354C
+│   ├── sol
+│   └── sol.cpp
+├── 354E
+│   ├── sol
+│   └── sol.cpp
+├── 360B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 373B
+│   ├── sol
+│   ├── sol.cpp
+│   └── sol.py
+├── 381B
+│   ├── a.out
+│   ├── chk
+│   │   └── sol.cpp
+│   ├── sol
+│   ├── sol.c
+│   └── sol.cpp
+├── 424B
+│   ├── sol
+│   └── sol.cpp
+├── 425D
+│   ├── sol
+│   └── sol.cpp
+├── 427B
+│   ├── sol
+│   └── sol.cpp
+├── 429D
+│   ├── sol
+│   └── sol.cpp
+├── 438D
+│   ├── sol
+│   └── sol.cpp
+├── 439C
+│   ├── sol
+│   └── sol.cpp
+├── 451E
+│   ├── sol
+│   └── sol.cpp
+├── 455D
+│   ├── sol
+│   └── sol.cpp
+├── 464A
+│   ├── sol
+│   └── sol.cpp
+├── 474E
+│   ├── sol
+│   └── sol.cpp
+├── 475D
+│   ├── sol
+│   └── sol.cpp
+├── 476A
+│   ├── sol
+│   └── sol.cpp
+├── 478D
+│   ├── sol
+│   ├── sol2
+│   ├── sol2.cpp
+│   └── sol.cpp
+├── 482A
+│   ├── sol
+│   └── sol.cpp
+├── 482B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 484D
+│   ├── sol
+│   └── sol.cpp
+├── 48C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 493C
+│   ├── sol
+│   └── sol.cpp
+├── 499E
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 509C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 514D
+│   ├── sol
+│   └── sol.cpp
+├── 515C
+│   ├── sol
+│   ├── sol.cpp
+│   └── sol.py
+├── 518A
+│   ├── sol
+│   └── sol.cpp
+├── 519C
+│   ├── sol
+│   └── sol.cpp
+├── 52A
+│   ├── sol
+│   └── sol.cpp
+├── 53C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 547B
+│   ├── sol
+│   └── sol.cpp
+├── 56D
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 570D
+│   ├── sol
+│   └── sol.cpp
+├── 584D
+│   ├── sol
+│   └── sol.cpp
+├── 58B
+│   ├── sol
+│   └── sol.cpp
+├── 597C
+│   └── sol.cpp
+├── 59B
+│   ├── alt
+│   ├── alt.cpp
+│   ├── sol
+│   └── sol.cpp
+├── 603A
+│   ├── sol
+│   └── sol.cpp
+├── 610A
+│   ├── sol
+│   └── sol.cpp
+├── 617B
+│   ├── sol
+│   └── sol.cpp
+├── 617C
+│   ├── sol
+│   └── sol.cpp
+├── 621B
+│   ├── sol
+│   └── sol.cpp
+├── 625B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 628C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 629D
+│   ├── sol
+│   └── sol.cpp
+├── 632E
+│   ├── sol
+│   └── sol.cpp
+├── 665D
+│   ├── sol
+│   └── sol.cpp
+├── 67A
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 681B
+│   ├── sol
+│   └── sol.cpp
+├── 686
+│   ├── A
+│   │   ├── go.py
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── temp.cpp
+│   ├── a.py
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D_easy
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── F
+│   │   └── sol.cpp
+│   └── FF
+│       ├── sol
+│       ├── sol.cpp
+│       └── sols.cc
+├── 690
+├── 691B
+│   ├── sol
+│   └── sol.cpp
+├── 731F
+│   ├── sol
+│   └── sol.cpp
+├── 776C
+│   ├── sol
+│   └── sol.cpp
+├── 797A
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 797C
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 79C
+│   ├── sol
+│   └── sol.cpp
+├── 834B
+│   ├── sol
+│   └── sol.cpp
+├── 846F
+│   ├── sol
+│   └── sol.cpp
+├── 847B
+│   ├── sol
+│   └── sol.cpp
+├── 875A
+│   ├── sol
+│   └── sol.cpp
+├── 891A
+│   └── sol.cpp
+├── 914C
+│   ├── sol
+│   └── sol.cpp
+├── 919B
+│   ├── sol
+│   └── sol.cpp
+├── 920F
+│   ├── sol
+│   └── sol.cpp
+├── 961B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── 9A
+│   ├── sol
+│   └── sol.cpp
+├── A
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   ├── s.sh
+│   ├── test
+│   └── test.cpp
+├── abc029_d
+│   ├── sol
+│   └── sol.cpp
+├── abc084_d
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── abc121_c
+│   ├── sol
+│   └── sol.cpp
+├── abc129_d
+│   ├── sol
+│   └── sol.cpp
+├── abc130_d
+│   ├── sol
+│   └── sol.cpp
+├── abc146e
+│   ├── sol
+│   └── sol.cpp
+├── abc156_d
+│   ├── sol
+│   └── sol.cpp
+├── abc169_f
+│   └── sol.cpp
+├── ABC179C
+│   ├── sol
+│   └── sol.cpp
+├── ABC180C
+│   ├── sol
+│   └── sol.cpp
+├── ABC181C
+│   ├── sol
+│   └── sol.cpp
+├── ABC181D
+│   ├── sol
+│   └── sol.cpp
+├── ABC182C
+│   ├── sol
+│   └── sol.cpp
+├── ABC182D
+│   ├── sol
+│   └── sol.cpp
+├── ABC183
+│   ├── A
+│   │   ├── gen.cpp
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── B
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── C
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── D
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── E
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   └── F
+│       ├── gen.cpp
+│       ├── sol
+│       ├── sol.cpp
+│       └── s.sh
+├── ABC184
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   └── sol.cpp
+│   ├── D
+│   │   └── sol.cpp
+│   ├── E
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── F
+│       ├── sol
+│       └── sol.cpp
+├── abc185_a
+│   ├── sol
+│   └── sol.cpp
+├── abc185_c
+│   ├── sol
+│   └── sol.cpp
+├── abc185_d
+│   ├── sol
+│   └── sol.cpp
+├── abc185_e
+│   ├── sol
+│   └── sol.cpp
+├── abc185_f
+│   ├── sol
+│   └── sol.cpp
+├── ABC51-D
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── algowar1.0
+│   ├── countthecount
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── dp
+│   │   ├── brute
+│   │   ├── brute.cpp
+│   │   ├── gen
+│   │   ├── gen.cpp
+│   │   ├── randomtests
+│   │   │   ├── input
+│   │   │   │   ├── input10.txt
+│   │   │   │   ├── input11.txt
+│   │   │   │   ├── input12.txt
+│   │   │   │   ├── input13.txt
+│   │   │   │   ├── input14.txt
+│   │   │   │   ├── input15.txt
+│   │   │   │   ├── input16.txt
+│   │   │   │   ├── input17.txt
+│   │   │   │   ├── input18.txt
+│   │   │   │   ├── input19.txt
+│   │   │   │   ├── input1.txt
+│   │   │   │   ├── input20.txt
+│   │   │   │   ├── input21.txt
+│   │   │   │   ├── input22.txt
+│   │   │   │   ├── input23.txt
+│   │   │   │   ├── input24.txt
+│   │   │   │   ├── input25.txt
+│   │   │   │   ├── input26.txt
+│   │   │   │   ├── input27.txt
+│   │   │   │   ├── input28.txt
+│   │   │   │   ├── input29.txt
+│   │   │   │   ├── input2.txt
+│   │   │   │   ├── input30.txt
+│   │   │   │   ├── input31.txt
+│   │   │   │   ├── input32.txt
+│   │   │   │   ├── input33.txt
+│   │   │   │   ├── input34.txt
+│   │   │   │   ├── input35.txt
+│   │   │   │   ├── input36.txt
+│   │   │   │   ├── input37.txt
+│   │   │   │   ├── input38.txt
+│   │   │   │   ├── input39.txt
+│   │   │   │   ├── input3.txt
+│   │   │   │   ├── input40.txt
+│   │   │   │   ├── input41.txt
+│   │   │   │   ├── input42.txt
+│   │   │   │   ├── input43.txt
+│   │   │   │   ├── input44.txt
+│   │   │   │   ├── input45.txt
+│   │   │   │   ├── input46.txt
+│   │   │   │   ├── input47.txt
+│   │   │   │   ├── input48.txt
+│   │   │   │   ├── input49.txt
+│   │   │   │   ├── input4.txt
+│   │   │   │   ├── input50.txt
+│   │   │   │   ├── input51.txt
+│   │   │   │   ├── input52.txt
+│   │   │   │   ├── input53.txt
+│   │   │   │   ├── input54.txt
+│   │   │   │   ├── input55.txt
+│   │   │   │   ├── input56.txt
+│   │   │   │   ├── input57.txt
+│   │   │   │   ├── input58.txt
+│   │   │   │   ├── input59.txt
+│   │   │   │   ├── input5.txt
+│   │   │   │   ├── input60.txt
+│   │   │   │   ├── input6.txt
+│   │   │   │   ├── input7.txt
+│   │   │   │   ├── input8.txt
+│   │   │   │   └── input9.txt
+│   │   │   └── output
+│   │   │       ├── output10.txt
+│   │   │       ├── output11.txt
+│   │   │       ├── output12.txt
+│   │   │       ├── output13.txt
+│   │   │       ├── output14.txt
+│   │   │       ├── output15.txt
+│   │   │       ├── output16.txt
+│   │   │       ├── output17.txt
+│   │   │       ├── output18.txt
+│   │   │       ├── output19.txt
+│   │   │       ├── output1.txt
+│   │   │       ├── output20.txt
+│   │   │       ├── output21.txt
+│   │   │       ├── output22.txt
+│   │   │       ├── output23.txt
+│   │   │       ├── output24.txt
+│   │   │       ├── output25.txt
+│   │   │       ├── output26.txt
+│   │   │       ├── output27.txt
+│   │   │       ├── output28.txt
+│   │   │       ├── output29.txt
+│   │   │       ├── output2.txt
+│   │   │       ├── output30.txt
+│   │   │       ├── output31.txt
+│   │   │       ├── output32.txt
+│   │   │       ├── output33.txt
+│   │   │       ├── output34.txt
+│   │   │       ├── output35.txt
+│   │   │       ├── output36.txt
+│   │   │       ├── output37.txt
+│   │   │       ├── output38.txt
+│   │   │       ├── output39.txt
+│   │   │       ├── output3.txt
+│   │   │       ├── output40.txt
+│   │   │       ├── output41.txt
+│   │   │       ├── output42.txt
+│   │   │       ├── output43.txt
+│   │   │       ├── output44.txt
+│   │   │       ├── output45.txt
+│   │   │       ├── output46.txt
+│   │   │       ├── output47.txt
+│   │   │       ├── output48.txt
+│   │   │       ├── output49.txt
+│   │   │       ├── output4.txt
+│   │   │       ├── output50.txt
+│   │   │       ├── output51.txt
+│   │   │       ├── output52.txt
+│   │   │       ├── output53.txt
+│   │   │       ├── output54.txt
+│   │   │       ├── output55.txt
+│   │   │       ├── output56.txt
+│   │   │       ├── output57.txt
+│   │   │       ├── output58.txt
+│   │   │       ├── output59.txt
+│   │   │       ├── output5.txt
+│   │   │       ├── output60.txt
+│   │   │       ├── output6.txt
+│   │   │       ├── output7.txt
+│   │   │       ├── output8.txt
+│   │   │       └── output9.txt
+│   │   ├── randomtests.zip
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   ├── s.sh
+│   │   └── test
+│   ├── findmex
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── sudoku
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   └── tree
+│       ├── ans1
+│       ├── ans2
+│       ├── backup
+│       │   └── randomtests_large
+│       │       ├── input
+│       │       │   ├── input0.txt
+│       │       │   ├── input10.txt
+│       │       │   ├── input11.txt
+│       │       │   ├── input12.txt
+│       │       │   ├── input13.txt
+│       │       │   ├── input14.txt
+│       │       │   ├── input15.txt
+│       │       │   ├── input16.txt
+│       │       │   ├── input17.txt
+│       │       │   ├── input18.txt
+│       │       │   ├── input19.txt
+│       │       │   ├── input1.txt
+│       │       │   ├── input20.txt
+│       │       │   ├── input21.txt
+│       │       │   ├── input22.txt
+│       │       │   ├── input23.txt
+│       │       │   ├── input24.txt
+│       │       │   ├── input25.txt
+│       │       │   ├── input26.txt
+│       │       │   ├── input27.txt
+│       │       │   ├── input28.txt
+│       │       │   ├── input29.txt
+│       │       │   ├── input2.txt
+│       │       │   ├── input30.txt
+│       │       │   ├── input31.txt
+│       │       │   ├── input32.txt
+│       │       │   ├── input33.txt
+│       │       │   ├── input34.txt
+│       │       │   ├── input35.txt
+│       │       │   ├── input36.txt
+│       │       │   ├── input37.txt
+│       │       │   ├── input38.txt
+│       │       │   ├── input39.txt
+│       │       │   ├── input3.txt
+│       │       │   ├── input40.txt
+│       │       │   ├── input4.txt
+│       │       │   ├── input5.txt
+│       │       │   ├── input6.txt
+│       │       │   ├── input7.txt
+│       │       │   ├── input8.txt
+│       │       │   └── input9.txt
+│       │       └── output
+│       │           ├── output0.txt
+│       │           ├── output10.txt
+│       │           ├── output11.txt
+│       │           ├── output12.txt
+│       │           ├── output13.txt
+│       │           ├── output14.txt
+│       │           ├── output15.txt
+│       │           ├── output16.txt
+│       │           ├── output17.txt
+│       │           ├── output18.txt
+│       │           ├── output19.txt
+│       │           ├── output1.txt
+│       │           ├── output20.txt
+│       │           ├── output21.txt
+│       │           ├── output22.txt
+│       │           ├── output23.txt
+│       │           ├── output24.txt
+│       │           ├── output25.txt
+│       │           ├── output26.txt
+│       │           ├── output27.txt
+│       │           ├── output28.txt
+│       │           ├── output29.txt
+│       │           ├── output2.txt
+│       │           ├── output30.txt
+│       │           ├── output31.txt
+│       │           ├── output32.txt
+│       │           ├── output33.txt
+│       │           ├── output34.txt
+│       │           ├── output35.txt
+│       │           ├── output36.txt
+│       │           ├── output37.txt
+│       │           ├── output38.txt
+│       │           ├── output39.txt
+│       │           ├── output3.txt
+│       │           ├── output40.txt
+│       │           ├── output4.txt
+│       │           ├── output5.txt
+│       │           ├── output6.txt
+│       │           ├── output7.txt
+│       │           ├── output8.txt
+│       │           └── output9.txt
+│       ├── brute
+│       ├── bruteclean
+│       ├── bruteclean.cpp
+│       ├── brute.cpp
+│       ├── chk
+│       ├── gen
+│       ├── gen.cpp
+│       ├── randomtests_large
+│       │   ├── input
+│       │   │   ├── input0.txt
+│       │   │   ├── input10.txt
+│       │   │   ├── input11.txt
+│       │   │   ├── input12.txt
+│       │   │   ├── input13.txt
+│       │   │   ├── input14.txt
+│       │   │   ├── input15.txt
+│       │   │   ├── input16.txt
+│       │   │   ├── input17.txt
+│       │   │   ├── input18.txt
+│       │   │   ├── input19.txt
+│       │   │   ├── input1.txt
+│       │   │   ├── input20.txt
+│       │   │   ├── input21.txt
+│       │   │   ├── input22.txt
+│       │   │   ├── input23.txt
+│       │   │   ├── input24.txt
+│       │   │   ├── input25.txt
+│       │   │   ├── input26.txt
+│       │   │   ├── input27.txt
+│       │   │   ├── input28.txt
+│       │   │   ├── input29.txt
+│       │   │   ├── input2.txt
+│       │   │   ├── input30.txt
+│       │   │   ├── input31.txt
+│       │   │   ├── input32.txt
+│       │   │   ├── input33.txt
+│       │   │   ├── input34.txt
+│       │   │   ├── input35.txt
+│       │   │   ├── input36.txt
+│       │   │   ├── input37.txt
+│       │   │   ├── input38.txt
+│       │   │   ├── input39.txt
+│       │   │   ├── input3.txt
+│       │   │   ├── input40.txt
+│       │   │   ├── input41.txt
+│       │   │   ├── input42.txt
+│       │   │   ├── input43.txt
+│       │   │   ├── input44.txt
+│       │   │   ├── input45.txt
+│       │   │   ├── input46.txt
+│       │   │   ├── input47.txt
+│       │   │   ├── input48.txt
+│       │   │   ├── input49.txt
+│       │   │   ├── input4.txt
+│       │   │   ├── input50.txt
+│       │   │   ├── input5.txt
+│       │   │   ├── input6.txt
+│       │   │   ├── input7.txt
+│       │   │   ├── input8.txt
+│       │   │   └── input9.txt
+│       │   └── output
+│       │       ├── output0.txt
+│       │       ├── output10.txt
+│       │       ├── output11.txt
+│       │       ├── output12.txt
+│       │       ├── output13.txt
+│       │       ├── output14.txt
+│       │       ├── output15.txt
+│       │       ├── output16.txt
+│       │       ├── output17.txt
+│       │       ├── output18.txt
+│       │       ├── output19.txt
+│       │       ├── output1.txt
+│       │       ├── output20.txt
+│       │       ├── output21.txt
+│       │       ├── output22.txt
+│       │       ├── output23.txt
+│       │       ├── output24.txt
+│       │       ├── output25.txt
+│       │       ├── output26.txt
+│       │       ├── output27.txt
+│       │       ├── output28.txt
+│       │       ├── output29.txt
+│       │       ├── output2.txt
+│       │       ├── output30.txt
+│       │       ├── output31.txt
+│       │       ├── output32.txt
+│       │       ├── output33.txt
+│       │       ├── output34.txt
+│       │       ├── output35.txt
+│       │       ├── output36.txt
+│       │       ├── output37.txt
+│       │       ├── output38.txt
+│       │       ├── output39.txt
+│       │       ├── output3.txt
+│       │       ├── output40.txt
+│       │       ├── output41.txt
+│       │       ├── output42.txt
+│       │       ├── output43.txt
+│       │       ├── output44.txt
+│       │       ├── output45.txt
+│       │       ├── output46.txt
+│       │       ├── output47.txt
+│       │       ├── output48.txt
+│       │       ├── output49.txt
+│       │       ├── output4.txt
+│       │       ├── output50.txt
+│       │       ├── output5.txt
+│       │       ├── output6.txt
+│       │       ├── output7.txt
+│       │       ├── output8.txt
+│       │       └── output9.txt
+│       ├── randomtests_large.zip
+│       ├── randomtests.zip
+│       ├── sol
+│       ├── solclean
+│       ├── solclean.cpp
+│       ├── sol.cpp
+│       ├── s.sh
+│       ├── testcase
+│       └── tests
+│           └── input50.txt
+├── aloveg
+│   ├── sol
+│   └── sol.cpp
+├── ALTARAY
+│   ├── sol
+│   └── sol.cpp
+├── ANUGCD
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── arc065_b
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── arc074_b
+│   ├── sol
+│   └── sol.cpp
+├── arista
+│   ├── sol
+│   └── sol.cpp
+├── array_sums
+│   ├── sol
+│   └── sol.cpp
+├── atcoder
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   ├── B.cpp
+│   └── C.cpp
+├── AVN007
+│   ├── sol
+│   └── sol.cpp
+├── B
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── beautiful_primes
+│   ├── sol
+│   └── sol.cpp
+├── bob_and_math
+│   ├── sol
+│   └── sol.cpp
+├── C
+│   ├── gen.cpp
+│   ├── sol.cpp
+│   └── s.sh
+├── CCRR
+│   └── sol
+│       ├── a.out
+│       ├── brute
+│       ├── brute.cpp
+│       ├── corrected.zip
+│       ├── gen
+│       ├── gen.cpp
+│       ├── in
+│       ├── input
+│       │   ├── input0.txt
+│       │   ├── input10.txt
+│       │   ├── input11.txt
+│       │   ├── input12.txt
+│       │   ├── input13.txt
+│       │   ├── input14.txt
+│       │   ├── input15.txt
+│       │   ├── input16.txt
+│       │   ├── input17.txt
+│       │   ├── input18.txt
+│       │   ├── input19.txt
+│       │   ├── input1.txt
+│       │   ├── input20.txt
+│       │   ├── input21.txt
+│       │   ├── input22.txt
+│       │   ├── input23.txt
+│       │   ├── input24.txt
+│       │   ├── input25.txt
+│       │   ├── input26.txt
+│       │   ├── input27.txt
+│       │   ├── input28.txt
+│       │   ├── input29.txt
+│       │   ├── input2.txt
+│       │   ├── input30.txt
+│       │   ├── input3.txt
+│       │   ├── input4.txt
+│       │   ├── input5.txt
+│       │   ├── input6.txt
+│       │   ├── input7.txt
+│       │   ├── input8.txt
+│       │   └── input9.txt
+│       ├── output
+│       │   ├── output0.txt
+│       │   ├── output10.txt
+│       │   ├── output11.txt
+│       │   ├── output12.txt
+│       │   ├── output13.txt
+│       │   ├── output14.txt
+│       │   ├── output15.txt
+│       │   ├── output16.txt
+│       │   ├── output17.txt
+│       │   ├── output18.txt
+│       │   ├── output19.txt
+│       │   ├── output1.txt
+│       │   ├── output20.txt
+│       │   ├── output21.txt
+│       │   ├── output22.txt
+│       │   ├── output23.txt
+│       │   ├── output24.txt
+│       │   ├── output25.txt
+│       │   ├── output26.txt
+│       │   ├── output27.txt
+│       │   ├── output28.txt
+│       │   ├── output29.txt
+│       │   ├── output2.txt
+│       │   ├── output30.txt
+│       │   ├── output3.txt
+│       │   ├── output4.txt
+│       │   ├── output5.txt
+│       │   ├── output6.txt
+│       │   ├── output7.txt
+│       │   ├── output8.txt
+│       │   └── output9.txt
+│       ├── sol
+│       ├── sol2
+│       ├── sol2.cpp
+│       ├── sol.cpp
+│       ├── sqrtdecomp.cpp
+│       └── s.sh
+├── cc_starter
+│   ├── a
+│   ├── A
+│   ├── a.cpp
+│   ├── A.cpp
+│   ├── B
+│   ├── B.cpp
+│   ├── C
+│   ├── C.cpp
+│   ├── D
+│   ├── D.cpp
+│   ├── E
+│   └── E.cpp
+├── CDVA1605
+│   ├── sol
+│   └── sol.cpp
+├── cf
+│   ├── 690
+│   │   ├── A
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   ├── B
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   ├── C
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   ├── D
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   ├── E1
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   ├── E2
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   └── F
+│   │       ├── sol
+│   │       └── sol.cpp
+│   ├── a
+│   ├── a.cpp
+│   ├── b.cpp
+│   ├── c.cpp
+│   ├── cf725
+│   │   ├── a
+│   │   ├── a.cpp
+│   │   ├── A.cpp
+│   │   ├── a.py
+│   │   ├── b
+│   │   ├── b.cpp
+│   │   ├── B.cpp
+│   │   ├── b.cpp.out
+│   │   ├── c
+│   │   ├── C
+│   │   ├── c.cpp
+│   │   └── C.cpp
+│   ├── chk.cpp
+│   ├── chk.py
+│   ├── d.cpp
+│   ├── E
+│   ├── E.cpp
+│   ├── go
+│   ├── go.cpp
+│   └── s.sh
+├── cf676
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   ├── solC
+│   │   ├── solC.cpp
+│   │   └── sol.cpp
+│   └── D
+│       ├── sol
+│       └── sol.cpp
+├── cf682
+├── CF683-div2
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   └── sol.cpp
+│   ├── C
+│   │   └── sol.cpp
+│   └── D
+│       ├── sol
+│       └── sol.cpp
+├── cf_685_div2
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── E
+│       └── sol.cpp
+├── cf689
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── D
+│       └── sol.cpp
+├── CF_Educational_Ladder
+│   └── 1
+│       ├── A
+│       │   └── sol.cpp
+│       ├── B
+│       │   └── sol.cpp
+│       ├── C
+│       │   └── sol.cpp
+│       ├── D
+│       │   └── sol.cpp
+│       ├── E
+│       │   └── sol.cpp
+│       └── F
+│           └── sol.cpp
+├── CF_practice
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── CF_raif
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── E
+│   │   ├── brute
+│   │   ├── brute.cpp
+│   │   ├── int
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── F
+│       ├── sol
+│       └── sol.cpp
+├── CHESUB
+│   ├── sol
+│   └── sol.cpp
+├── chk_segtree
+│   ├── sol
+│   └── sol.cpp
+├── circuit_oct_20
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── D
+│       ├── sol
+│       └── sol.cpp
+├── city_and_campers
+│   └── sol.cpp
+├── CLASH
+│   ├── clash
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── other
+│   │   └── sol.cpp
+│   └── sol.py
+├── clash_credenz_upsolve
+│   ├── sol
+│   └── sol.cpp
+├── codefusion_20_11
+│   ├── CKWR01
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── CKWR04
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── CKWR06
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── CKWR08
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── CKWR09
+│       ├── sol
+│       └── sol.cpp
+├── codenation-26jan
+│   └── dp
+├── codestrike
+│   ├── A
+│   ├── A.cpp
+│   ├── B.cpp
+│   ├── C
+│   ├── C.cpp
+│   ├── E
+│   └── E.cpp
+├── cses1636
+│   ├── gen.cpp
+│   ├── sol.cpp
+│   └── s.sh
+├── cses_sorting_searching
+│   └── A.py
+├── dec-circuits
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── E
+│       ├── sol
+│       └── sol.cpp
+├── div2-678
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   └── sol.cpp
+│   └── D
+│       ├── sol
+│       └── sol.cpp
+├── div3_1433
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── E
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── F
+│       ├── sol
+│       └── sol.cpp
+├── dmoj_1_B
+│   ├── sol
+│   └── sol.cpp
+├── easy_math
+│   ├── sol
+│   └── sol.cpp
+├── EasyMath
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── ECJAND
+│   ├── sol
+│   └── sol.cpp
+├── ECPC19_kickoff
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── G
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── M
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── N
+│       ├── sol
+│       └── sol.cpp
+├── EDU
+│   └── segtree
+│       ├── step1
+│       │   ├── A
+│       │   │   ├── sol
+│       │   │   └── sol.cpp
+│       │   ├── B
+│       │   │   ├── sol
+│       │   │   └── sol.cpp
+│       │   └── C
+│       │       ├── sol
+│       │       └── sol.cpp
+│       └── step3
+│           └── E
+│               ├── sol
+│               └── sol.cpp
+├── edu97
+│   ├── A
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── B
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   ├── C
+│   │   ├── gen.cpp
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   └── D
+│       ├── gen.cpp
+│       ├── sol
+│       ├── sol.cpp
+│       └── s.sh
+├── expo_subsets
+│   ├── sol
+│   └── sol.cpp
+├── file_tree.txt
+├── git_test
+│   ├── A
+│   ├── A.cpp
+│   └── input_file
+├── go
+├── go2
+├── go2.cpp
+├── go.cpp
+├── greedy_math
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── E
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── G
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── I
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── L
+│       ├── sol
+│       └── sol.cpp
+├── gym01
+│   ├── a.c
+│   ├── a.out
+│   ├── sol
+│   └── sol.cpp
+├── gym03
+│   ├── sol
+│   └── sol.cpp
+├── gym04
+│   ├── sol
+│   └── sol.cpp
+├── hackerearth
+│   ├── 41
+│   ├── 41.cpp
+│   ├── A
+│   ├── A.cpp
+│   ├── B
+│   ├── B.cpp
+│   ├── mike
+│   ├── mike.cpp
+│   └── todo
+├── hackerrank_cp_contest
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── D
+│       └── sol.cpp
+├── hashcode21
+│   ├── practice
+│   │   ├── sol
+│   │   │   ├── a.in
+│   │   │   ├── a.out
+│   │   │   ├── b.in
+│   │   │   ├── b.out
+│   │   │   ├── c.in
+│   │   │   ├── c.out
+│   │   │   ├── d.in
+│   │   │   ├── d.out
+│   │   │   ├── e.in
+│   │   │   ├── e.out
+│   │   │   ├── out
+│   │   │   │   ├── c0.out
+│   │   │   │   ├── c10.out
+│   │   │   │   ├── c11.out
+│   │   │   │   ├── c12.out
+│   │   │   │   ├── c13.out
+│   │   │   │   ├── c14.out
+│   │   │   │   ├── c15.out
+│   │   │   │   ├── c16.out
+│   │   │   │   ├── c17.out
+│   │   │   │   ├── c18.out
+│   │   │   │   ├── c19.out
+│   │   │   │   ├── c1.out
+│   │   │   │   ├── c20.out
+│   │   │   │   ├── c21.out
+│   │   │   │   ├── c22.out
+│   │   │   │   ├── c23.out
+│   │   │   │   ├── c24.out
+│   │   │   │   ├── c25.out
+│   │   │   │   ├── c26.out
+│   │   │   │   ├── c27.out
+│   │   │   │   ├── c28.out
+│   │   │   │   ├── c29.out
+│   │   │   │   ├── c2.out
+│   │   │   │   ├── c30.out
+│   │   │   │   ├── c31.out
+│   │   │   │   ├── c32.out
+│   │   │   │   ├── c33.out
+│   │   │   │   ├── c34.out
+│   │   │   │   ├── c35.out
+│   │   │   │   ├── c36.out
+│   │   │   │   ├── c37.out
+│   │   │   │   ├── c38.out
+│   │   │   │   ├── c39.out
+│   │   │   │   ├── c3.out
+│   │   │   │   ├── c4.out
+│   │   │   │   ├── c5.out
+│   │   │   │   ├── c6.out
+│   │   │   │   ├── c7.out
+│   │   │   │   ├── c8.out
+│   │   │   │   └── c9.out
+│   │   │   ├── sol
+│   │   │   ├── sol.cpp
+│   │   │   └── s.sh
+│   │   └── stmt.pdf
+│   └── sol
+│       ├── a.in
+│       ├── a.out
+│       ├── b.in
+│       ├── b.out
+│       ├── c.in
+│       ├── code.cpp
+│       ├── c.out
+│       ├── d.in
+│       ├── d.out
+│       ├── e.in
+│       ├── e.out
+│       ├── f.in
+│       ├── f.out
+│       ├── sol
+│       ├── sol2
+│       ├── sol2.cpp
+│       ├── sol_a.cc
+│       ├── sol_b.cpp
+│       ├── sol.cpp
+│       ├── s.sh
+│       └── stmt.pdf
+├── HE_archery
+│   ├── sol
+│   └── sol.cpp
+├── hello_nachiket
+│   └── a.cpp
+├── hE_seg
+│   ├── sol
+│   └── sol.cpp
+├── hE_seg2
+│   ├── sol
+│   └── sol.cpp
+├── HRMaths
+│   ├── JourneyToMars
+│   │   └── sol.cpp
+│   └── NumberList
+│       └── sol.cpp
+├── ich
+│   ├── sol
+│   └── sol.cpp
+├── icpc
+│   ├── A
+│   ├── A.cpp
+│   ├── C
+│   ├── C.cpp
+│   ├── D
+│   └── D.cpp
+├── ICPC-contest-2018-2019-Pacific-Northwest-Regional
+│   └── info.cc
+├── ilya_matrix
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── jhool
+│   ├── sol
+│   └── sol.cpp
+├── Keyboard
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── kickstart2021
+│   ├── A
+│   │   ├── 1
+│   │   │   ├── gen
+│   │   │   ├── gen.cpp
+│   │   │   ├── int
+│   │   │   ├── sol
+│   │   │   ├── sol.cpp
+│   │   │   └── s.sh
+│   │   └── 2
+│   │       └── sol.cpp
+│   └── B
+│       ├── ConsecutivePrimes
+│       │   ├── sol
+│       │   └── sol.cpp
+│       ├── IncreasingSubstring
+│       │   ├── sol
+│       │   └── sol.cpp
+│       ├── LongestProgression
+│       │   ├── sol
+│       │   └── sol.cpp
+│       └── TruckDelivery
+│           ├── sol
+│           └── sol.cpp
+├── lex_k
+│   ├── sol
+│   └── sol.cpp
+├── long_jan_21
+│   └── WIPL
+│       ├── sol
+│       └── sol.cpp
+├── math1
+│   ├── sol
+│   └── sol.cpp
+├── math2
+│   ├── sol
+│   └── sol.cpp
+├── math_mod_magic
+│   ├── sol
+│   └── sol.cpp
+├── math_seg1
+│   ├── sol
+│   └── sol.cpp
+├── mBIT-std
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── E
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── F
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── H
+│       ├── gen
+│       ├── gen.cpp
+│       ├── I
+│       │   ├── sol
+│       │   └── sol.cpp
+│       ├── sol
+│       ├── sol.cpp
+│       ├── s.sh
+│       └── test
+├── mocha1
+│   ├── ClosestNeighbour
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── CountingPrimeCubes
+│   │   └── sol.cpp
+│   ├── OptimalBill
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── solutions
+│   │   ├── ClosestNeighbour
+│   │   │   ├── sol
+│   │   │   └── sol.cpp
+│   │   ├── CountingPrimeCubes
+│   │   │   └── sol.cpp
+│   │   └── OptimalBill
+│   │       ├── sol
+│   │       └── sol.cpp
+│   └── solutions.zip
+├── my_solving
+│   ├── a.py
+│   ├── chk.py
+│   ├── E
+│   ├── E.cpp
+│   ├── go
+│   ├── go.cc
+│   ├── go.cpp
+│   ├── h.py
+│   ├── lucky
+│   ├── lucky.cpp
+│   ├── nn.py
+│   ├── sol.cpp
+│   ├── x
+│   ├── x.cpp
+│   └── y.cpp
+├── nachi.cpp
+├── nachiket.txt
+├── ncc21
+│   ├── a
+│   ├── a.cpp
+│   ├── b
+│   ├── b.cpp
+│   ├── c
+│   ├── c.cpp
+│   ├── d
+│   ├── d.cpp
+│   ├── e
+│   ├── e.cpp
+│   ├── ee
+│   └── ee.cpp
+├── new_template
+│   ├── sol
+│   └── sol.cpp
+├── nov-circuits-20
+│   └── minimum_indexes
+│       ├── sol
+│       └── sol.cpp
+├── pal_everywhere
+│   ├── sol
+│   └── sol.cpp
+├── pandigital_upd
+│   ├── sol
+│   └── sol.cpp
+├── PE113
+│   ├── sol
+│   └── sol.cpp
+├── PE131
+│   ├── sol
+│   └── sol.cpp
+├── PE149
+│   ├── sol
+│   └── sol.cpp
+├── PE150
+│   ├── sol
+│   └── sol.cpp
+├── PE158
+│   ├── a.out
+│   ├── PE162
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── PE204
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── sol
+│   └── sol.cpp
+├── PE178
+│   ├── sol
+│   └── sol.cpp
+├── PE231
+│   ├── sol
+│   └── sol.cpp
+├── PE294
+│   └── sol.cpp
+├── PE62
+│   ├── sol
+│   └── sol.cpp
+├── PE706
+│   ├── sol
+│   ├── sol.cpp
+│   ├── sol_new
+│   └── sol_new.cpp
+├── PE87
+│   ├── sol
+│   └── sol.cpp
+├── phi_all
+│   ├── sol
+│   └── sol.cpp
+├── play_list
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── POLYMUL
+│   ├── sol
+│   └── sol.cpp
+├── practice
+│   ├── brute
+│   ├── brute.cpp
+│   ├── donut
+│   ├── donut.c
+│   ├── gen
+│   ├── gen.cpp
+│   ├── in1
+│   ├── int
+│   ├── out
+│   ├── output.txt
+│   ├── pulzion
+│   ├── sol
+│   ├── sol2
+│   ├── sol2.cpp
+│   ├── sol.cpp
+│   ├── sol.py
+│   ├── s.sh
+│   └── zerror.txt
+├── prob_combo
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── E
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── H
+│       ├── sol
+│       └── sol.cpp
+├── prosortC
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── PSUT18
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── D
+│   │   ├── D_
+│   │   │   ├── sol
+│   │   │   ├── sol.cpp
+│   │   │   └── s.sh
+│   │   ├── sol
+│   │   ├── sol.cpp
+│   │   └── s.sh
+│   └── F
+│       ├── sol
+│       └── sol.cpp
+├── python
+│   └── A.py
+├── QSET
+│   ├── sol
+│   └── sol.cpp
+├── quotes_gen
+│   ├── main.py
+│   └── quotes
+├── RESTORE
+│   ├── sol
+│   └── sol.cpp
+├── restore_seq
+│   ├── ans1
+│   ├── ans2
+│   ├── brute
+│   ├── brute.cpp
+│   ├── gen
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   ├── s.sh
+│   └── testcase
+├── roses_shop
+│   ├── sol
+│   └── sol.cpp
+├── rusty
+│   └── hello.rs
+├── SCALSUM
+│   ├── sol
+│   └── sol.cpp
+├── sol
+│   ├── gen.cpp
+│   ├── sol
+│   ├── sol.cpp
+│   └── s.sh
+├── TechnoCup_div2
+│   ├── A
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── B
+│   │   ├── sol
+│   │   └── sol.cpp
+│   ├── C
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── D
+│       └── sol.cpp
+├── test
+│   ├── A.cpp
+│   ├── a.out
+│   ├── a.py
+│   ├── bfs
+│   ├── bfs2
+│   ├── bfs2.cpp
+│   ├── bfs.cpp
+│   ├── bittup
+│   ├── bittup.cpp
+│   ├── brute
+│   ├── brute.cpp
+│   ├── chk
+│   ├── chk.c
+│   ├── chk.cpp
+│   ├── chk.py
+│   ├── dsu.py
+│   ├── E
+│   ├── E.cpp
+│   ├── gcd
+│   ├── gcd.cpp
+│   ├── gen
+│   ├── gen.cpp
+│   ├── go
+│   ├── go.cc
+│   ├── go.cpp
+│   ├── he1
+│   ├── he1.cpp
+│   ├── hello.cpp
+│   ├── in
+│   ├── leet
+│   ├── leet.cc
+│   ├── new_file
+│   ├── new_file.cpp
+│   ├── one
+│   ├── one.cpp
+│   ├── out
+│   ├── pywhatkit_dbs.txt
+│   ├── sol
+│   ├── sol2.cpp
+│   ├── sol.cpp
+│   ├── sol.py
+│   ├── s.sh
+│   ├── ss.sh
+│   ├── test
+│   ├── test2
+│   │   └── sol.cpp
+│   ├── test.chk
+│   ├── test.py
+│   ├── test.tx
+│   ├── two_divs
+│   ├── two_divs.cpp
+│   ├── Untitled.ipynb
+│   ├── wa.py
+│   └── X.cpp
+├── test2
+│   ├── sol
+│   └── sol.cpp
+├── test3
+│   ├── in
+│   ├── sol
+│   ├── sol.cpp
+│   └── sol.py
+├── treaps
+│   └── A
+│       └── sol.cpp
+├── treefile.txt
+├── upd_qry
+│   ├── gen.cpp
+│   ├── sol.cpp
+│   └── s.sh
+├── virat
+│   ├── chk2
+│   │   └── sol.cpp
+│   ├── chker
+│   │   ├── sol
+│   │   └── sol.cpp
+│   └── sol.cpp
+├── WINIT
+│   ├── sol
+│   └── sol.cpp
+├── X
+├── X.cpp
+├── XORemall
+│   ├── sol
+│   ├── sol.cpp
+│   └── sol.py
+├── XORSUB
+│   ├── sol
+│   └── sol.cpp
+└── zuciso
+    ├── gen
+    ├── gen.cpp
+    ├── int
+    ├── sol
+    ├── sol2
+    ├── sol2.cpp
+    ├── sol.cpp
+    └── s.sh
+
+458 directories, 1546 files

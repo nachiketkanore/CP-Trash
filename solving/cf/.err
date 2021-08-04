@@ -1,0 +1,11 @@
+c.cpp:1:1: error: expected unqualified-id before ‘for’
+    1 | for (int i = 0; i < n; i++) {
+      | ^~~
+c.cpp:1:17: error: ‘i’ does not name a type
+    1 | for (int i = 0; i < n; i++) {
+      |                 ^
+c.cpp:1:24: error: ‘i’ does not name a type
+    1 | for (int i = 0; i < n; i++) {
+      |                        ^
+cc1plus: fatal error: ./: No such file or directory
+compilation terminated.

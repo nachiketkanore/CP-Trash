@@ -1,0 +1,13 @@
+nachiket kanore
+for (int i = 0; i < n; i++) {
+	int u;
+	cin >> u;
+	for (int j = 0; j < u; j++) {
+		int x, y;
+		cin >> x >> y;
+		g[x].push_back(y);
+		g[y].push_back(x);
+	}
+}
+nachiket kanore
+nachiket kanore nachiket kanore nachiket

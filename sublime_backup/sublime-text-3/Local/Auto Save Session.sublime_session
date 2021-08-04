@@ -1,0 +1,2275 @@
+{
+	"folder_history":
+	[
+		"/home/nachiket/Desktop/AI - ML/Projects/snake-ai-bot",
+		"/home/nachiket/Desktop/1/python-tkinter-sqlite-crud",
+		"/home/nachiket/.config/sublime-text-3/Packages",
+		"/home/nachiket/CP/solving/test",
+		"/home/nachiket/.template",
+		"/home/nachiket/.config/sublime-text-3",
+		"/home/nachiket/Downloads/SDL",
+		"/home/nachiket/CP/practice"
+	],
+	"last_version": 3211,
+	"last_window_id": 33,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 0.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"he",
+						"heWins"
+					],
+					[
+						"cou",
+						"CountingChanges"
+					],
+					[
+						"co",
+						"CountingChanges"
+					],
+					[
+						"bu",
+						"bugs"
+					],
+					[
+						"ff",
+						"fft\tfft_complex"
+					],
+					[
+						"i",
+						"ifmain\tif __name__ == '__main__'"
+					],
+					[
+						"ge",
+						"getPar"
+					],
+					[
+						"get",
+						"getSize"
+					],
+					[
+						"go",
+						"goRight"
+					],
+					[
+						"g",
+						"goLeft"
+					],
+					[
+						"cn",
+						"cntCol"
+					],
+					[
+						"pos",
+						"possCol"
+					],
+					[
+						"poss",
+						"possRow"
+					],
+					[
+						"cnt",
+						"cntCol"
+					],
+					[
+						"mo",
+						"mod_int_geothermal\tmod_int_geothermal"
+					],
+					[
+						"seg",
+						"segtree_basic\tsegtree_basic"
+					],
+					[
+						"or",
+						"order_of_key"
+					],
+					[
+						"retu",
+						"return"
+					],
+					[
+						"sp",
+						"sparsetable\tsparsetable"
+					],
+					[
+						"se",
+						"segtree_basic\tsegtree_basic"
+					],
+					[
+						"pw",
+						"pow2"
+					],
+					[
+						"w",
+						"write_char"
+					],
+					[
+						"wr",
+						"write_int"
+					],
+					[
+						"rea",
+						"read_int"
+					],
+					[
+						"segt",
+						"segtree_lazy\tsegtree_lazy"
+					],
+					[
+						"mod",
+						"modify"
+					],
+					[
+						"y",
+						"y_coordinates"
+					],
+					[
+						"fi",
+						"find_endpoint"
+					],
+					[
+						"fin",
+						"find_first_positive"
+					],
+					[
+						"b",
+						"bitsstdc++\tbits_std++"
+					],
+					[
+						"par",
+						"parent"
+					],
+					[
+						"ans",
+						"answer"
+					],
+					[
+						"add",
+						"addx"
+					],
+					[
+						"whi",
+						"which_building"
+					],
+					[
+						"wh",
+						"which_building"
+					],
+					[
+						"bul",
+						"building"
+					],
+					[
+						"an",
+						"antenna"
+					],
+					[
+						"buil",
+						"building"
+					],
+					[
+						"bil",
+						"building"
+					],
+					[
+						"rand",
+						"rand\trand"
+					],
+					[
+						"pref",
+						"pref_mod"
+					],
+					[
+						"parts",
+						"parts-1"
+					],
+					[
+						"a",
+						"ans"
+					],
+					[
+						"val",
+						"val_mask"
+					],
+					[
+						"pri",
+						"primes_mask"
+					],
+					[
+						"primes",
+						"primes_mask"
+					],
+					[
+						"chec",
+						"checkPrime"
+					],
+					[
+						"qer",
+						"query2"
+					],
+					[
+						"q",
+						"query1"
+					],
+					[
+						"sg",
+						"segmin"
+					],
+					[
+						"str",
+						"STRING"
+					],
+					[
+						"div",
+						"divide_conquer"
+					],
+					[
+						"bi",
+						"builtinpopcount\tbuiltinpopcount"
+					],
+					[
+						"col",
+						"col_sum"
+					],
+					[
+						"mul",
+						"multiply"
+					],
+					[
+						"donw",
+						"downright"
+					],
+					[
+						"con",
+						"conv1"
+					],
+					[
+						"n_cl",
+						"n_class_samples"
+					],
+					[
+						"n_",
+						"n_class_correct"
+					],
+					[
+						"n_c",
+						"n_class_correct"
+					],
+					[
+						"opt",
+						"optimizer"
+					],
+					[
+						"train_",
+						"train_dataset"
+					],
+					[
+						"tran",
+						"transform"
+					],
+					[
+						"tr",
+						"torchvision"
+					],
+					[
+						"tra",
+						"transforms"
+					],
+					[
+						"n",
+						"n_samples"
+					],
+					[
+						"test",
+						"test_loader"
+					],
+					[
+						"out",
+						"outputs"
+					],
+					[
+						"train",
+						"train_loader"
+					],
+					[
+						"neu",
+						"NeuralNet"
+					],
+					[
+						"Ne",
+						"next"
+					],
+					[
+						"bat",
+						"batch_size"
+					],
+					[
+						"ba",
+						"batch_size"
+					],
+					[
+						"Train",
+						"train_dataset"
+					],
+					[
+						"troc",
+						"torchvision"
+					],
+					[
+						"pre",
+						"preds_one"
+					],
+					[
+						"Y",
+						"y_pred_good"
+					],
+					[
+						"y_pre",
+						"y_pred_good"
+					],
+					[
+						"chk",
+						"checkPrime"
+					],
+					[
+						"c",
+						"checkprime\tcheckprime"
+					],
+					[
+						"up",
+						"update"
+					],
+					[
+						"to",
+						"torchvision"
+					],
+					[
+						"from",
+						"from_numpy"
+					],
+					[
+						"data",
+						"dataset"
+					],
+					[
+						"epc",
+						"epoch"
+					],
+					[
+						"epo",
+						"epochs"
+					],
+					[
+						"inpu",
+						"input_size"
+					],
+					[
+						"in",
+						"__init__"
+					],
+					[
+						"Linear",
+						"LinearRegression"
+					],
+					[
+						"ou",
+						"output_dim"
+					],
+					[
+						"lin",
+						"LinearRegression"
+					],
+					[
+						"te",
+						"tensor"
+					],
+					[
+						"gra",
+						"gradient"
+					],
+					[
+						"for",
+						"forward"
+					],
+					[
+						"basic_st",
+						"basic_string\tbasic_string<typename _CharT>"
+					],
+					[
+						"ve",
+						"vector\tvector<typename _Tp>(vector<_Tp, _Alloc> &&__rv, const allocator_type &__m, true_type)"
+					],
+					[
+						"gre",
+						"green_time"
+					],
+					[
+						"ra",
+						"rand\trand"
+					],
+					[
+						"inc",
+						"incoming"
+					],
+					[
+						"max",
+						"max_parity"
+					],
+					[
+						"BI",
+						"BIT\tbit"
+					],
+					[
+						"di",
+						"distinct"
+					],
+					[
+						"dp",
+						"dp_sums"
+					],
+					[
+						"asn",
+						"ans2"
+					],
+					[
+						"del",
+						"delta_right, get\t⟠"
+					],
+					[
+						"lef",
+						"left_shift"
+					],
+					[
+						"conve",
+						"ConvexHullDynamic"
+					],
+					[
+						"curr",
+						"curr_mod\t⟠"
+					],
+					[
+						"it",
+						"itsOcc"
+					],
+					[
+						"B",
+						"BIT\tbit"
+					],
+					[
+						"ma",
+						"maxLen\t⟠"
+					],
+					[
+						"mx",
+						"maxLen"
+					],
+					[
+						"ne",
+						"next_farthest\t⟠"
+					],
+					[
+						"s",
+						"spf\tspf"
+					],
+					[
+						"dis",
+						"distances\t⟠"
+					],
+					[
+						"tes",
+						"test\tDataFrame ⟠"
+					],
+					[
+						"num",
+						"num_classes\tint ⟠"
+					],
+					[
+						"test_",
+						"test_loader\tDataLoader ⟠"
+					],
+					[
+						"no",
+						"no_grad\ttype ⟠"
+					],
+					[
+						"nu",
+						"num_epochs"
+					],
+					[
+						"le",
+						"learning_rate\tfloat ⟠"
+					],
+					[
+						"inp",
+						"input_size\t⟠"
+					],
+					[
+						"__",
+						"__init__"
+					],
+					[
+						"tst",
+						"test_loader"
+					],
+					[
+						"Ten",
+						"TensorDataset"
+					],
+					[
+						"f",
+						"float32\tdtype ⟠"
+					],
+					[
+						"tor",
+						"torch.float32\t2★ pro ⟠"
+					],
+					[
+						"t",
+						"torch.float32\t2★ pro ⟠"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						"Run"
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"reind",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"togg",
+						"View: Toggle Menu"
+					],
+					[
+						"sparse",
+						"Snippet: sparsetable"
+					],
+					[
+						"re",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"key",
+						"Preferences: Key Bindings"
+					],
+					[
+						"rein",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"me",
+						"View: Toggle Menu"
+					],
+					[
+						"menu",
+						"View: Toggle Menu"
+					],
+					[
+						"them",
+						"UI: Select Color Scheme"
+					],
+					[
+						"scheme",
+						"UI: Select Theme"
+					],
+					[
+						"men",
+						"View: Toggle Menu"
+					],
+					[
+						"dis",
+						"Package Control: Disable Package"
+					],
+					[
+						"sett",
+						"Preferences: Settings"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"disab",
+						"Package Control: Disable Package"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"templ",
+						"Snippet: template"
+					],
+					[
+						"inden",
+						"Indentation: Convert to Spaces"
+					],
+					[
+						"color",
+						"UI: Select Color Scheme"
+					],
+					[
+						"the",
+						"gruvbox: Select Theme"
+					],
+					[
+						"setti",
+						"Preferences: Settings"
+					],
+					[
+						"theme",
+						"UI: Select Color Scheme"
+					],
+					[
+						"th",
+						"gruvbox: Select Theme"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"k",
+						"Preferences: Key Bindings"
+					],
+					[
+						"stre",
+						"Snippet: stress"
+					],
+					[
+						"setting",
+						"Preferences: Settings"
+					],
+					[
+						"linter",
+						"SublimeLinter: Toggle Highlights"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"pack",
+						"Preferences: Browse Packages"
+					],
+					[
+						"pref",
+						"Preferences: Settings"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 226.0,
+				"history":
+				[
+					"exit()",
+					"exit",
+					"2 * 3",
+					"ls",
+					"clear",
+					"10**2",
+					"g++",
+					"pwd",
+					"ls"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/transfer_learning.py",
+				"/home/nachiket/CP/solving/practice/gen.cpp",
+				"/home/nachiket/Desktop/AI - ML/Projects/MNIST/cnn-digit-recognizer-pytorch.ipynb",
+				"/home/nachiket/.template/sol.cpp",
+				"/home/nachiket/.template/sol.",
+				"/home/nachiket/CP/solving/kickstart2021/A/1/sol.cpp",
+				"/home/nachiket/CP/solving/kickstart2021/A/2/sol.cpp",
+				"/home/nachiket/CP/solving/kickstart2021/A/1/s.sh",
+				"/home/nachiket/CP/solving/kickstart2021/A/1/gen.cpp",
+				"/home/nachiket/.cache/.fr-NR5h8t/escape_route/grader.cpp",
+				"/home/nachiket/.cache/.fr-B2GBVt/escape_route/escape_route.cpp",
+				"/home/nachiket/Downloads/cp-related/nachiket.kanore-0000000000694362.txt",
+				"/home/nachiket/Downloads/cp-related/nachiket.kanore-000000000069cf8e.txt",
+				"/home/nachiket/Downloads/cp-related/nachiket.kanore-00000000006b08cc.txt",
+				"/home/nachiket/Downloads/cp-related/wandan23-00000000006ad01e.txt",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/feedforward.py",
+				"/home/nachiket/CP/create.sh",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/mod_int_geothermal.sublime-snippet",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/sol2.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/chk.sh",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/output1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/input1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/s.sh",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/output2.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/input2.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/input1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/output1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/input7.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/output7.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/s.sh",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/tests/output/output7.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/tests/output/output10.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input5.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input4.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input9.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input8.txt",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/modint.sublime-snippet",
+				"/home/nachiket/Downloads/cp-related/output-55154580-8935582885491882590.txt",
+				"/home/nachiket/Downloads/cp-related/output-55154580-11665707749762184910.txt",
+				"/home/nachiket/Downloads/cp-related/output-55154558-8935582885491882590.txt",
+				"/home/nachiket/Downloads/cp-related/output-55154434-11665707749762184910.txt",
+				"/home/nachiket/CP/solving/practice/sol.cpp",
+				"/home/nachiket/CP/reply-code-2021/s.sh",
+				"/home/nachiket/CP/reply-code-2021/sol.cpp",
+				"/home/nachiket/CP/reply-code-2021/1.in",
+				"/home/nachiket/CP/reply-code-2021/2.in",
+				"/home/nachiket/CP/reply-code-2021/3.in",
+				"/home/nachiket/CP/reply-code-2021/4.in",
+				"/home/nachiket/CP/reply-code-2021/5.in",
+				"/home/nachiket/CP/reply-code-2021/6.in",
+				"/home/nachiket/CP/reply-code-2021/sol_in3.cpp",
+				"/home/nachiket/CP/reply-code-2021/sol (1).cpp",
+				"/home/nachiket/CP/reply-code-2021/2.out",
+				"/home/nachiket/CP/reply-code-2021/1.out",
+				"/home/nachiket/CP/reply-code-2021/s.shs",
+				"/home/nachiket/CP/solving/practice/s.sh",
+				"/home/nachiket/CP/solving/practice/sol2.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/s.sh",
+				"/home/nachiket/CP/problem_setting/unsolvable/gen.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/sol2.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/sol.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input4.txt",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input3.txt",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input2.txt",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input8.txt",
+				"/home/nachiket/CP/solving/practice/sol.py",
+				"/home/nachiket/CP/problem_setting/digit_dp_sum_divisibility/sol.cpp",
+				"/home/nachiket/CP/problem_setting/seg_bs/s.sh",
+				"/home/nachiket/CP/problem_setting/seg_bs/gen.cpp",
+				"/home/nachiket/CP/problem_setting/seg_bs/brute.cpp",
+				"/home/nachiket/CP/problem_setting/seg_bs/main.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/buggy_maze/sol.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/sol.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/buggy_maze/gen.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/buggy_maze/s.sh",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/gen.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/s.sh",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/output21.txt",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/input21.txt",
+				"/home/nachiket/CP/solving/zuciso/sol.cpp",
+				"/home/nachiket/CP/problem_setting/gcd_operations/sol.cpp",
+				"/home/nachiket/CP/solving/zuciso/sol2.cpp",
+				"/home/nachiket/CP/solving/zuciso/s.sh",
+				"/home/nachiket/CP/solving/zuciso/gen.cpp",
+				"/home/nachiket/CP/solving/practice/pulzion",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/sol.cpp",
+				"/home/nachiket/.cache/.fr-qkR1HX/north-2013-archive/problems/bad/bad_tourist.c++",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/fft_complex.sublime-snippet",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/gen.cpp",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/s.sh",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/output9.txt",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/input9.txt",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/input10.txt",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/input1.txt",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/sol.cpp",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/s.sh",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/gen.cpp",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/out6",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/out1",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/in1",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/input1.txt",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/in6",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/out4",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/out2",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/cnn.py",
+				"/home/nachiket/Desktop/AI - ML/Books/PyTorch Books/[PyTorch Deep Learning Hands-On- Build CNNs, RNNs, GANs, reinforcement learning, and more, quickly and easily/~Get Your Files Here !/3.DLWorkFlow/DesignExperiments/torchtext_example.py",
+				"/home/nachiket/Desktop/AI - ML/Books/PyTorch Books/[PyTorch Deep Learning Hands-On- Build CNNs, RNNs, GANs, reinforcement learning, and more, quickly and easily/~Get Your Files Here !/3.DLWorkFlow/DesignExperiments/datautils.py",
+				"/home/nachiket/Desktop/insta_scripts/insta_story/a.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/activation_functions.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/softmax.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/cross_entropy.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/multiclass.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/binaryclass.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/dataset_transforms.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/dataset.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/gradient_descent.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/gradient_torch2.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/linear_regression.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/logistic_regression.py"
+			],
+			"find":
+			{
+				"height": 30.0
+			},
+			"find_in_files":
+			{
+				"height": 337.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"15",
+					"x",
+					"true",
+					"100",
+					"lable",
+					");\n",
+					"3",
+					")",
+					"];\n",
+					"max",
+					"\t\t",
+					"+ ",
+					"TC"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 30.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.SublimeLinter":
+			{
+				"height": 0.0
+			},
+			"output.exec":
+			{
+				"height": 132.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.mdpopups":
+			{
+				"height": 0.0
+			},
+			"output.unsaved_changes":
+			{
+				"height": 109.0
+			},
+			"pinned_build_system": "Packages/User/C++17.sublime-build",
+			"replace":
+			{
+				"height": 56.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": false,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 50.0,
+			"status_bar_visible": false,
+			"template_settings":
+			{
+				"max_columns": 2
+			}
+		},
+		"new_window_width": 0.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"max",
+						"maxV"
+					],
+					[
+						"min",
+						"minV"
+					],
+					[
+						"mn",
+						"mn_f"
+					],
+					[
+						"jum",
+						"jump-1"
+					],
+					[
+						"seg",
+						"segtree_basic\tsegtree_basic"
+					],
+					[
+						"ge",
+						"getPar"
+					],
+					[
+						"safe",
+						"safe_row"
+					],
+					[
+						"pus",
+						"push_back"
+					],
+					[
+						"bi",
+						"bitsstdc++\tbits_std++"
+					],
+					[
+						"Mo",
+						"Mojo"
+					],
+					[
+						"phi",
+						"phi_1_to_n"
+					],
+					[
+						"cur",
+						"currBit"
+					],
+					[
+						"pr",
+						"primes"
+					],
+					[
+						"fft",
+						"fft\tfft_complex"
+					],
+					[
+						"ff",
+						"fft\tfft"
+					],
+					[
+						"vec",
+						"vector\tstd::vector"
+					],
+					[
+						"b",
+						"builtinpopcount\tbuiltinpopcount"
+					],
+					[
+						"mem",
+						"memo"
+					],
+					[
+						"get",
+						"get_hash"
+					],
+					[
+						"pl",
+						"plot_mean_scores"
+					],
+					[
+						"plot_",
+						"plot_mean_scores"
+					],
+					[
+						"plot",
+						"plot_scores"
+					],
+					[
+						"next",
+						"next_state"
+					],
+					[
+						"re",
+						"reward"
+					],
+					[
+						"file",
+						"file_name"
+					],
+					[
+						"fil",
+						"file_name"
+					],
+					[
+						"mode",
+						"model_foler_path"
+					],
+					[
+						"lin",
+						"linear2"
+					],
+					[
+						"predi",
+						"prediction"
+					],
+					[
+						"ran",
+						"random"
+					],
+					[
+						"nex",
+						"next_states"
+					],
+					[
+						"train",
+						"train_step"
+					],
+					[
+						"tra",
+						"trainer"
+					],
+					[
+						"n",
+						"n_games"
+					],
+					[
+						"state",
+						"state_old"
+					],
+					[
+						"sta",
+						"state_new"
+					],
+					[
+						"st",
+						"state_old"
+					],
+					[
+						"ne",
+						"next_idx"
+					],
+					[
+						"clo",
+						"clock_wise"
+					],
+					[
+						"up",
+						"UP"
+					],
+					[
+						"ha",
+						"head"
+					],
+					[
+						"he",
+						"heWins"
+					],
+					[
+						"cou",
+						"CountingChanges"
+					],
+					[
+						"co",
+						"CountingChanges"
+					],
+					[
+						"bu",
+						"bugs"
+					],
+					[
+						"i",
+						"ifmain\tif __name__ == '__main__'"
+					],
+					[
+						"go",
+						"goRight"
+					],
+					[
+						"g",
+						"goLeft"
+					],
+					[
+						"cn",
+						"cntCol"
+					],
+					[
+						"pos",
+						"possCol"
+					],
+					[
+						"poss",
+						"possRow"
+					],
+					[
+						"cnt",
+						"cntCol"
+					],
+					[
+						"mo",
+						"mod_int_geothermal\tmod_int_geothermal"
+					],
+					[
+						"or",
+						"order_of_key"
+					],
+					[
+						"retu",
+						"return"
+					],
+					[
+						"sp",
+						"sparsetable\tsparsetable"
+					],
+					[
+						"se",
+						"segtree_basic\tsegtree_basic"
+					],
+					[
+						"pw",
+						"pow2"
+					],
+					[
+						"w",
+						"write_char"
+					],
+					[
+						"wr",
+						"write_int"
+					],
+					[
+						"rea",
+						"read_int"
+					],
+					[
+						"segt",
+						"segtree_lazy\tsegtree_lazy"
+					],
+					[
+						"mod",
+						"modify"
+					],
+					[
+						"y",
+						"y_coordinates"
+					],
+					[
+						"fi",
+						"find_endpoint"
+					],
+					[
+						"fin",
+						"find_first_positive"
+					],
+					[
+						"par",
+						"parent"
+					],
+					[
+						"ans",
+						"answer"
+					],
+					[
+						"add",
+						"addx"
+					],
+					[
+						"whi",
+						"which_building"
+					],
+					[
+						"wh",
+						"which_building"
+					],
+					[
+						"bul",
+						"building"
+					],
+					[
+						"an",
+						"antenna"
+					],
+					[
+						"buil",
+						"building"
+					],
+					[
+						"bil",
+						"building"
+					],
+					[
+						"rand",
+						"rand\trand"
+					],
+					[
+						"pref",
+						"pref_mod"
+					],
+					[
+						"parts",
+						"parts-1"
+					],
+					[
+						"a",
+						"ans"
+					],
+					[
+						"val",
+						"val_mask"
+					],
+					[
+						"pri",
+						"primes_mask"
+					],
+					[
+						"primes",
+						"primes_mask"
+					],
+					[
+						"chec",
+						"checkPrime"
+					],
+					[
+						"qer",
+						"query2"
+					],
+					[
+						"q",
+						"query1"
+					],
+					[
+						"sg",
+						"segmin"
+					],
+					[
+						"str",
+						"STRING"
+					],
+					[
+						"div",
+						"divide_conquer"
+					],
+					[
+						"col",
+						"col_sum"
+					],
+					[
+						"mul",
+						"multiply"
+					],
+					[
+						"donw",
+						"downright"
+					],
+					[
+						"con",
+						"conv1"
+					],
+					[
+						"n_cl",
+						"n_class_samples"
+					],
+					[
+						"n_",
+						"n_class_correct"
+					],
+					[
+						"n_c",
+						"n_class_correct"
+					],
+					[
+						"opt",
+						"optimizer"
+					],
+					[
+						"train_",
+						"train_dataset"
+					],
+					[
+						"tran",
+						"transform"
+					],
+					[
+						"tr",
+						"torchvision"
+					],
+					[
+						"test",
+						"test_loader"
+					],
+					[
+						"out",
+						"outputs"
+					],
+					[
+						"neu",
+						"NeuralNet"
+					],
+					[
+						"Ne",
+						"next"
+					],
+					[
+						"bat",
+						"batch_size"
+					],
+					[
+						"ba",
+						"batch_size"
+					],
+					[
+						"Train",
+						"train_dataset"
+					],
+					[
+						"troc",
+						"torchvision"
+					],
+					[
+						"pre",
+						"preds_one"
+					],
+					[
+						"Y",
+						"y_pred_good"
+					],
+					[
+						"y_pre",
+						"y_pred_good"
+					],
+					[
+						"chk",
+						"checkPrime"
+					],
+					[
+						"c",
+						"checkprime\tcheckprime"
+					],
+					[
+						"to",
+						"torchvision"
+					],
+					[
+						"from",
+						"from_numpy"
+					],
+					[
+						"data",
+						"dataset"
+					],
+					[
+						"epc",
+						"epoch"
+					],
+					[
+						"epo",
+						"epochs"
+					],
+					[
+						"inpu",
+						"input_size"
+					],
+					[
+						"in",
+						"__init__"
+					],
+					[
+						"Linear",
+						"LinearRegression"
+					],
+					[
+						"ou",
+						"output_dim"
+					],
+					[
+						"te",
+						"tensor"
+					],
+					[
+						"gra",
+						"gradient"
+					],
+					[
+						"for",
+						"forward"
+					],
+					[
+						"basic_st",
+						"basic_string\tbasic_string<typename _CharT>"
+					],
+					[
+						"ve",
+						"vector\tvector<typename _Tp>(vector<_Tp, _Alloc> &&__rv, const allocator_type &__m, true_type)"
+					],
+					[
+						"gre",
+						"green_time"
+					],
+					[
+						"ra",
+						"rand\trand"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/nachiket/Desktop/AI - ML/Books/todo",
+					"settings":
+					{
+						"buffer_size": 9502,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/nachiket/CP/solving/practice/sol.py",
+					"settings":
+					{
+						"buffer_size": 44,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/nachiket/CP/solving/practice/sol.cpp",
+					"settings":
+					{
+						"buffer_size": 817,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/nachiket/.nk/in",
+					"settings":
+					{
+						"buffer_size": 4,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/nachiket/.nk/out",
+					"settings":
+					{
+						"buffer_size": 7,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/nachiket/.nk/err",
+					"settings":
+					{
+						"buffer_size": 0,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "Packages/C++/C++ Single File.sublime-build",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						"Run"
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"men",
+						"View: Toggle Menu"
+					],
+					[
+						"reinde",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"to",
+						"View: Toggle Menu"
+					],
+					[
+						"snni",
+						"Snippet: ncr"
+					],
+					[
+						"togg",
+						"View: Toggle Menu"
+					],
+					[
+						"reind",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"sparse",
+						"Snippet: sparsetable"
+					],
+					[
+						"re",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"key",
+						"Preferences: Key Bindings"
+					],
+					[
+						"rein",
+						"Indentation: Reindent Lines"
+					],
+					[
+						"me",
+						"View: Toggle Menu"
+					],
+					[
+						"menu",
+						"View: Toggle Menu"
+					],
+					[
+						"them",
+						"UI: Select Color Scheme"
+					],
+					[
+						"scheme",
+						"UI: Select Theme"
+					],
+					[
+						"dis",
+						"Package Control: Disable Package"
+					],
+					[
+						"sett",
+						"Preferences: Settings"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"disab",
+						"Package Control: Disable Package"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"templ",
+						"Snippet: template"
+					],
+					[
+						"inden",
+						"Indentation: Convert to Spaces"
+					],
+					[
+						"color",
+						"UI: Select Color Scheme"
+					],
+					[
+						"the",
+						"gruvbox: Select Theme"
+					],
+					[
+						"setti",
+						"Preferences: Settings"
+					],
+					[
+						"theme",
+						"UI: Select Color Scheme"
+					],
+					[
+						"th",
+						"gruvbox: Select Theme"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"k",
+						"Preferences: Key Bindings"
+					],
+					[
+						"stre",
+						"Snippet: stress"
+					],
+					[
+						"setting",
+						"Preferences: Settings"
+					],
+					[
+						"linter",
+						"SublimeLinter: Toggle Highlights"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"pack",
+						"Preferences: Browse Packages"
+					],
+					[
+						"pref",
+						"Preferences: Settings"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 226.0,
+				"history":
+				[
+					"exit()",
+					"exit",
+					"2 * 3",
+					"ls",
+					"clear",
+					"10**2",
+					"g++",
+					"pwd",
+					"ls"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/nachiket/Downloads/cp-related/PRIMEDST.cpp",
+				"/home/nachiket/Downloads/cp-related/PRIMEDST (1).cpp",
+				"/home/nachiket/.template/sol.cpp",
+				"/home/nachiket/CP/create.sh",
+				"/home/nachiket/CP/solving/test/sol.py",
+				"/home/nachiket/CP/solving/cses_sorting_searching/A.py",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/sieve.sublime-snippet",
+				"/home/nachiket/CP/Sublime-Snippets/sublime_snippets/C++17.sublime-build",
+				"/home/nachiket/Downloads/cp-related/Gennady.Korotkevich-00000000006dcd07.txt",
+				"/home/nachiket/Downloads/cp-related/Benq-00000000006dd02a.txt",
+				"/home/nachiket/Downloads/cp-related/Geothermal-00000000006db8b7.txt",
+				"/home/nachiket/Downloads/cp-related/Geothermal-00000000006d6103.txt",
+				"/home/nachiket/Downloads/cp-related/e1f2d45aa2b611e7.txt.clean.txt",
+				"/home/nachiket/Downloads/cp-related/2fea1e7282-input.txt.clean.txt",
+				"/home/nachiket/Downloads/cp-related/5317bcce82-input.txt.clean.txt",
+				"/home/nachiket/Desktop/AI - ML/Projects/snake-ai-bot/game.py",
+				"/home/nachiket/Desktop/AI - ML/Projects/snake-ai-bot/agent.py",
+				"/home/nachiket/Desktop/AI - ML/Projects/snake-ai-bot/model.py",
+				"/home/nachiket/Desktop/AI - ML/Projects/snake-ai-bot/helper.py",
+				"/home/nachiket/Desktop/AI - ML/Projects/snake-ai-bot/snake_game.py",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/transfer_learning.py",
+				"/home/nachiket/CP/solving/practice/gen.cpp",
+				"/home/nachiket/Desktop/AI - ML/Projects/MNIST/cnn-digit-recognizer-pytorch.ipynb",
+				"/home/nachiket/.template/sol.",
+				"/home/nachiket/CP/solving/kickstart2021/A/1/sol.cpp",
+				"/home/nachiket/CP/solving/kickstart2021/A/2/sol.cpp",
+				"/home/nachiket/CP/solving/kickstart2021/A/1/s.sh",
+				"/home/nachiket/CP/solving/kickstart2021/A/1/gen.cpp",
+				"/home/nachiket/.cache/.fr-NR5h8t/escape_route/grader.cpp",
+				"/home/nachiket/.cache/.fr-B2GBVt/escape_route/escape_route.cpp",
+				"/home/nachiket/Downloads/cp-related/nachiket.kanore-0000000000694362.txt",
+				"/home/nachiket/Downloads/cp-related/nachiket.kanore-000000000069cf8e.txt",
+				"/home/nachiket/Downloads/cp-related/nachiket.kanore-00000000006b08cc.txt",
+				"/home/nachiket/Downloads/cp-related/wandan23-00000000006ad01e.txt",
+				"/home/nachiket/Desktop/AI - ML/PyTorch Tutorial/PyTorch Tutorial/feedforward.py",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/mod_int_geothermal.sublime-snippet",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/sol2.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/chk.sh",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/output1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/input1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/palindrome_subtree/s.sh",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/output2.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/input2.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/input1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/hugging_divisors/output1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/input7.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/substring_habitat/output7.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/s.sh",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/gen.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/sol.cpp",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/tests/output/output7.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/tests/output/output10.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input1.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input5.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input4.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input9.txt",
+				"/home/nachiket/CP/problem_setting/shortest_code_challenge/mandatory_primer/input8.txt",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/modint.sublime-snippet",
+				"/home/nachiket/Downloads/cp-related/output-55154580-8935582885491882590.txt",
+				"/home/nachiket/Downloads/cp-related/output-55154580-11665707749762184910.txt",
+				"/home/nachiket/Downloads/cp-related/output-55154558-8935582885491882590.txt",
+				"/home/nachiket/Downloads/cp-related/output-55154434-11665707749762184910.txt",
+				"/home/nachiket/CP/solving/practice/sol.cpp",
+				"/home/nachiket/CP/reply-code-2021/s.sh",
+				"/home/nachiket/CP/reply-code-2021/sol.cpp",
+				"/home/nachiket/CP/reply-code-2021/1.in",
+				"/home/nachiket/CP/reply-code-2021/2.in",
+				"/home/nachiket/CP/reply-code-2021/3.in",
+				"/home/nachiket/CP/reply-code-2021/4.in",
+				"/home/nachiket/CP/reply-code-2021/5.in",
+				"/home/nachiket/CP/reply-code-2021/6.in",
+				"/home/nachiket/CP/reply-code-2021/sol_in3.cpp",
+				"/home/nachiket/CP/reply-code-2021/sol (1).cpp",
+				"/home/nachiket/CP/reply-code-2021/2.out",
+				"/home/nachiket/CP/reply-code-2021/1.out",
+				"/home/nachiket/CP/reply-code-2021/s.shs",
+				"/home/nachiket/CP/solving/practice/s.sh",
+				"/home/nachiket/CP/solving/practice/sol2.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/s.sh",
+				"/home/nachiket/CP/problem_setting/unsolvable/gen.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/sol2.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/sol.cpp",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input4.txt",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input3.txt",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input2.txt",
+				"/home/nachiket/CP/problem_setting/unsolvable/tests/input/input8.txt",
+				"/home/nachiket/CP/solving/practice/sol.py",
+				"/home/nachiket/CP/problem_setting/digit_dp_sum_divisibility/sol.cpp",
+				"/home/nachiket/CP/problem_setting/seg_bs/s.sh",
+				"/home/nachiket/CP/problem_setting/seg_bs/gen.cpp",
+				"/home/nachiket/CP/problem_setting/seg_bs/brute.cpp",
+				"/home/nachiket/CP/problem_setting/seg_bs/main.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/buggy_maze/sol.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/sol.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/buggy_maze/gen.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/buggy_maze/s.sh",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/gen.cpp",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/s.sh",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/output21.txt",
+				"/home/nachiket/CP/problem_setting/bugoff21/persistent_pointers/input21.txt",
+				"/home/nachiket/CP/solving/zuciso/sol.cpp",
+				"/home/nachiket/CP/problem_setting/gcd_operations/sol.cpp",
+				"/home/nachiket/CP/solving/zuciso/sol2.cpp",
+				"/home/nachiket/CP/solving/zuciso/s.sh",
+				"/home/nachiket/CP/solving/zuciso/gen.cpp",
+				"/home/nachiket/CP/solving/practice/pulzion",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/sol.cpp",
+				"/home/nachiket/.cache/.fr-qkR1HX/north-2013-archive/problems/bad/bad_tourist.c++",
+				"/home/nachiket/.config/sublime-text-3/Packages/User/fft_complex.sublime-snippet",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/gen.cpp",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/s.sh",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/output9.txt",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/input9.txt",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/input10.txt",
+				"/home/nachiket/CP/problem_setting/largest_plus/sol/input1.txt",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/sol.cpp",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/s.sh",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/gen.cpp",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/out6",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/out1",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/in1",
+				"/home/nachiket/CP/problem_setting/largest_star/sol/input1.txt"
+			],
+			"find":
+			{
+				"height": 30.0
+			},
+			"find_in_files":
+			{
+				"height": 337.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"15",
+					"x",
+					"true",
+					"100",
+					"lable",
+					");\n",
+					"3",
+					")",
+					"];\n",
+					"max",
+					"\t\t",
+					"+ ",
+					"TC"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 2,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/nachiket/Desktop/AI - ML/Books/todo",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 9502,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										9502,
+										9502
+									]
+								],
+								"settings":
+								{
+									"show_definitions": true,
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 496.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/nachiket/CP/solving/practice/sol.py",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 44,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										44,
+										44
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Python/Python.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/nachiket/CP/solving/practice/sol.cpp",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 817,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										719,
+										719
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 252.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				},
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 3,
+							"file": "/home/nachiket/.nk/in",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 4,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						}
+					]
+				},
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 4,
+							"file": "/home/nachiket/.nk/out",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 7,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						}
+					]
+				},
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 5,
+							"file": "/home/nachiket/.nk/err",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 0,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 3,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 30.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						3
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					],
+					[
+						1,
+						1,
+						2,
+						2
+					],
+					[
+						1,
+						2,
+						2,
+						3
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.657113075256,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					0.349264274148,
+					0.656112094981,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.SublimeLinter":
+			{
+				"height": 0.0
+			},
+			"output.exec":
+			{
+				"height": 151.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.mdpopups":
+			{
+				"height": 0.0
+			},
+			"output.unsaved_changes":
+			{
+				"height": 109.0
+			},
+			"pinned_build_system": "Packages/User/C++17.sublime-build",
+			"position": "0,1,0,0,0,0,0,0,0,1920,1080",
+			"project": "",
+			"replace":
+			{
+				"height": 56.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+				"last_automatic_layout":
+				[
+					[
+						0,
+						0,
+						1,
+						3
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					],
+					[
+						1,
+						1,
+						2,
+						2
+					],
+					[
+						1,
+						2,
+						2,
+						3
+					]
+				]
+			},
+			"show_minimap": false,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 50.0,
+			"status_bar_visible": false,
+			"template_settings":
+			{
+				"max_columns": 2
+			},
+			"window_id": 20,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

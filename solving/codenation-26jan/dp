@@ -1,0 +1,71 @@
+/*
+Author: Nachiket Kanore
+Created: Monday 25 January 2021 10:55:58 PM IST
+(ツ) It is through science that we prove, but through intuition that we discover.
+*/
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <algorithm>
+#include <cmath>
+#include <vector>
+#include <cassert>
+#include <string>
+#include <cstring>
+
+#define int long long
+#define pb push_back
+#define ALL(x) (x).begin(),(x).end()
+#define sz(x) (int)(x.size())
+#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+using namespace std;
+
+template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
+template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+ 
+const int N = 2000 + 5, inf = 1e18;
+
+int n, m, A[N][N], B[N][N];
+
+int32_t main() {
+	ios::sync_with_stdio(0); cin.tie(0);
+	
+	cin >> n >> m;
+	int sa = 0, sb = 0;
+	FOR (i,1,n) FOR (j,1,m) cin >> A[i][j], sa += A[i][j], A[i][j] += A[i][j-1];	
+	FOR (i,1,n) FOR (j,1,m) cin >> B[i][j], sb += B[i][j], B[i][j] += B[i][j-1];	
+
+	int ans = max(sa, sb);
+
+	auto sumA = [&](int row, int L, int R) {
+		if (L > R) return 0ll;
+		return A[row][R] - A[row][L-1];
+	};
+	auto sumB = [&](int row, int L, int R) {
+		if (L > R) return 0ll;
+		return B[row][R] - B[row][L-1];
+	};
+
+	vector<int> dp(m+1);
+	dp[0] = A[1][m];
+	FOR (i,1,m) dp[i] = sumB(1,1,i) + sumA(1,i+1,m);
+
+	ans = max(ans, *max_element(ALL(dp)));
+
+	FOR (row, 2, n) {
+		vector<int> ndp(m+1);
+		ndp[0] = A[row][m];
+		FOR (i,1,m) ndp[i] = sumB(row,1,i) + sumA(row,i+1,m);
+
+		FOR (i,1,m) dp[i] = max(dp[i], dp[i-1]);
+
+		ndp[0] += dp[0];
+		FOR (i,1,m) {
+			ndp[i] += dp[i];
+		}
+
+		dp = ndp;
+		ans = max(ans, *max_element(ALL(dp)));
+	}
+
+	cout << ans << '\n';

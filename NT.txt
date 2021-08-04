@@ -1,0 +1,212 @@
+# TODO
+1. GCD and LCM
+--> std::c++ functions
+
+2. Factorization
+--> N integer given
+--> O(root(N)) -> finding all divisors
+= N = a.b, a, b >= 1
+min(a, b) <= root(N), smaller = a = [1, root(N)]
+for each a in [1, root(N)]:
+	N = a.b
+	N % a==0:
+		b = N / a
+		a, b one possible answer to a.b = N
+
+
+--> O(hello(N)) -> prime factorize
+N = 9.25 = 37
+for a in range(2, root(N)):
+	if N % a == 0:
+		exp = 0
+		while N % a == 0:
+			exp++
+			N /= a
+N > 1:
+	
+	N = a1^exp1 . a2^exp2 ... remain_N
+
+--> Sieve -- prime[N] in O(Nlog(N)) ->
+			N upto 10^7
+			(fill all true)
+p = 2, not prime = 4, 6, 8, 10, ..
+p = 3, not prime = 6, 9, 12, 15, ...
+p = 5, not prime = 10, 15, 20, ..
+
+for p = 2 to N:
+	if prime[p]:
+		for m = 2*p; m <= N; m += p:
+			prime[m] = false
+
+p = 2 --> m = 4, 6, 8, .. N --> N / 2
+p = 3 --> m = 3, 6, ...     --> N / 3
+..
+..
+sum(N / i) i >= 2 ==> O(NlogN)
+Total = N / 2 + N / 3 + N / 4 ...
+      = O(N log (N) log(N))
+
+--> spf = smallest prime factor
+O(NlogN) for all i 1 to N, find spf[i]
+N upto 10^7
+N = 3^5 . 5^7 . 11^2
+spf(N) = 3
+
+How to find ?
+
+N = 2 --> 2*k --> N < 2*k --> 2 is spf
+
+p = 2, multiples (4, 6, 8, 10) --> spf() = 2
+p = 3, multiples (6, 9, 12..) --> spf() = 3
+p = 5, ...
+spf[i]
+
+for p = 2 to N:
+	if prime[p]:
+		spf[p] = p
+		for m = 2*p; m <= N; m += p:
+			prime[m] = false
+			spf[m] = p
+
+
+--> for all N <= 10^7 --> O(Nlog(N)log(N))
+--> Using spf, N --> O(log(N)) prime factorize
+
+3. Prime factorization
+4. Divisors + counting
+--> How to count divisors from prime factorization
+
+Q. N = p1^a1 . p2^a2 .... pk^ak
+count divisors of N.
+a[i] >= 10^9
+N = 2^7. 5^4
+d is divisor of N
+
+d = p1^b1 . p2^b2 . ... pk^bk
+	b1 <= a1
+	b2 <= a2
+	..
+	bk <= ak
+
+number of solutions to (b1, b2, .., bk)
+0 <= b[i] <= a[i]
+b[1] = [0, 1, 2, .. a[i]] --> a[i] + 1
+b[2] = ..
+
+solutions = (a[1] + 1) * (a[2] + 1) * .. ()
+number of divisors of N
+
+--> Counting divisors given prime factorization
+
+
+5. Sieve + SPF
+6. Modular Arithmetics
+7. Fast exponentiation
+
+M = 10^9
+500 ^ M % mod
+O(M)
+
+in O(log(M))
+How ? 
+
+500^(12) --> 12 = 1100 -> M --> binary form
+							--> log(M) length
+							--> len(M) - 30
+500^(4 + 8)
+500^4. 500^8
+
+500^M --> 500 ^(2^0 + 2^1 + ... + )
+
+500^1 = 500
+500^2 = (500^1) ^ 2
+
+500^x = (500^(x / 2)) ^ 2
+
+
+8. Project Euler
+9. HackerEarth Maths section
+10. 
+
+(i, j) --> i + j is prime
+0 <= i, j < N
+
+i + j = prime--> (10^5)
+(0 to N)
+j = p - i if j in [0, N) ans++
+
+i+j <= 2*N
+
+mat[N][N] --> mat[i][j] = i + j
+
+0 1 2 3 4 ... N-1
+1 2 3 4 5 ... N
+2 3 4 ........N+1
+
+			  2*N-2
+
+query(L, R) - count primes numbers in [L, R]
+prefix sums
+1. p[i] = 1 means prime else 0 <-- sieve
+2. prefix sums of p[i]
+3. [L, R] - p[R] - p[L-1]
+
+
+O(1) O(logN) for each testcase
+precomputation
+
+O(root(N))
+N --> root(N) - finding all divisors
+root(N) divisors
+pairwise multiplication
+
+O(T. root(N))
+
+1 2 3 4 5
+sum = 0
+1 * sum
+sum += 1
+2 * sum
+sum += 2
+
+4 * (1 + 2 + 3) 
+
+(a + b + c + d + ... ) ^ 2 =
+a^2 + b^2 + c^2 + ....
++ 2 * (a * b + a * c + b * c + .... )
+
+sumofdivisors = sod
+divisors square sum = sdd
+
+sod^2 = sdd + 2 * x
+x = (sod^2 - sdd) / 2
+
+sod[i] - sum of divisors of i for all i <= 10^7
+sdd[i] - sum of square of divisors...
+
+Find out ?
+
+1 is divisor of which numbers?
+1 2 3 4 ... N
+2 is divisor of -//- ?
+2 4 6 8 ... N
+
+i is divisor ?
+i , 2i, 3i, ...
+
+for i in [1, N]:
+	for j = i; j <= N; j += i:
+		sod[j] += i
+		sdd[j] += i * i
+
+N / 1 + N / 2 + N / 3 + ...
+O(N log N)
+
+
+
+
+
+
+
+
+

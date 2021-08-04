@@ -1,0 +1,27 @@
+{
+   "@verified": "yes",
+   "folder": "images",
+   "filename": "raccoon-1.jpg",
+   "path": "/Users/datitran/Desktop/raccoon/images/raccoon-1.jpg",
+   "source": {
+      "database": "Unknown"
+   },
+   "size": {
+      "width": "650",
+      "height": "417",
+      "depth": "3"
+   },
+   "segmented": "0",
+   "object": {
+      "name": "raccoon",
+      "pose": "Unspecified",
+      "truncated": "0",
+      "difficult": "0",
+      "bndbox": {
+         "xmin": "81",
+         "ymin": "88",
+         "xmax": "522",
+         "ymax": "408"
+      }
+   }
+}

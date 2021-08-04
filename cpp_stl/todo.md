@@ -1,0 +1,8 @@
+- generic type
+- capacity
+- size
+- front
+- back
+- operator []
+- sort
+- operator =
