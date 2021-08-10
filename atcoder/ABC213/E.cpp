@@ -52,7 +52,8 @@ int32_t main() {
 	Q.push_back(make_pair(1, 1));
 
 	while (!Q.empty()) {
-		auto [x, y] = Q.front();
+		int x = Q.front().first;
+		int y = Q.front().second;
 		Q.pop_front();
 		if (vis[x][y]) continue;
 		vis[x][y] = true;
