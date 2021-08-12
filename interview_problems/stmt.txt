@@ -1,0 +1,19 @@
+1)You are given an Array of N positive intergers. Your task is to convert this array into a gifted array in minimum number of steps. Gifted array is defined as an array in which each index i in range (2 <= i <= N). satisfies the condition A[i] — A[i-1] = 1. In one step you can select any index and either increase or decrease the value at the selected index by 1.
+
+Note : You aren't allowed to rearrange the order of elements in the array.
+
+input: an integer N then n numbers
+
+constraint: 1 <= N <=10^5 1 <= A[i] <= 10^5
+
+6 13 17 13 6 11 11
+
+output 6+9+4+4+0+1 = 24
+
+5 3 2 5 4 6
+
+output 8
+
+5 9 11 15 25 21
+
+output = 20
