@@ -47,7 +47,16 @@ void hello() {
 		int u;
 		cin >> u;
 		f.insert(u);
-		int val = f.begin();
+		int val = *f.begin();
+		cout << val++ << endl;
+	}
+}
+
+void Main() {
+	int T;
+	cin >> T;
+	FOR (i,1,T) {
+		cout << "HELLO WORLD\n";
 	}
 }
 
