@@ -1,6 +1,6 @@
 import numpy as np
 
-n = int(input())
+n = 10
 
 ans = 0
 
