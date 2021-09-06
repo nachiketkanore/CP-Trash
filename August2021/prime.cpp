@@ -38,6 +38,11 @@ int solve(char* s, int n) {
 	return ans;
 }
 
+void get_best() {
+	int n;
+	cin >> n;
+}
+
 int main() {
 	srand(time(0));
 	int T = 100000;
