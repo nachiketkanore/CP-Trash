@@ -15,7 +15,7 @@ Created: Friday 20 November 2020 01:49:55 PM IST
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define F0R (i,R) for (int i = 0; i < R; i++)
+#define F0R(i,R) for (int i = 0; i < R; i++)
 #define FOR(i,L,R) for(int i = (L); i <= (R); i++)
 using namespace std;
 
@@ -51,7 +51,7 @@ void solve() {
 	cin >> n;
 	vector<int> a(n);
 	F0R (i,n) cin >> a[i];
-	sort(ALL(a));
+	sort(a.begin(), a.end());
 	for (int i = 1; i < n; i++) {
 		a[i] += a[i-1];
 	}
