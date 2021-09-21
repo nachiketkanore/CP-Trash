@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 
 // currently only taking 'int',
 // later change to 'T' type
@@ -8,12 +9,12 @@ class vector {
 		int N = 0;
 		int* A = nullptr;
 	public:
-		vector(int _N, int default = 0) {
+		vector(int _N, int default_value = 0) {
 			assert(_N >= 0);
 			N = _N;
 			A = new int[N];
 			for (int i = 0; i < N; i++) {
-				A[i] = default;
+				A[i] = default_value;
 			}
 		}
 
@@ -30,13 +31,13 @@ class vector {
 			for (int i = 0; i < N; i++) {
 				for (int j = i + 1; j < N; j++) {
 					if (A[i] > A[j]) {
-						swap(A[i], A[j]);
+						std::swap(A[i], A[j]);
 					}
 				}
 			}
 			if (!ascending) {
-				for (int i = 0; j = N - 1; i < j; i++, j--)
-					swap(A[i], A[j]);
+				for (int i = 0, j = N - 1; i < j; i++, j--)
+					std::swap(A[i], A[j]);
 			}
 		}
 
@@ -52,3 +53,8 @@ class vector {
 			return yes;
 		}
 };
+
+int main() {
+	std::cout << "OK COMPILATION\n";
+	return 0;
+}
