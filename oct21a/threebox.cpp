@@ -1,6 +1,6 @@
 /**
- *	Author: Nachiket Kanore
- *	Created: Wednesday 29 September 2021 01:00:54 PM IST
+ *    Author: Nachiket Kanore
+ *    Created: Wednesday 06 October 2021 04:02:45 PM IST
 **/
 #include <iostream>
 #include <cstdio>
@@ -27,4 +27,17 @@ template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
 template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
 
 int32_t main() {
+	int T;
+	cin >> T;
+	while (T--) {
+		int A, B, C, D;
+		cin >> A >> B >> C >> D;
+		if (A + B + C <= D) {
+			cout << "1\n";
+		} else if (A + B <= D || A + C <= D || B + C <= D) {
+			cout << "2\n";
+		} else {
+			cout << "3\n";
+		}
+	}
 }

@@ -52,11 +52,10 @@ template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
  
 const int N = 2e5 + 5, inf = 1e18;
 
-void solve() {
-	cout << "HELLO WORLD\n";
-	{
-		
-	}
+bool solve() {
+	int x, y;
+	cin >> x >> y;
+	return "nachiket";
 }
 
 int32_t main() {
