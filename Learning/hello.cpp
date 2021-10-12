@@ -27,12 +27,38 @@ struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
 template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
 template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
 
-vector<int> my_func(int n) {
-	return {n};
+vector<int> follow(int when) {
+	int n;
+	cin >> n;
+	return {};
+}
+
+void test() {
+	int T = 20;
+	while (T--) {
+		cout << "[ { {nachiket} } ]" << 20 - T << endl;
+	}
+}
+
+vector<int> my_func() {
+	vector<int> ret = { 21 };
+	ret.begin()++;
+	return {ret.back()};
+}
+
+void Test() {
+	int N;
+	cin >> N;
+	while (N--) {
+		int u;
+		cin >> u;
+		cout << __builtin_popcountll(u) << '\n';
+	}
 }
 
 int32_t main() {
-	vector<int> (*my_func_ptr)(int);
+	Test();
+	vector<int> (*my_func_ptr)();
 	my_func_ptr = my_func;
 	printf("address = %p\n", my_func_ptr);
 	cout << my_func_ptr;

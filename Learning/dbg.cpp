@@ -13,7 +13,17 @@ public:
 	}
 };
 
+int T = 20;
+
+void hello_world() {
+	cout << "HELLO WORLD\n";
+	return;
+}
+
 int32_t main() {
+	for (int i = 0; i < 100; i++) {
+		cout << i << endl;
+	}
 	int val = 21;
 	see(val);
 	school abc;

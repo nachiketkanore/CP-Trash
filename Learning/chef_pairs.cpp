@@ -45,6 +45,9 @@ void dfs(int i, int p, int d){
         }
     }
 }
+void main() {
+
+}
 signed main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);

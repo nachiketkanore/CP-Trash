@@ -17,16 +17,31 @@ struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
 template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
 template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
 
+void test() {
+	int X, Y, Z;
+	cin >> X >> Y >> Z;
+	cout << X * Y + Z << '\n';
+}
+
 int32_t main() {
 	srand(time(0));
-	int T = 10;
-	cout << T << '\n';
-	while (T--) {
-		int N = rand() % 20 + 1;
-		cout << N << '\n';
-		while (N--) {
-			cout << rand() % 2000 + 1 << ' ';
+	int N = rand() % 20 + 1, Q = rand() % 20 + 1;
+	cout << N << ' ' << Q << '\n';
+	FOR (i,1,N) {
+		cout << rand() % 100000 + 1 << ' ';
+	}
+	cout << '\n';
+	while (Q--){ 
+		int type = rand() % 2 + 1;
+		cout << type << ' ';
+		if (type == 1) {
+			int L = rand() % N + 1, R = rand() % N + 1, V = rand() % 1000;
+			if (L > R) swap(L, R);
+			cout << L << ' ' << R << ' ' << V << '\n';
+		} else {
+			int L = rand() % N + 1, R = rand() % N + 1, V = rand() % 1000;
+			if (L > R) swap(L, R);
+			cout << L << ' ' << R << '\n';
 		}
-		cout << '\n';
 	}
 }

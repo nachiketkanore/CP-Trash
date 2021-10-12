@@ -26,6 +26,15 @@ T umax(T v) {
   return v;
 }
 
+void Main() {
+	int N;
+	cin >> M;
+}
+
+void tests() {
+	int N; cin >> N; int A[N]; F0R (i,N) cin >> A[i];
+}
+
 void test2() {
 	int n;
 	cin >> n;

@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 
+int32_t get_int() {
+	int hello = 21;
+	return hello;
+}
+
 int* test() {
-	int val = 21;
-	val = 222;
-	val++;
-	return &val;
 	// compiler throws warning for this one 
+	int val = 32;
+	return nullptr;
 }
 
 // works different with static variables

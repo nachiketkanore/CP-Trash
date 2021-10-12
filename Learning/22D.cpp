@@ -52,7 +52,7 @@ int32_t main() {
 	cin >> n;
 	vector<pair<int,int>> segs(n);
 	vector<int> answer;
-	for (auto &[x, y]: segs) {
+	for (pair<int,int> &[x, y]: segs) {
 		cin >> x >> y;
 		if (x > y) swap(x, y);
 		x += OFFSET;
@@ -61,7 +61,7 @@ int32_t main() {
 	sort(ALL(segs), [&](const pair<int,int> &one, const pair<int,int> &two){ 
 		return one.second < two.second;
 	});
-	for (auto &[x, y]: segs) {
+	for (pair<int,int> &[x, y]: segs) {
 		bool taken = (qry(y) - qry(x - 1)) > 0;
 		if (!taken) {
 			add(y);

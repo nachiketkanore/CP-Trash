@@ -26,6 +26,32 @@ struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
 template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
 template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
 
+struct Hello {
+	array<int,3> f;
+	int N;
+	Hello(int N): N(N) {
+		f.at(N);
+	}
+};
+
+void hello_world() {
+	Hello nachiket(21);
+	nachiket.f.begin();
+}
+
+void test() {
+	static const int MOD = 1e9 + 7;
+	int N;
+	cin >> N;
+	int A[N]; F0R (i,N) cin >> A[i];
+	for (int i = 0; i < N; i++) {
+		if (i > 0)
+			A[i] += A[i-1];
+		if (A[i] >= MOD) 
+			A[i] -= MOD;
+	}
+}
+
 int32_t main() {
 	int T;
 	cin >> T;

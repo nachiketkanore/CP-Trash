@@ -29,6 +29,7 @@ void test2() {
 	}
 }
 
+#define N 20
 vector<int> adj[N];
 
 void test() {
