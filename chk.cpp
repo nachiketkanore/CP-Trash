@@ -16,6 +16,20 @@ template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int inf = 1e18;
 const int N = 5e5 + 5;
+constexpr char en = '\n';
+
+struct Data {
+	int N;
+	Data(int N): N(N) {}
+};
+
+int hello() {
+	vector<Data> A { Data(20) };
+	for (Data x: A) {
+		cout << x.N << en;
+	}
+	return 0;
+}
 
 bool check_prime(int u) {
 	if (u < 2) return false;

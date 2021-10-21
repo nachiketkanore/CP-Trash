@@ -31,9 +31,13 @@ class Name{
 	}
 };
 
-int32_t main() {
-	{
+int times;
 
-	}
+void run() { times++; }
+
+int32_t main() {
+	int T;
+	for (cin >> T; T--; run());
+	cout << times << '\n';
 }
 
