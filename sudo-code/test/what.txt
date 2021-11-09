@@ -1,0 +1,4 @@
+was testing where my solution was wrong
+--> overflow issue 
+--> python worked
+--> couldn't figure out actual answer could get upto 1e27
