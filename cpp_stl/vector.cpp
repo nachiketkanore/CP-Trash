@@ -52,6 +52,21 @@ class vector {
 			}
 			return yes;
 		}
+		int* copy() {
+			int *ret = new int[N];
+			for (int i = 0; i < N; i++) {
+				ret[i] = A[i];
+			}
+			return ret;
+		}
+		int* slice(int L, int R) {
+			assert(0 <= L && L <= R && R < N);
+			int* ret = new int[R - L + 1];
+			for (int i = L; i <= R; i++) {
+				ret[i-L] = A[i];
+			}
+			return ret;
+		}
 };
 
 int main() {
