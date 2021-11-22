@@ -1,0 +1,227 @@
+22nd November 2021
+
+Interviewer: Krishna B
+Candidate: NACHIKET KANORE
+
+Timelines plan: 
+Initial discussion: 5 mins
+Ques1: 25 mins
+Ques2: 25 mins
+Questions: 5 mins
+
+ 
+ Q1 :
+ 
+You are an employee at Amazon and each employee at Amazon is identified by a productivity factor. 
+
+Your boss assigns you an array of N tasks, and each of the tasks are identified by difficulty-level difficulty[i].
+
+The tasks are required to be completed within a deadline of D days. 
+
+What is the minimum productivity factor that you should possess, in order to be able to finish all of the tasks within D days? 
+
+NOTE: In a day, You cannot consume more tasks than your productivity level's limit. 
+NOTE: You cannot split the same task across multiple days. 
+
+Example test-case(s):
+
+Difficulty: [1, 2, 3, 4, 5] 
+D: 1
+MinimumProductivityFactor required = 15
+
+Difficulty: [1, 2, 3, 1, 1, 1]
+D: 3
+MinimumProductivityFactor required = 3
+
+Difficulty: [1, 2, 3, 1, 4, 1]
+D: 4
+MinimumProductivityFactor required = 4
+
+
+
+Observations:
+MinimumProductivityFactor = x, x + 1, x + 2, ... 
+1 2 ... x x + 1 
+max(A) ... sum(A)
+0 0 0   1 1 1 1
+
+can answer be x ?
+
+
+log(sum(A)) * O(N)
+
+
+
+int MinimumProductivityFactor(vector<int> tasks, int D) {
+    const int N = tasks.size();
+    int mx = task[0], sum = 0;
+    for (int i = 0; i < N; i++) {
+        mx = max(mx, tasks[i]);
+        sum += tasks[i];
+    }
+    int low = mx, high = sum;
+    int answer = -1;
+    
+    auto possible = [&](int x) {
+        int days = 0;
+        int curr_sum = 0;
+        for (int i = 0; i < N; i++) {
+            if (curr_sum + tasks[i]) {
+                curr_sum += tasks[i];
+            } else {
+                days++;
+                curr_sum = tasks[i];
+            }
+        }
+        days++;
+        return days <= D;
+    };
+           // 4 5 6 7 8   12
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (possible(mid)) {
+            answer = mid;
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+    
+    assert(answer != -1);
+    return answer;
+}
+
+
+// tests
+Difficulty: [1, 2, 3, 1, 4, 1]
+D: 4
+
+// time complexity
+O(sum(A) - max(A)) * O(N)
+// space
+O(1)
+
+
+
+
+
+
+Q3 : Given a BST and value K, find a pair of elements whose sum is K.
+
+A contains a sequence of inorder traversal of BST
+
+// approach 1: naive
+A: <- BST
+A[i] + A[j] = K
+O(N^2)
+
+// approach 2: optimized
+A[j] = K - A[i]
+O(N * log(N))
+
+// 
+A[i] is some node in BST
+find some node in BST = K - node_value
+O(N * height(N))
+
+
+2 4 5 7 9 10, K = 11
+i
+           j
+
+A[i] is sorted in ascending
+and K - A[i] is sorted in descending
+Keep two pointers for both
+for first from left to right
+for second, from right to left
+in worst case, whole BST will be traversed 2 times
+Time complexity: O(N)
+Space complexity: O(1)
+
+Q2 : 
+
+ You are a professional robber planning to rob houses along a street. 
+ Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them 
+ is that adjacent houses have security systems connected and it will automatically contact the police 
+ if two adjacent houses were broken into on the same night.
+ Given an integer array nums representing the amount of money of each house, 
+ return the maximum amount of money you can rob tonight without alerting the police.
+
+Input  : [6, 7, 1, 3, 8, 2, 4], [6, 7, 1, 3, 8, 2, 4]
+Output : 19
+
+Input  : [5, 3, 4, 11, 2]
+Output : 16
+
+
+
+// observations:
+ A1 A2 A3 ... AN
+ select subset
+ S1 S2 .. Sk
+ abs(S[i] - S[j]) > 1
+
+// Approach 1: generate all subsets
+    O(2^N)
+
+// dp[i] = 2 choices
+//         = a[i] + dp[i-2]
+//         = dp[i-1]
+// dp[i] = max(dp[i-1], a[i] + dp[i-2])
+
+
+// time complexity: O(N)
+// space complexity: O(N) O(1)
+
+
+int maximumRob(vector<int> amounts) {
+    const int N = amounts.size();
+    vector<int> dp(N, 0);
+    dp[0] = a[0];
+    
+    for (int i = 1; i < N; i++) {
+        int c1 = dp[i-1];
+        int c2 = 0;
+        if (i - 2 >= 0) {
+            c2 = a[i] + dp[i-2];
+        }
+        dp[i] = max(c1, c2);
+    }
+    return dp[N-1];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
