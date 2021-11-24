@@ -1,3 +1,5 @@
+# Round 1 interview:
+
 22nd November 2021
 
 Interviewer: Krishna B
@@ -8,7 +10,6 @@ Initial discussion: 5 mins
 Ques1: 25 mins
 Ques2: 25 mins
 Questions: 5 mins
-
  
  Q1 :
  
@@ -97,12 +98,9 @@ Difficulty: [1, 2, 3, 1, 4, 1]
 D: 4
 
 // time complexity
-O(sum(A) - max(A)) * O(N)
+O(log(sum(A) - max(A))) * O(N)
 // space
 O(1)
-
-
-
 
 
 
@@ -190,38 +188,10 @@ int maximumRob(vector<int> amounts) {
     return dp[N-1];
 }
 
+# Round 2 interview:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. QnA with behavioural and situational task
+2. Arrange linked list alternating from front and back
+   Expected O(N) time and O(1) Space
+3. Max length subarray with even sum
+   Expected O(N) time and O(1) Space
