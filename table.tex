@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{array}
+\usepackage{chngpage}
+
+\setlength{\tabcolsep}{1em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.8}% for the vertical padding
+
+\begin{document}
+\begin{center}
+
+\begin{adjustwidth}{-1.5in}{-.4in} 
+\begin{tabular}{ | m{0.5cm} | m{2cm}| m{3cm} | m{5cm}| m{5cm} | } 
+  \hline
+No &
+Paper Title &
+Problem &
+Methodology &
+Usage/ Outcome
+\\
+  \hline
+1
+	&
+A Survey of Deep Learning-based Object Detection
+ 05 September 2019
+	&
+How to achieve high accuracy and high precision real time systems for object detection technology
+	& 
+1. R-CNN - Region based CNN \newline
+2. Fast R-CNN \newline
+3. Faster R-CNN \newline
+4. Mask R-CNN \newline
+5. YOLO: Multiple versions emerged \newline
+	& 
+ The typical baselines enhance accuracy by
+ extracting richer features of objects and adopting multi-level
+ and multi-scale features for different sized object detection.
+ IDx-DR, a diabetic retinopathy detection achieved
+ an accuracy of more than 87.4\%
+ \\
+  \hline
+  2
+&
+Long Short-Term Memory Recurrent Neural Network Architectures
+for Large Scale Acoustic Modeling
+5 Feb 2014
+&
+How to improve the accuracy of large scale acoustic modelling in speech recognition than conventional RNNs
+&
+1. Long Short-Term Memory (LSTM) is a specific recurrent neural network (RNN) architecture that was designed to model temporal sequences and their long-range dependencies more accurately than conventional RNNs \newline
+2. LSTM RNNs are more effective than DNNs and conventional RNNs for acoustic modeling, considering moderately-sized models trained on a single machine \newline
+&
+LSTMP RNN architecture outperforms standard LSTM networks and DNNs and makes more effective use of the model parameters by addressing the computational efficiency needed for training large networks. In comparison, our best DNN models with 85M parameters give 11.3\% at the same beam and training takes a few weeks.
+\\ 
+
+  \hline
+  3
+&
+Shot-Net: A Convolutional Neural Network for Classifying Different Cricket Shots
+20 July 2019
+&
+Classify 6 types of Cricket shots when input is given as an image of a shot played using CNN.
+&
+13 layered Convolutional Neural Network referred as “Shot-Net” in order to classifying six categories of cricket shots
+&
+Classified 6 types of cricket shots using three convolution layer, three max pooling layer, four
+dropout layer, one ﬂatten and two dense layers. classiﬁer achieved a decent accuracy, which is 80\% \newline
+\\
+  \hline
+\end{tabular}
+
+
+\pagebreak
+
+\begin{tabular}{ | m{0.5cm} | m{2cm}| m{3cm} | m{5cm}| m{5cm} | } 
+  \hline
+No &
+Paper Title &
+Problem &
+Methodology &
+Usage/ Outcome
+\\
+  \hline
+ 4
+	&
+Deep Learning for Video
+Classification and
+Captioning
+Publication 
+22 Feb 2018
+	&
+How to achieve better accuracy when video is given as input to model instead of image.
+	&
+1. Loop over all frames in the video file \newline
+2. For each frame, pass the frame through the CNN \newline
+3. Obtain the predictions from the CNN \newline
+4. Maintain a list of the last K predictions \newline
+5. Compute the average of the last K predictions and choose the label with the largest corresponding probability. (K is a hyperparameter) \newline
+	&
+Deep Learning in Video Classification is to derive robust and discriminative features representations from raw data through exploiting massive videos with the aim to achieve effective and efficient recognition which could serve as a fundamental component in Video captioning.
+ \\
+  \hline
+ 5
+	&
+DeepPose: Human Pose Estimation via Deep Neural Networks
+20 Aug 2014
+	&
+How to locate Human joints in order to perform Human Pose Estimation using Deep Neural Networks.
+	&
+1. DNN is capable of capturing the full context of each body joint – each joint regressor uses the full image as a signal. \newline
+2. The location of each body joint is regressed to using as an input the full image and a 7-layered generic convolutional DNN. \newline
+	&
+Formulation of the problem as DNN-based regression to joint coordinates and the presented cascade of such regressors helps capturing context and reasoning
+about pose in a holistic manner. The Deep Pose method achieves an average accuracy of 69\% better than other methods. \newline
+\\ 
+
+  \hline
+ 6
+	&
+An Introduction to Convolutional Neural Networks
+2 Dec 2015
+	&
+How best to structure the network in most image analysis tasks
+	&
+1. CNNs are composed of three types of layers. \newline
+2. These are convolutional layers, pooling layers and fully-connected layers.  \newline
+3. When these layers are stacked, a CNN architecture has been formed.  \newline
+	&
+CNN allows for a much simpler network architecture to be set up as compared to ANN. \newline
+\\
+  \hline
+\end{tabular}
+
+
+
+\end{adjustwidth}
+\end{center}
+\end{document}
+}
