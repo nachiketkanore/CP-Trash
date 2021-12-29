@@ -26,10 +26,19 @@ struct $ { $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
 template <class T> bool cmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
 template <class T> bool cmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
 
+int dp[8][11][25][2];
+
 int32_t main() {
   string S;
   while (cin >> S) {
     const int N = S.size();
+    memset(dp, -1, sizeof(dp));
+
+    auto hash = [](char ch) {
+        if (ch == 'a') return 10;
+        assert('0' <= ch && ch <= '9');
+        return ch-'0';
+    };
 
     function<int(int, char, int, bool)> go = [&](int id, char x_value, int val_mod, bool leading_zero) {
         if (id == N) {
@@ -38,7 +47,9 @@ int32_t main() {
             return 1;
         }
 
-        int ans = 0;
+        int &ans = dp[id][hash(x_value)][val_mod][leading_zero];
+        if (~ans) return ans;
+        ans = 0;
 
         if (S[id] == '_') {
             F0R (dig,10) {
