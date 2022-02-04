@@ -5,20 +5,26 @@
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
-static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+
+inline int rand(int l, int r){
+    static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+    std::uniform_int_distribution<int> uid(l, r); return uid(rng);
+}
 
 int32_t main() {
-	int T = 100;
+	int T = 10000;
 	cin >> T;
 	while (T--) {
-		int N; cin >> N;
+		int N = rand(2, 200);
+		cin >> N;
 		int B[N], cnt[2]; cnt[0] = cnt[1] = 0;
 		for (int i = 0; i < N; i++) {
+			B[i] = rand(0, 10000);
 			cin >> B[i];
 			B[i] %= 2;
 			cnt[B[i]]++;
 		}
-		if (cnt[0] >= 1 && cnt[1] >= 1) {
+		if (cnt[1] >= 1) {
 			vector<pair<int,int>> ans;
 			int got = 1e9;
 			for (int start = 0; start < 2; start++) {
@@ -74,6 +80,10 @@ int32_t main() {
 			}
 
 		} else {
+			// cout << "N = " << N << '\n';
+			// for (int i = 0; i < N; i++) {
+			// 	cout << B[i] << " \n"[i == N - 1];
+			// }
 			cout << "-1\n";
 		}
 	}
