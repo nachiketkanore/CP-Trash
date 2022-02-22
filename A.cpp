@@ -24,7 +24,7 @@ using namespace std;
 struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
 
 template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int _ = 1e5 + 5;
 int N, L[_], R[_];
