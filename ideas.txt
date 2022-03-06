@@ -1,0 +1,10 @@
+## idea
+ - simple website to explain code snippet
+ - take code snippet
+ - select range of lines --> add some explanation/ comments to it
+ - multiple such disjoint ranges of lines can be selected
+ - each one will have it's own explanations
+ - scroll through explanations --> highlights that specific part
+ - provide syntax highlighting for particular languages
+ - better UI
+ - pastebin ~ similar link creator
