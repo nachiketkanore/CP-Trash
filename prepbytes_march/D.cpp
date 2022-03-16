@@ -25,8 +25,8 @@ int32_t main() {
 				reds.push_back(A[i]);
 			}
 		}
-		sort(blues.begin(), blues.end());
-		sort(reds.begin(), reds.end());
+		sort(blues.begin(), blues.end()); // minus
+		sort(reds.begin(), reds.end());	  // plus
 		if (!reds.empty() && reds.back() > N) {
 			cout << "NO\n";
 			continue;
