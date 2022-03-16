@@ -12,7 +12,7 @@ using namespace std;
 struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
 
 template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
 
 const int inf = 1e18;
 const int N = 5e5 + 5;
@@ -22,7 +22,7 @@ struct mi {
 	using ll = long long;
 	ll v; explicit operator ll() const { return v; }
 	mi() { v = 0; }
-	mi(ll _v) { 
+	mi(ll _v) {
 		v = (-MOD < _v && _v < MOD) ? _v : _v % MOD;
 		if (v < 0) v += MOD;
 	}
