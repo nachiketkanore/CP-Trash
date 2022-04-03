@@ -1,44 +1,89 @@
-#include <bits/stdc++.h>
+#include "bits/stdc++.h"
+
+#define int long long
+#define sz(x) (int)(x.size())
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
-class UnionFind {
-	private:
-		int N, components;
-		vector<int> parent, rank;
-	public:
-		UnionFind(int N_) {
-			N = N_;
-			parent.resize(N+1);
-			rank.resize(N+1);
-			for (int i = 1; i <= N; i++) {
-				parent[i] = i;
-				rank[i] = 1;
-			}
-			components = N;
-		}
-		int find(int u) {
-			if (u == parent[u]) return u;
-			return parent[u] = find(parent[u]);
-		}	
-		bool unite(int u, int v) {
-			u = find(u), v = find(v);
-			if (u == v) return false;
-			if (rank[u] < rank[v]) swap(u, v);
-			parent[v] = u;
-			rank[u] += rank[v];
-			rank[v] = 0;
-			components--;
-			return true;
-		}
-		bool same(int u, int v) {
-			return find(u) == find(v);
-		}
-		int groupSize(int u) {
-			return rank[find(u)];
-		}
-};
+const int inf = 1e18;
 
-int main() {
+static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
 
-	return 0;
+inline int rand(int l, int r) {
+	std::uniform_int_distribution<int> uid(l, r);
+	return uid(rng);
+}
+
+void ARRAY(int n, int L, int R) {
+	cout << n << '\n';
+	FOR(i, 1, n) {
+		cout << rand(L, R) << " \n"[i == n];
+	}
+}
+
+void STRING(int n, char from, char to) {
+	assert(from <= to);
+	int L = from - 'a';
+	int R = to - 'a';
+	assert(L <= R);
+
+	FOR(i, 1, n) {
+		char ch = (char)('a' + rand(L, R));
+		cout << ch;
+	}
+	cout << ' ';
+}
+
+void TREE(int n) {
+	cout << n << '\n';
+
+	vector<pair<int, int>> edges;
+	for (int i = 2; i <= n; ++i) {
+		edges.emplace_back(rand(1, i - 1), i);
+	}
+
+	vector<int> perm(n + 1); // re-naming vertices
+	for (int i = 1; i <= n; ++i) {
+		perm[i] = i;
+	}
+	shuffle(perm.begin() + 1, perm.end(), rng);
+
+	shuffle(edges.begin(), edges.end(), rng); // random order of edges
+
+	for (pair<int, int> edge : edges) {
+		int a = edge.first, b = edge.second;
+		if (rand() % 2) {
+			swap(a, b); // random order of two vertices
+		}
+		cout << perm[a] << ' ' << perm[b] << '\n';
+	}
+}
+
+void QUERIES(int Q, int L, int R) {
+	cout << Q << "\n";
+	while (Q--) {
+		int QL = rand(L, R);
+		int QR = rand(L, R);
+		if (QL > QR)
+			swap(QL, QR);
+		cout << QL << " " << QR << "\n";
+	}
+}
+
+int32_t main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	STRING(rand(1, 20), 'a', 'z');
+	STRING(rand(1, 20), 'a', 'z');
+	STRING(rand(1, 20), 'a', 'z');
+
+	// int T = 20;
+	// cout << T << '\n';
+	// FOR(TC, 1, T) {
+	// 	int N = rand(1, 200);
+	// 	cout << N << '\n';
+	// 	FOR(i, 1, N) cout << rand(1, inf) << " \n"[i == N];
+	// }
 }

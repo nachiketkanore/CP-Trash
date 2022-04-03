@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo 'Compiling files'
-g++ -O2 -std=c++17 -o sol sol.cpp
-g++ -O2 -std=c++17 -o brute brute.cpp
+g++ -O2 -std=c++17 -o sol name.cpp
+g++ -O2 -std=c++17 -o brute name_brute.cpp
 g++ -O2 -std=c++17 -o gen gen.cpp
 echo 'Compilation done'
 
@@ -11,7 +11,7 @@ do
   ./gen > testcase
   ./brute < testcase > ans1
   ./sol < testcase > ans2
-  
+
   if diff -w ans1 ans2
   then
       echo $i OK
