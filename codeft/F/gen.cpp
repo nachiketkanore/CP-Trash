@@ -76,18 +76,18 @@ int32_t main() {
 	cin.tie(0);
 	cout.tie(0);
 
-	int N = rand(1, 100), M = 0;
+	int N = rand(1, 10), M = 0;
 	int mat[N + 1][N + 1];
 	vector<pair<int, int>> edges;
 	FOR(i, 1, N) {
 		FOR(j, 1, N) if (i != j) {
-			mat[i][j] = rand(0, 1);
+			mat[i][j] = rand(0, 10) > 7;
 			if (mat[i][j]) {
 				edges.push_back({ i, j });
 			}
 		}
 	}
-	cout << N << ' ' << sz(edges) << ' ' << rand(1, 400) << ' ' << rand(1, N) << '\n';
+	cout << N << ' ' << sz(edges) << ' ' << rand(0, 5) << ' ' << rand(N / 2, N) << '\n';
 	for (auto [u, v] : edges) {
 		cout << u << ' ' << v << '\n';
 	}

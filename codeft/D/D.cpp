@@ -18,7 +18,7 @@ bool dp[2][2][2][2005][2005];
 
 bool go(int x, char dx, int y, char dy, int who) {
 	if (x == y)
-		return true;
+		return who;
 	if (vis[who][dx == 'L'][dy == 'L'][x][y])
 		return dp[who][dx == 'L'][dy == 'L'][x][y];
 	vis[who][dx == 'L'][dy == 'L'][x][y] = true;

@@ -39,6 +39,10 @@ int32_t main() {
 	cin.tie(0);
 	memset(dp, -1, sizeof(dp));
 	cin >> N >> M >> K >> H;
+	if (K == 0) {
+		cout << "0\n";
+		return 0;
+	}
 	F0R(i, M) {
 		int u, v;
 		cin >> u >> v;
