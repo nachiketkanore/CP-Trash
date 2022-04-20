@@ -113,6 +113,15 @@ const int N = 505;
 mi dp[N][N], ndp[N][N], sum_dp[N][N];
 bool sum_dp_vis[N][N];
 
+inline mi compute_sum(int b, int s, int x) {
+	if (b < 0 || s < 0)
+		return mi(0);
+	if (sum_dp_vis[b][s])
+		return sum_dp[b][s];
+	sum_dp_vis[b][s] = true;
+	return sum_dp[b][s] = dp[b][s] + compute_sum(b - x, s - 1, x);
+};
+
 int32_t main() {
 	// turns out global arrays are much faster
 	// instead of multiple allocation / deallocation processes
@@ -129,18 +138,9 @@ int32_t main() {
 	}
 	FOR(i, 1, n - 1) {
 		F0R(j, bugs + 1) F0R(k, sum + 1) {
-			ndp[j][k]		 = 0;
-			sum_dp[j][k]	 = 0;
+			ndp[j][k] = 0;
 			sum_dp_vis[j][k] = false;
 		}
-		function<mi(int, int, int)> compute_sum = [&](int b, int s, int x) {
-			if (b < 0 || s < 0)
-				return mi(0);
-			if (sum_dp_vis[b][s])
-				return sum_dp[b][s];
-			sum_dp_vis[b][s]	= true;
-			return sum_dp[b][s] = dp[b][s] + compute_sum(b - x, s - 1, x);
-		};
 		FOR(b, 0, bugs) {
 			FOR(s, 0, sum) {
 				ndp[b][s] += compute_sum(b, s, a[i]);
