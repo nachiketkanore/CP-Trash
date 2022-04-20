@@ -4,7 +4,6 @@
  **/
 #include <bits/stdc++.h>
 
-#define int int64_t
 #define sz(x) (int)(x.size())
 #define ALL(x) (x).begin(), (x).end()
 #define F0R(i, R) for (int i = (0); i < (R); ++i)
@@ -109,7 +108,14 @@ struct mi {
 		return is;
 	}
 };
-void solve() {
+
+const int N = 505;
+mi dp[N][N], ndp[N][N], sum_dp[N][N];
+bool sum_dp_vis[N][N];
+
+int32_t main() {
+	// turns out global arrays are much faster
+	// instead of multiple allocation / deallocation processes
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 	int n, sum, bugs;
@@ -118,16 +124,15 @@ void solve() {
 	for (int& x : a) {
 		cin >> x;
 	}
-	// mi dp[bugs + 1][sum + 1];
-	vector<vector<mi>> dp(bugs + 1, vector<mi>(sum + 1));
 	for (int i = 0; i * a[0] <= bugs && i <= sum; i++) {
 		dp[i * a[0]][i] = 1;
 	}
 	FOR(i, 1, n - 1) {
-		// mi ndp[bugs + 1][sum + 1];
-		vector<vector<mi>> ndp(bugs + 1, vector<mi>(sum + 1));
-		vector<vector<bool>> sum_dp_vis(bugs + 1, vector<bool>(sum + 1));
-		vector<vector<mi>> sum_dp(bugs + 1, vector<mi>(sum + 1));
+		F0R(j, bugs + 1) F0R(k, sum + 1) {
+			ndp[j][k]		 = 0;
+			sum_dp[j][k]	 = 0;
+			sum_dp_vis[j][k] = false;
+		}
 		function<mi(int, int, int)> compute_sum = [&](int b, int s, int x) {
 			if (b < 0 || s < 0)
 				return mi(0);
@@ -139,9 +144,6 @@ void solve() {
 		FOR(b, 0, bugs) {
 			FOR(s, 0, sum) {
 				ndp[b][s] += compute_sum(b, s, a[i]);
-				/* for (int k = 0; k * a[i] <= b && s - k >= 0; k++) {
-					ndp[b][s] += dp[b - k * a[i]][s - k];
-				} */
 			}
 		}
 		F0R(j, bugs + 1) F0R(k, sum + 1) dp[j][k] = ndp[j][k];
@@ -149,22 +151,5 @@ void solve() {
 	mi ans = 0;
 	F0R(b, bugs + 1) ans += dp[b][sum];
 	cout << ans << '\n';
-}
-
-static void run_with_stack_size(void (*func)(void), size_t stsize) {
-	char *stack, *send;
-	stack = (char*)malloc(stsize);
-	send  = stack + stsize - 16;
-	send  = (char*)((uintptr_t)send / 16 * 16);
-	asm volatile("mov %%rsp, (%0)\n"
-				 "mov %0, %%rsp\n"
-				 :
-				 : "r"(send));
-	func();
-	asm volatile("mov (%0), %%rsp\n" : : "r"(send));
-	free(stack);
-}
-int32_t main() {
-	run_with_stack_size(solve, 1024 * 1024 * 240);
 	return 0;
 }
