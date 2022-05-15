@@ -22,14 +22,14 @@ struct Query {
 	}
 };
 
-int Q;
+const int _ = 5e5 + 5, LOG = 21;
+int Q, id_of[_], to[LOG][_];
 vector<int> A;
 vector<Query> queries;
 
 int32_t main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	// not optimal: will optimize later
 	cin >> Q;
 	while (Q--) {
 		int type, x, y;
@@ -41,31 +41,31 @@ int32_t main() {
 			queries.push_back(Query(sz(A), x, y));
 		}
 	}
+	memset(to, -1, sizeof(to));
+	memset(id_of, -1, sizeof(id_of));
+	int j = sz(queries) - 1;
 	for (int i = sz(A) - 1; i >= 0; i--) {
 		int len = i + 1;
-		int val = A[i];
-		int lo = 0, hi = sz(queries) - 1;
-		int start = -1;
-		while (lo <= hi) {
-			int mid = (lo + hi) / 2;
-			if (queries[mid].len >= len) {
-				start = mid;
-				hi = mid - 1;
-			} else {
-				lo = mid + 1;
+		while (j >= 0 && queries[j].len >= len) {
+			Query add = queries[j];
+			int nxt_id = id_of[add.y];
+			to[0][j] = nxt_id;
+			for (int jump = 1; jump < LOG; jump++) {
+				if (to[jump - 1][j] >= 0)
+					to[jump][j] = to[jump - 1][to[jump - 1][j]];
 			}
+			id_of[add.x] = j;
+			j--;
 		}
-		if (start == -1)
+		int curr_id = id_of[A[i]];
+		if (curr_id < 0)
 			continue;
-		for (int id = start; id < sz(queries); id++) {
-			Query q = queries[id];
-			if (q.len < len)
-				continue;
-			if (q.x == val) {
-				val = q.y;
+		for (int jump = LOG - 1; jump >= 0; jump--) {
+			if (to[jump][curr_id] >= 0) {
+				curr_id = to[jump][curr_id];
 			}
 		}
-		A[i] = val;
+		A[i] = queries[curr_id].y;
 	}
 	for (int x : A) {
 		cout << x << " ";
