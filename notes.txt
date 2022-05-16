@@ -1,0 +1,33 @@
+a[1] a[2] a[3] ... a[n]
+
+pref[1] = a[1]
+pref[2] = a[1] + a[2]
+pref[3] = a[1] + a[2] + a[3]
+
+pref[n] = a[1] + a[2] + .. + a[n]
+
+say operation was performed on the indices 2 and 3
+that is a[2] -= 1, a[3] += 1
+then the prefixes become as follows:
+
+pref[1] = a[1]									<-- same
+pref[2] = a[1] + a[2]-1							<-- not same -> pref[2] -> pref[2] - 1
+pref[3] = a[1] + a[2]-1 + a[3]+1				<-- same
+pref[4] = a[1] + a[2]-1 + a[3]+1 + a[4]			<-- same
+pref[5] = a[1] + a[2]-1 + a[3]+1 + a[4] + a[5]	<-- same
+
+pref[n] = a[1] + a[2]-1 + .. + a[n]
+
+Otherways operation effect:
+a[2] += 1, a[3] -= 1
+
+pref[1] = a[1]									<-- same
+pref[2] = a[1] + a[2]+1							<-- not same -> pref[2] -> pre[f2] + 1
+pref[3] = a[1] + a[2]+1 + a[3]-1				<-- same
+pref[4] = a[1] + a[2]+1 + a[3]-1 + a[4]			<-- same
+pref[5] = a[1] + a[2]+1 + a[3]-1 + a[4] + a[5]	<-- same
+
+pref[n] = a[1] + a[2]-1 + .. + a[n]
+
+Conclusion: Applying one operation on i and j such that i + 1 == j,
+changes only one index of the prefix sum array
