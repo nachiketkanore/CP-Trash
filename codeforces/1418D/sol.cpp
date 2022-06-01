@@ -2,7 +2,12 @@
  *    Author: Nachiket Kanore
  *    Created: Wednesday 01 June 2022 12:38:44 AM IST
  **/
-#include "bits/stdc++.h"
+#include <array>
+#include <iostream>
+#include <set>
+#include <vector>
+#define NDEBUG
+#include <assert.h>
 using namespace std;
 
 #ifdef DEBUG
@@ -17,86 +22,108 @@ using namespace std;
 #define F0R(i, R) for (int i = (0); i < (R); ++i)
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
+struct Points {
+	set<int> pts;
+	multiset<int> gaps;
+
+	int find_small(int x) {
+		if (sz(pts) == 0)
+			return -1;
+		auto it = pts.lower_bound(x);
+		if (it == pts.begin())
+			return -1;
+		--it;
+		return *it;
+	}
+
+	int find_large(int x) {
+		if (sz(pts) == 0)
+			return -1;
+		auto it = pts.upper_bound(x);
+		if (it == pts.end())
+			return -1;
+		return *it;
+	}
+
+	void add_point(int x) {
+		pts.insert(x);
+
+		int L = find_small(x), R = find_large(x);
+
+		if (~L && ~R) {
+			int rem = R - L;
+			assert(gaps.count(rem));
+			gaps.erase(gaps.find(rem));
+			gaps.insert(x - L);
+			gaps.insert(R - x);
+		} else if (~L) {
+			gaps.insert(x - L);
+		} else if (~R) {
+			gaps.insert(R - x);
+		} else {
+			assert(sz(pts) == 1);
+		}
+	}
+
+	void remove_point(int x) {
+		int L = find_small(x), R = find_large(x);
+
+		if (~L && ~R) {
+			assert(gaps.count(x - L));
+			gaps.erase(gaps.find(x - L));
+			assert(gaps.count(R - x));
+			gaps.erase(gaps.find(R - x));
+			gaps.insert(R - L);
+		} else if (~L) {
+			assert(gaps.count(x - L));
+			gaps.erase(gaps.find(x - L));
+		} else if (~R) {
+			assert(gaps.count(R - x));
+			gaps.erase(gaps.find(R - x));
+		} else {
+		}
+
+		pts.erase(x);
+	}
+
+	int answer() {
+		if (sz(pts) <= 2)
+			return 0;
+
+		int lo = *pts.begin(), hi = *pts.rbegin();
+		int max_gap = *gaps.rbegin();
+		int ans = hi - lo;
+		ans = min(ans, hi - lo - max_gap);
+		return ans;
+	}
+} solution;
+
 int32_t main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-	// not optimal
 
 	int N, Q;
 	cin >> N >> Q;
 
-	set<int> pts;
 	F0R(i, N) {
-		int u;
-		cin >> u;
-		pts.insert(u);
+		int x;
+		cin >> x;
+		solution.add_point(x);
 	}
 
-	auto solve = [&]() {
-		vector<int> P(ALL(pts));
-		sort(ALL(P));
-		// see(P);
-
-		if (P.empty())
-			return int(0);
-
-		const int M = sz(P);
-		int L = P[0], R = P[M - 1];
-		int mid = (L + R) / 2;
-		mid = lower_bound(ALL(P), mid) - P.begin();
-
-		int ans = 1e18;
-		FOR(m, mid - 2, mid + 2) {
-			if (m >= 0 && m < M) {
-				int cost = abs(P[m] - P[0]) + abs(P[M - 1] - P[m]);
-				ans = min(ans, cost);
-			}
-		}
-
-		mid = (L + R) / 3;
-
-		int M1 = L + mid;
-		M1 = lower_bound(ALL(P), M1) - P.begin();
-		int M2 = R - mid;
-		M2 = lower_bound(ALL(P), M2) - P.begin();
-
-		FOR(m1, M1 - 2, M1 + 2) {
-			FOR(m2, M2 - 2, M2 + 2) {
-				if (m1 >= 0 && m1 < M && m2 >= 0 && m2 < M) {
-					int l = m1, r = m2;
-					if (l > r)
-						swap(l, r);
-
-					int cost = abs(P[0] - P[l]);
-					cost += abs(P[M - 1] - P[r]);
-
-					int best = (l == r ? 0 : 1e18);
-					for (int i = l; i < r; i++) {
-						best = min(best, abs(P[i] - P[l]) + abs(P[i + 1] - P[r]));
-					}
-
-					cost += best;
-					ans = min(ans, cost);
-				}
-			}
-		}
-
-		return ans;
-	};
-
-	cout << solve() << '\n';
+	cout << solution.answer() << '\n';
 
 	while (Q--) {
 		int type, x;
 		cin >> type >> x;
 
 		if (type == 0) {
-			assert(pts.count(x));
-			pts.erase(x);
+			solution.remove_point(x);
 		} else {
-			pts.insert(x);
+			solution.add_point(x);
 		}
-		cout << solve() << '\n';
+
+		cout << solution.answer() << '\n';
 	}
 
 	return 0;
