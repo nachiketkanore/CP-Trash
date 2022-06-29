@@ -17,7 +17,7 @@ using namespace std;
 #define F0R(i, R) for (int i = (0); i < (R); ++i)
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
-const int _ = 1e5;
+const int _ = 1e5 + 5;
 int u[_], v[_];
 vector<pair<int, int>> g[_];
 bool nactive[55][_], eactive[55][_], vis[55][_];
@@ -29,6 +29,7 @@ void solve() {
 	int N;
 	cin >> N;
 	FOR(i, 1, N) {
+		g[i].clear();
 		int cnt;
 		cin >> cnt;
 		while (cnt--) {
