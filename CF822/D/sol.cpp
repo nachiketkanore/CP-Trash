@@ -28,44 +28,52 @@ bool solve() {
 	while (true) {
 		assert(S >= 0);
 		if (cL == 1 || cR == N) return true;
-		int L = cL - 1;
-		int final_left = S;
-		while (L >= 1 && final_left + A[L] >= 0) {
-			final_left += A[L];
+		int L = cL;
+		int left = S;
+		int best_left = S;
+		int best_left_pos = L;
+		while (L - 1 >= 1 && left + A[L - 1] >= 0) {
+			left += A[L - 1];
 			L -= 1;
-		}
-		L++;
-
-		int R = cR + 1;
-		int final_right = S;
-		while (R <= N && final_right + A[R] >= 0) {
-			final_right += A[R];
-			R += 1;
-		}
-		R--;
-		
-		if (L == 1 || R == N) return true;
-		// cannot extend anywhere
-		if (cL == L && cR == R) return false;
-		// see(L, R, cL, cR, S);
-		// see(final_left, final_right);
-
-		if (L == cL) {
-			S = final_right;
-			cR = R;
-		} else if (R == cR) {
-			S = final_left;
-			cL = L;
-		} else {
-			if (final_left > final_right) {
-				S = final_left;
-				cL = L;
-			} else {
-				S = final_right;
-				cR = R;
+			if (left > best_left) {
+				best_left = left;
+				best_left_pos = L;
 			}
 		}
-		// see("now", cL, cR);
+		int R = cR;
+		int right = S;
+		int best_right = S;
+		int best_right_pos = R;
+		while (R + 1 <= N && right + A[R + 1] >= 0) {
+			right += A[R + 1];
+			R += 1;
+			if (right > best_right) {
+				best_right = right;
+				best_right_pos = R;
+			}
+		}
+		if (L == 1 || R == N) return true;
+		if (L == cL && R == cR) return false;
+
+		if (best_left > S && best_right > S) {
+			// take the maximum ? or anyone would do?
+			// if (best_left > best_right) {
+				cL = best_left_pos;
+				S = best_left;
+			// } else {
+			// 	cR = best_right_pos;
+			// 	S = best_right;
+			// }
+		} else if (best_left > S) {
+			cL = best_left_pos;
+			S = best_left;
+		} else if (best_right > S) {
+			cR = best_right_pos;
+			S = best_right;
+		} else {
+			// best_left = S and best_right = S
+			return false;
+		}
 	}
 	assert(false);
 	return false;
