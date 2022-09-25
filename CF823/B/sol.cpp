@@ -22,29 +22,29 @@ void solve() {
 	for (auto &it: A) { cin >> it.first; }
 	for (auto &it: A) { cin >> it.second; }
 
-
-	auto f = [&](long double x0) {
-		long double ans = -1e18;
+	auto f = [&](double x0) {
+		double ans = -1e18;
 		for (const auto &[x, t]: A) {
-			ans = max(ans, t + abs((long double)x - x0));
+			ans = max(ans, t + abs((double)x - x0));
 		}
 		return ans;
 	};
 
-	int L = 0, R = 1e9;
-	while (L < R) {
-		int mid = (L + R) / 2;
-		double f1 = f(mid);
-		double f2 = f(mid + 1);
+	double l = 0, r = 1e9;
+	const double eps = 1e-6;
+	while (r - l > eps) {
+		double m1 = l + (r - l) / 3;
+		double m2 = r - (r - l) / 3;
+		double f1 = f(m1);
+		double f2 = f(m2);
 		if (f1 > f2) {
-			L = mid + 1;
-		} else if (f2 > f1) 
-			R = mid - 1;
-		else {
-			break;
+			l = m1;
+		} else {
+			r = m2;
 		}
 	}
-	cout << (L + R) / 2. << '\n';
+
+	cout << fixed << setprecision(15) << l << '\n';
 }
 
 int32_t main() {
