@@ -17,58 +17,25 @@ using namespace std;
 #define F0R(i, R) for (int i = (0); i < (R); ++i)
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
-int N, d[105];
-map<int, int> dp[105];
-
-int go(int id, int prev) {
-	if (id == N + 1) return 1;
-	if (dp[id].count(prev)) return dp[id][prev];
-	int ans = 0;
-	set<int> chk = {prev - d[id], prev + d[id]};
-	for (int curr: chk) {
-		if (curr >= 0) {
-			ans += go(id + 1, curr);
-			if (ans > 2) break;
-		}
-	}
-	if (ans > 2) ans = 2;
-	dp[id][prev] = ans;
-	return ans;
-}
-
-void trace(int id, int prev) {
-	if (id == N + 1) return;
-	int ans = go(id, prev);
-	set<int> chk = {prev - d[id], prev + d[id]};
-	for (int curr: chk) {
-		if (curr >= 0) {
-			if(go(id + 1, curr)) {
-				cout << curr << ' ';
-				return trace(id + 1, curr);
-			}
-		}
-	}
-	assert(false);
-}
-
 void solve() {
-	cin >> N;
-	FOR (i,1,N) {
-		cin >> d[i];
-		dp[i].clear();
+	int N; cin >> N;
+	vector<int> D(N);
+	for (int &x: D) cin >> x;
+	vector<int> A(N);
+	A[0] = D[0];
+	for (int i = 1; i < N; i++) {
+		int choice1 = A[i - 1] - D[i];
+		int choice2 = A[i - 1] + D[i];
+		if (choice1 >= 0 && D[i] > 0) {
+			cout << "-1\n";
+			return;
+		}
+		A[i] = choice2;
 	}
-	if (N == 1) {
-		cout << d[1] << "\n";
-		return;
+	for (int x: A) {
+		cout << x << ' ';
 	}
-	int tot = go(2, d[1]);
-	if (tot > 1) {
-		cout << "-1\n";
-	} else {
-		cout << d[1] << ' ';
-		trace(2, d[1]);
-		cout << '\n';
-	}
+	cout << '\n';
 }
 
 int32_t main() {
