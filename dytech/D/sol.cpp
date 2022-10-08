@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 07 October 2022 10:19:41 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -21,57 +21,31 @@ void solve() {
 	int N, M;
 	cin >> N >> M;
 	vector<array<int, 3>> edges(M);
-	const int INF = 1e17;
-	vector<vector<int>> dist(N + 1, vector<int> (N + 1, INF));
-	vector<set<int>> adj(N + 1);
-	FOR (i,1,N) {
+	const int INF = 1e14;
+	vector<vector<int>> dist(N + 1, vector<int>(N + 1, INF));
+	FOR(i, 1, N) {
 		dist[i][i] = 0;
 	}
-	auto add_edge = [&](int u, int v, int w) {
-		dist[u][v] = min(dist[u][v], w);
-		dist[v][u] = min(dist[v][u], w);
-	};
-	for (auto &[u, v, w]: edges) {
+	for (auto& [u, v, w] : edges) {
 		cin >> u >> v >> w;
-		add_edge(u, v, w);
-		adj[u].insert(v);
-		adj[v].insert(u);
+		dist[u][v] = 1;
+		dist[v][u] = 1;
 	}
-	set<array<int, 3>> Q;
-	for (auto &[u, v, w]: edges) {
-		for (int to: adj[u]) {
-			add_edge(v, to, 2 * w);
-			Q.insert({2 * w, v, to});
-			adj[u].insert(to);
-			adj[to].insert(u);
-		}
-		for (int to: adj[v]) {
-			add_edge(u, to, 2 * w);
-			Q.insert({2 * w, u, to});
-			adj[v].insert(to);
-			adj[to].insert(v);
+	FOR(k, 1, N) FOR(u, 1, N) FOR(v, 1, N) dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
+	int ans = INF;
+	F0R(rep, 2) {
+		for (auto& [u, v, w] : edges) {
+			swap(u, v);
+			int c1 = w * (dist[1][u] + dist[v][N] + 1);
+			ans = min(ans, c1);
+			FOR(loop, 1, N) {
+				int c2 = w * (dist[1][loop] + dist[loop][N] + dist[u][loop] + 2);
+				ans = min(ans, c2);
+			}
 		}
 	}
-	while (true) {
-		auto [w, u, v] = *Q.begin();
-		Q.erase(*Q.begin());
-		if (w > INF) break;
-		for (int to: adj[u]) {
-			add_edge(v, to, 2 * w);
-			Q.insert({2 * w, v, to});
-			adj[v].insert(to);
-			adj[to].insert(v);
-		}
-		for (int to: adj[v]) {
-			add_edge(u, to, 2 * w);
-			Q.insert({2 * w, u, to});
-			adj[v].insert(to);
-			adj[to].insert(u);
-		}
-	}
-	FOR (k,1,N) FOR (a,1,N) FOR (b,1,N) dist[a][b] = min(dist[a][b], dist[a][k] + dist[k][b]);
-
-	cout << dist[1][N] << '\n';
+	assert(ans ^ INF);
+	cout << ans << '\n';
 }
 
 int32_t main() {
