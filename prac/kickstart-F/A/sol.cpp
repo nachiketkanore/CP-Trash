@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 18 September 2022 10:27:31 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -24,25 +24,30 @@ struct Data {
 };
 
 void solve() {
-	int N; cin >> N;
+	int N;
+	cin >> N;
 	vector<Data> A(N);
-	for (Data &d: A) { 
+	for (Data& d : A) {
 		cin >> d.C >> d.D >> d.U;
 	}
 	vector<Data> first = A, second = A;
-	sort(first.begin(), first.end(), [&](const Data &one, const Data &two) {
-		if (one.C < two.C) return true;
-		if (one.C > two.C) return false;
+	sort(first.begin(), first.end(), [&](const Data& one, const Data& two) {
+		if (one.C < two.C)
+			return true;
+		if (one.C > two.C)
+			return false;
 		return one.U < two.U;
 	});
-	sort(second.begin(), second.end(), [&](const Data &one, const Data &two) {
-		if (one.D < two.D) return true;
-		if (one.D > two.D) return false;
+	sort(second.begin(), second.end(), [&](const Data& one, const Data& two) {
+		if (one.D < two.D)
+			return true;
+		if (one.D > two.D)
+			return false;
 		return one.U < two.U;
 	});
 
 	int ans = 0;
-	F0R (i,N) {
+	F0R(i, N) {
 		ans += first[i].D == second[i].D && first[i].C == second[i].C && first[i].U == second[i].U;
 	}
 	cout << ans << '\n';
@@ -55,7 +60,7 @@ int32_t main() {
 	int T;
 	cin >> T;
 
-	FOR (tc, 1, T) {
+	FOR(tc, 1, T) {
 		cout << "Case #" << tc << ": ";
 		solve();
 	}

@@ -1,8 +1,9 @@
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 void print(const char* s) {
-	if (!s) return;
+	if (!s)
+		return;
 	int id = 0;
 	while (s[id] != '\0') {
 		printf("%c", s[id]);
@@ -22,15 +23,14 @@ struct Human {
 
 int main(void) {
 
-	int var = 21 ;
+	int var = 21;
 	int nachiket = 0032;
 	const char name[128] = "Nachiket Kanore";
 
 	print(NULL);
 	printf("%s\n", name);
-	printf("%d\n", var ) ;
+	printf("%d\n", var);
 	printf("%d\n", nachiket);
 
 	return 0;
-
 }

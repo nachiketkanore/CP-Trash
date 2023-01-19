@@ -3,18 +3,18 @@ Author: Nachiket Kanore
 Created: Saturday 31 October 2020 02:56:06 PM IST
 (ツ) The secret of joy in work is contained in one word: excellence. To know how to do something well is to enjoy it.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e6 + 5;
@@ -23,7 +23,7 @@ int n, q, a[N], tree[N << 2];
 
 void upd(int tl, int tr, int node, int id, int val) {
 	if (tl > tr)
-		return ;
+		return;
 	if (tl == tr) {
 		assert(tl == id);
 		tree[node] = val;
@@ -59,13 +59,14 @@ int get(int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> q;
 
-	FOR (i,1,n) cin >> a[i], a[i] %= 2;
+	FOR(i, 1, n) cin >> a[i], a[i] %= 2;
 
-	FOR (i,1,n) upd(i, a[i]);
+	FOR(i, 1, n) upd(i, a[i]);
 
 	while (q--) {
 		int type;
@@ -91,8 +92,10 @@ int32_t main() {
 				}
 			}
 
-			if (1 <= ans && ans <= n && get(1, ans) == k) cout << ans << "\n";
-			else cout << "-1\n";
+			if (1 <= ans && ans <= n && get(1, ans) == k)
+				cout << ans << "\n";
+			else
+				cout << "-1\n";
 		}
 	}
 }

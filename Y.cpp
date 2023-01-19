@@ -24,7 +24,7 @@ template <class T> bool cmax(T& a, const T& b) {
 }
 
 const int inf = 1e18;
-const int N	  = 5e5 + 5;
+const int N = 5e5 + 5;
 
 void hello() {
 	int hey;
@@ -38,11 +38,10 @@ int32_t main() {
 	vector<int> a(n), b(m);
 	F0R(i, n) cin >> a[i];
 	F0R(i, m) cin >> b[i];
-	int G			= 0;
+	int G = 0;
 	F0R(i, n - 1) G = __gcd(G, abs(a[i] - a[i + 1]));
 	F0R(i, m) {
 		int A = a[0] + b[i];
 		cout << __gcd(A, G) << " \n"[i + 1 == m];
 	}
 }
-

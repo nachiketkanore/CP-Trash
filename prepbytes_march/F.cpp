@@ -1,26 +1,26 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Tuesday 15 March 2022 03:25:21 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
 
-const int _= 1e5 + 5;
+const int _ = 1e5 + 5;
 int N, C, root, sub[_];
-vector<pair<int,int>> g[_];
+vector<pair<int, int>> g[_];
 vector<int> vals;
 
 void dfs(int u, int par) {
 	sub[u] = 1;
-	for (auto edge: g[u]) {
+	for (auto edge : g[u]) {
 		int v = edge.first, w = edge.second;
 		if (v ^ par) {
 			dfs(v, u);
 			sub[u] += sub[v];
 		}
 	}
-	for (auto edge: g[u]) {
+	for (auto edge : g[u]) {
 		int v = edge.first, w = edge.second;
 		if (v ^ par) {
 			// u to v edge has weight w
@@ -30,7 +30,8 @@ void dfs(int u, int par) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int T;
 	cin >> T;
 	while (T--) {
@@ -51,7 +52,7 @@ int32_t main() {
 			vals.pop_back();
 		}
 		int ans = 0;
-		for (int val: vals) {
+		for (int val : vals) {
 			ans += val;
 		}
 		cout << ans << '\n';

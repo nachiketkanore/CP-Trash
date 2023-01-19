@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 02 December 2021 02:38:26 PM IST
-**/
+ **/
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -21,13 +21,14 @@
 
 using namespace std;
 
-template <class T>
-bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template <class T>
-bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
-int32_t main()
-{
+int32_t main() {
 	string direction;
 	int move;
 	int depth = 0;

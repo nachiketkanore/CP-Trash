@@ -15,9 +15,11 @@ int brute(int N) {
 	return 0;
 }
 int solve(int N) {
-	if (N % 2 == 0) return N - 2;
+	if (N % 2 == 0)
+		return N - 2;
 	for (int i = 3; i * i <= N; i += 2) {
-		if (N % i == 0) return N - i;
+		if (N % i == 0)
+			return N - i;
 	}
 	return 0;
 }
@@ -28,10 +30,11 @@ int solve(char* s, int n) {
 		int L = i, R = i + 1;
 		int len = 0;
 		while (L >= 0 && R < n) {
-			left += s[L]-'0';
-			right += s[R]-'0';
+			left += s[L] - '0';
+			right += s[R] - '0';
 			len += 2;
-			if (left == right) ans = max(ans, len);
+			if (left == right)
+				ans = max(ans, len);
 			L--, R++;
 		}
 	}
@@ -50,7 +53,7 @@ int main() {
 		int N = rand() % 1000000 + 2;
 		/* cout << N << " " << brute(N) << ' ' << solve(N) << endl; */
 		assert(brute(N) == solve(N));
-		cout << N  << " , OK " << (100000 - T) << '\n';
+		cout << N << " , OK " << (100000 - T) << '\n';
 	}
 	cout << solve(253) << '\n';
 	char s[] = "6693581";

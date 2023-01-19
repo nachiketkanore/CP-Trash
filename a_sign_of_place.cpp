@@ -13,7 +13,7 @@
 using namespace std;
 
 const int MOD = 1e9 + 7;
-const int _	  = 5002;
+const int _ = 5002;
 int N;
 string S;
 

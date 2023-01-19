@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 04 February 2022 10:07:59 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -10,9 +10,11 @@ const int OFFSET = -3e4;
 
 int32_t main() {
 	// slow solution: O(sqrt(sum(A) * N))
-	int T; cin >> T;
+	int T;
+	cin >> T;
 	while (T--) {
-		int N; cin >> N;
+		int N;
+		cin >> N;
 		int A[N], sum = 0;
 		for (int i = 0; i < N; i++) {
 			cin >> A[i];
@@ -30,7 +32,8 @@ int32_t main() {
 					curr = 0;
 				}
 			}
-			if (parts * t == orig_sum) return parts;
+			if (parts * t == orig_sum)
+				return parts;
 			return int(0);
 		};
 		int k = 1;

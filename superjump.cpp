@@ -122,7 +122,7 @@ int32_t main() {
 		FOR(j, 1, M) {
 			char ch;
 			cin >> ch;
-			mat[i][j]	  = ch - '0';
+			mat[i][j] = ch - '0';
 			row_sum[i][j] = mat[i][j] + row_sum[i][j - 1];
 			col_sum[i][j] = mat[i][j] + col_sum[i - 1][j];
 		}
@@ -143,7 +143,7 @@ int32_t main() {
 					int sum = row_sum[i][j - 1] - row_sum[i][mid - 1];
 					if (sum != len) {
 						col = mid;
-						lo	= mid + 1;
+						lo = mid + 1;
 					} else {
 						hi = mid - 1;
 					}
@@ -162,7 +162,7 @@ int32_t main() {
 					int sum = col_sum[i - 1][j] - col_sum[mid - 1][j];
 					if (len != sum) {
 						row = mid;
-						lo	= mid + 1;
+						lo = mid + 1;
 					} else {
 						hi = mid - 1;
 					}

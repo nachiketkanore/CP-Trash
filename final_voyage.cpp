@@ -32,7 +32,7 @@ void solve() {
 		}
 		F0R(j, W + 1) dp[j] = ndp[j];
 	}
-	int ans			  = 0;
+	int ans = 0;
 	F0R(i, W + 1) ans = max(ans, dp[i]);
 	cout << ans << '\n';
 }

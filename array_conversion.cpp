@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const int _		 = 100;
+const int _ = 100;
 const int OFFSET = 2e4;
 int N, K, A[_];
 int8_t dp[_][2 * OFFSET];

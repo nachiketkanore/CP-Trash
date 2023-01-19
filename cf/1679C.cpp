@@ -76,8 +76,7 @@ int32_t main() {
 		} else if (type == 3) {
 			int x2, y2;
 			cin >> x2 >> y2;
-			bool okay = row_cnt.rsum(x1, x2) == x2 - x1 + 1 ||
-			col_cnt.rsum(y1, y2) == y2 - y1 + 1;
+			bool okay = row_cnt.rsum(x1, x2) == x2 - x1 + 1 || col_cnt.rsum(y1, y2) == y2 - y1 + 1;
 			cout << (okay ? "Yes\n" : "No\n");
 		}
 	}

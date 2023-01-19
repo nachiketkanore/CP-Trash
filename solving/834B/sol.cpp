@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Friday 16 October 2020 06:14:10 PM IST
 (ツ) You have power over your mind, not outside events. Realize this, and you will find strength.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 1e6 + 5, inf = 1e18;
@@ -32,29 +32,32 @@ bool isLast(char ch, int id) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> k;
 	cin >> s;
 	s = " " + s;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		f[s[i] - 'A'][i]++;
-		FOR(j,0,25) {
-			f[j][i] += f[j][i-1];
+		FOR(j, 0, 25) {
+			f[j][i] += f[j][i - 1];
 		}
 	}
 
 	int open = 0;
 
 	for (int i = 1; i <= n; i++) {
-		if (isFirst(s[i], i)) open++;
+		if (isFirst(s[i], i))
+			open++;
 		if (open > k) {
 			cout << "YES\n";
 			return 0;
 		}
-		if (isLast(s[i], i)) open--;
-	}	
+		if (isLast(s[i], i))
+			open--;
+	}
 
 	cout << "NO\n";
 }

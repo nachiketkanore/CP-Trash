@@ -1,10 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
 
 void test() {
 	char* input;
 	switch (input) {
-		case (char *)"1":
-			break;
+	case (char*)"1": break;
 		case (char *)"2";
 			break;
 	}
@@ -31,4 +30,3 @@ int main(){
 	/* printf("%d\n", (int)(p - q)); */
 	/* return 0; */
 }
-

@@ -131,15 +131,13 @@ int go(int id, int p2, int p3) {
 		ans -= MOD;
 	// choice 2: reduce GCD by 2 by inserting a multiple of GCD / 2
 	if (p2 > 0) {
-		ans += 1ll * go(id + 1, p2 - 1, p3) *
-		(multiples(p2 - 1, p3) - multiples(p2, p3)) % MOD;
+		ans += 1ll * go(id + 1, p2 - 1, p3) * (multiples(p2 - 1, p3) - multiples(p2, p3)) % MOD;
 		if (ans >= MOD)
 			ans -= MOD;
 	}
 	// choice 3: reduce GCD by 3 by inserting a multiple of GCD / 3
 	if (p3 > 0) {
-		ans += go(id + 1, p2, p3 - 1) * 1ll *
-		(multiples(p2, p3 - 1) - multiples(p2, p3)) % MOD;
+		ans += go(id + 1, p2, p3 - 1) * 1ll * (multiples(p2, p3 - 1) - multiples(p2, p3)) % MOD;
 		if (ans >= MOD)
 			ans -= MOD;
 	}

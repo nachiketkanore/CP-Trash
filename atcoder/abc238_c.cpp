@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Monday 07 March 2022 08:12:00 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -9,8 +9,9 @@ using namespace std;
 const int MOD = 998244353;
 
 int32_t main() {
-	int N, ans = 0; cin >> N;
-	vector<int> tens {1};
+	int N, ans = 0;
+	cin >> N;
+	vector<int> tens{ 1 };
 	for (int i = 0; i < 18; i++) {
 		tens.push_back(tens.back() * 10);
 	}
@@ -32,7 +33,8 @@ int32_t main() {
 			tot %= MOD;
 			ans += tot;
 			ans %= MOD;
-		} else break;
+		} else
+			break;
 	}
 	cout << ans << '\n';
 	return 0;

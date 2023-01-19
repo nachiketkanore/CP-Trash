@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Monday 19 September 2022 10:24:43 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -18,14 +18,16 @@ using namespace std;
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 void solve() {
-	int N, K; cin >> N >> K;
+	int N, K;
+	cin >> N >> K;
 	vector<int> vals(K);
-	F0R (i, N) {
-		int u; cin >> u;
+	F0R(i, N) {
+		int u;
+		cin >> u;
 		vals[i % K] = max(vals[i % K], u);
 	}
 	int ans = 0;
-	F0R (i,K) {
+	F0R(i, K) {
 		ans += vals[i];
 	}
 	cout << ans << '\n';

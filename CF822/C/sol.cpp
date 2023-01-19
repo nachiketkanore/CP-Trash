@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 23 September 2022 06:10:25 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -21,23 +21,27 @@ void solve() {
 	int N;
 	cin >> N;
 	vector<bool> keep(N + 1), have(N + 1, true);
-	FOR (i,1,N) {
+	FOR(i, 1, N) {
 		char status;
 		cin >> status;
 		keep[i] = status == '1';
 	}
 	int ans = 0;
-	FOR (k, 1, N) {
-		if (keep[k]) assert(have[k]);
+	FOR(k, 1, N) {
+		if (keep[k])
+			assert(have[k]);
 		int multiples = 0;
 		for (int m = k; m <= N; m += k) {
 			multiples += have[m];
 		}
-		if (multiples == 0) continue;
+		if (multiples == 0)
+			continue;
 		// see(k, multiples);
 		for (int m = k; m <= N; m += k) {
-			if (keep[m]) break;
-			if (have[m]) ans += k;
+			if (keep[m])
+				break;
+			if (have[m])
+				ans += k;
 			have[m] = false;
 		}
 	}

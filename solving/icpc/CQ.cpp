@@ -3,16 +3,25 @@
 #define int int64_t
 #define pb push_back
 #define sz(x) (int)(x.size())
-#define ALL(x) (x).begin(),(x).end()
-#define F0R(i,R) for(int i = (0); i < (R); ++i)
-#define FOR(i,L,R) for(int i = (L); i <= (R); ++i)
+#define ALL(x) (x).begin(), (x).end()
+#define F0R(i, R) for (int i = (0); i < (R); ++i)
+#define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 using namespace std;
 
-struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
+struct $ {
+	$() {
+		ios::sync_with_stdio(0);
+		cin.tie(0);
+	}
+} $;
 
-template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 const int inf = 1e18;
 const int N = 5e5 + 5;
@@ -22,11 +31,11 @@ int n, Q, a[N];
 struct FenwickTree {
 	int n;
 	vector<int> bit;
-	FenwickTree(int n): n(n) {
-		bit = vector<int> (n + 1);
+	FenwickTree(int n) : n(n) {
+		bit = vector<int>(n + 1);
 	}
 	void add(int id, int val) {
-		for (; id <= n; id += id & -id) 
+		for (; id <= n; id += id & -id)
 			bit[id] += val;
 	}
 	void add(int L, int R, int val) {
@@ -44,7 +53,7 @@ struct FenwickTree {
 int32_t main() {
 	cin >> n >> Q;
 	FenwickTree one(n), two(n), three(n);
-	FOR (i,1,n) cin >> a[i];
+	FOR(i, 1, n) cin >> a[i];
 	while (Q--) {
 		int type;
 		cin >> type;
@@ -62,4 +71,3 @@ int32_t main() {
 		}
 	}
 }
-

@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 19 August 2021 01:09:02 PM IST
-**/
+ **/
 #include <iostream>
 using namespace std;
 
@@ -15,8 +15,10 @@ int main() {
 			swap(cnt1, cnt2);
 			swap(first, second);
 		}
-		while (cnt1--) cout << first;
-		while (cnt2--) cout << second;
+		while (cnt1--)
+			cout << first;
+		while (cnt2--)
+			cout << second;
 		cout << '\n';
 	}
 }

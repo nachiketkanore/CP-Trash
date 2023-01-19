@@ -2,13 +2,15 @@
 using namespace std;
 
 int main() {
-	int N; cin >> N;
+	int N;
+	cin >> N;
 	int A[N], sum1 = 0;
 	for (int i = 0; i < N; i++) {
 		cin >> A[i];
 		sum1 += A[i];
 	}
-	int M; cin >> M;
+	int M;
+	cin >> M;
 	int B[M], sum2 = 0;
 	for (int i = 0; i < M; i++) {
 		cin >> B[i];

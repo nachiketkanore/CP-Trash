@@ -3,18 +3,18 @@ Author: Nachiket Kanore
 Created: Sunday 01 November 2020 01:55:13 PM IST
 (ツ) We have two ears and one mouth so that we can listen twice as much as we speak.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 1e5 + 5;
@@ -65,13 +65,14 @@ int getSum(int which, int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> s;
 	n = sz(s);
 	s = "@" + s;
 
-	FOR (i,1,n) upd(s[i] - 'a', i, 1);
+	FOR(i, 1, n) upd(s[i] - 'a', i, 1);
 
 	int Q;
 	cin >> Q;
@@ -83,18 +84,18 @@ int32_t main() {
 			cin >> pos;
 
 			upd(s[pos] - 'a', pos, 0);
-			
+
 			char ch;
 			cin >> ch;
 			s[pos] = ch;
-			
+
 			upd(s[pos] - 'a', pos, 1);
-		
+
 		} else {
 			int L, R, ans = 0;
 			cin >> L >> R;
 
-			FOR (ch,0,25) ans += getSum(ch, L, R) > 0;
+			FOR(ch, 0, 25) ans += getSum(ch, L, R) > 0;
 
 			cout << ans << "\n";
 		}

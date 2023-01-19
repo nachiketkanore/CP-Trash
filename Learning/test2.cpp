@@ -3,10 +3,12 @@ using namespace std;
 
 class A {
 	private:
-		int side;
+	int side;
+
 	public:
-		A(int side): side(side) {}
-		friend void area(A a);
+	A(int side) : side(side) {
+	}
+	friend void area(A a);
 };
 
 // friend function is not member function of any class
@@ -19,7 +21,8 @@ void area(A a) {
 void test(int a, int b) {
 	cout << "Input: a = " << a << ", b = " << b << endl;
 	try {
-		if (b == 0) throw "Divide by zero error\n";
+		if (b == 0)
+			throw "Divide by zero error\n";
 		cout << a / b << endl;
 	} catch (const char* error) {
 		cout << error << endl;

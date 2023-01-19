@@ -3,9 +3,13 @@
 using namespace std;
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
-	int N; cin >> N;
-	int A[N]; for (int i = 0; i < N; i++) cin >> A[i];
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	int N;
+	cin >> N;
+	int A[N];
+	for (int i = 0; i < N; i++)
+		cin >> A[i];
 	sort(A, A + N);
 	do {
 		bool ok = true;
@@ -22,4 +26,3 @@ int32_t main() {
 	} while (next_permutation(A, A + N));
 	return 0;
 }
-

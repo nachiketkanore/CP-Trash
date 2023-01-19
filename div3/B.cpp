@@ -1,16 +1,16 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Monday 14 March 2022 07:05:51 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
 
-
 int L, R;
 
 int f(int x, int a) {
-	if (a <= 0 || !(L <= x && x <= R)) return 0;
+	if (a <= 0 || !(L <= x && x <= R))
+		return 0;
 	return (x / a) + (x % a);
 }
 

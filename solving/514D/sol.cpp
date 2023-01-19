@@ -3,18 +3,18 @@ Author: Nachiket Kanore
 Created: Thursday 15 October 2020 10:30:26 AM IST
 (ツ) The most beautiful things in the world cannot be seen or even touched. They must be felt with the heart.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 1e5 + 5, inf = 1e9;
@@ -22,7 +22,8 @@ const int N = 1e5 + 5, inf = 1e9;
 int n, m, k, tree[6][N << 2];
 
 void upd(int tl, int tr, int node, int id, int val, int which) {
-	if (tl > tr) return;
+	if (tl > tr)
+		return;
 	if (tl == tr) {
 		tree[which][node] = max(tree[which][node], val);
 		return;
@@ -30,13 +31,14 @@ void upd(int tl, int tr, int node, int id, int val, int which) {
 	int mid = (tl + tr) >> 1;
 	if (id <= mid)
 		upd(tl, mid, 2 * node, id, val, which);
-	else 
+	else
 		upd(mid + 1, tr, 2 * node + 1, id, val, which);
 	tree[which][node] = max(tree[which][2 * node], tree[which][2 * node + 1]);
 }
 
 int query(int tl, int tr, int node, int ql, int qr, int which) {
-	if (tl > tr || ql > qr) return -inf;
+	if (tl > tr || ql > qr)
+		return -inf;
 	if (tl == ql && tr == qr) {
 		return tree[which][node];
 	}
@@ -55,12 +57,13 @@ int getMax(int which, int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> m >> k;
 
-	FOR(i,1,n) {
-		FOR(j,1,m) {
+	FOR(i, 1, n) {
+		FOR(j, 1, m) {
 			int val;
 			cin >> val;
 			put(j, i, val);
@@ -70,14 +73,14 @@ int32_t main() {
 	int maxLen = 0;
 	vector<int> ret(m, 0);
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		int lo = i, hi = n;
 		int right = -1;
 
 		while (lo <= hi) {
 			int mid = (lo + hi) >> 1;
 			int costReq = 0;
-			FOR(j,1,m) {
+			FOR(j, 1, m) {
 				costReq += getMax(j, i, mid);
 			}
 			if (costReq <= k) {
@@ -93,7 +96,7 @@ int32_t main() {
 			assert(tot > 0);
 			if (tot > maxLen) {
 				maxLen = tot;
-				FOR(j,1,m) {
+				FOR(j, 1, m) {
 					ret[j - 1] = getMax(j, i, right);
 				}
 			}
@@ -101,5 +104,6 @@ int32_t main() {
 	}
 
 	assert(sz(ret) == m);
-	for (int x : ret) cout << x << ' ';
+	for (int x : ret)
+		cout << x << ' ';
 }

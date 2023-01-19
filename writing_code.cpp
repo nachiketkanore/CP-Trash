@@ -133,7 +133,7 @@ void solve() {
 				return mi(0);
 			if (sum_dp_vis[b][s])
 				return sum_dp[b][s];
-			sum_dp_vis[b][s]	= true;
+			sum_dp_vis[b][s] = true;
 			return sum_dp[b][s] = dp[b][s] + compute_sum(b - x, s - 1, x);
 		};
 		FOR(b, 0, bugs) {
@@ -154,8 +154,8 @@ void solve() {
 static void run_with_stack_size(void (*func)(void), size_t stsize) {
 	char *stack, *send;
 	stack = (char*)malloc(stsize);
-	send  = stack + stsize - 16;
-	send  = (char*)((uintptr_t)send / 16 * 16);
+	send = stack + stsize - 16;
+	send = (char*)((uintptr_t)send / 16 * 16);
 	asm volatile("mov %%rsp, (%0)\n"
 				 "mov %0, %%rsp\n"
 				 :

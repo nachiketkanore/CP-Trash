@@ -3,24 +3,25 @@ Author: Nachiket Kanore
 Created: Thursday 22 October 2020 12:00:11 PM IST
 (ツ) It is better to travel well than to arrive.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <map>
 #include <cstring>
+#include <iostream>
+#include <map>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
-long long gcd(long long a, long long b) { 
-    if(a == 0 && b == 0) return 0;
-    return b == 0 ? a : gcd(b, a % b); 
+long long gcd(long long a, long long b) {
+	if (a == 0 && b == 0)
+		return 0;
+	return b == 0 ? a : gcd(b, a % b);
 }
 
 const int N = 1e5 + 5, inf = 1e18;
@@ -39,7 +40,7 @@ void upd(int tl, int tr, int node, int id, int val) {
 
 	int mid = (tl + tr) >> 1;
 
-	if (id <= mid) 
+	if (id <= mid)
 		upd(tl, mid, 2 * node, id, val);
 	else
 		upd(mid + 1, tr, 2 * node + 1, id, val);
@@ -72,7 +73,7 @@ int getGCD(int L, int R) {
 int getOccurences(int val, int L, int R) {
 	if (pos[val].empty())
 		return 0;
-	vector<int> &chk = pos[val];
+	vector<int>& chk = pos[val];
 
 	int left = -1;
 	int lo = 0, hi = sz(chk) - 1;
@@ -106,11 +107,12 @@ int getOccurences(int val, int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		cin >> a[i];
 		upd(i, a[i]);
 		pos[a[i]].push_back(i);

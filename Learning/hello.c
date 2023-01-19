@@ -10,5 +10,4 @@ struct vector {
 };
 
 int main() {
-
 }

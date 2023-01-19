@@ -19,16 +19,14 @@ template <typename T> ostream& operator<<(ostream& os, const vector<T>& v) {
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <typename T, size_t size>
-ostream& operator<<(ostream& os, const array<T, size>& arr) {
+template <typename T, size_t size> ostream& operator<<(ostream& os, const array<T, size>& arr) {
 	os << '{';
 	string sep;
 	for (const auto& x : arr)
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <typename A, typename B>
-ostream& operator<<(ostream& os, const pair<A, B>& p) {
+template <typename A, typename B> ostream& operator<<(ostream& os, const pair<A, B>& p) {
 	return os << '(' << p.first << ", " << p.second << ')';
 }
 
@@ -47,7 +45,7 @@ template <typename Head, typename... Tail> void dbg_out(Head H, Tail... T) {
 #endif
 
 const int mod = 1e9 + 7;
-const int N	  = 1e5;
+const int N = 1e5;
 int factmod[N];
 
 void pre() {
@@ -71,10 +69,10 @@ int power(int a, int b) {
 int nCr(int n, int r) {
 	if (r > n)
 		return 0;
-	int num	 = factmod[n];
+	int num = factmod[n];
 	int deno = factmod[n - r] * factmod[r] % mod;
-	deno	 = power(deno, mod - 2);
-	int ans	 = num * deno % mod;
+	deno = power(deno, mod - 2);
+	int ans = num * deno % mod;
 	return ans;
 }
 int n, m, k;
@@ -119,7 +117,7 @@ int32_t main() {
 		vals.push_back(P);
 	}
 	const int MOD = 1e9 + 7;
-	int P		  = vals.back();
+	int P = vals.back();
 	see(vals);
 	see(P);
 	int ans = power(P, m / n, MOD);

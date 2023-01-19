@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Saturday 17 October 2020 01:28:10 AM IST
 (ツ) However many holy words you read, However many you speak, What good will they do you If you do not act on upon them?
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e14;
@@ -30,7 +30,8 @@ int go(int id, int prev, int mask, bool smallTaken, bool nonZeroTaken) {
 	}
 
 	int& ans = dp[smallTaken][nonZeroTaken][id][prev][mask];
-	if (~ans) return ans;
+	if (~ans)
+		return ans;
 	ans = 0;
 
 	int curr = s[id] - '0';
@@ -41,8 +42,9 @@ int go(int id, int prev, int mask, bool smallTaken, bool nonZeroTaken) {
 		from = 0, to = curr;
 	}
 
-	FOR(dig,from,to) {
-		if (abs(dig - prev) != 1 && nonZeroTaken) continue;
+	FOR(dig, from, to) {
+		if (abs(dig - prev) != 1 && nonZeroTaken)
+			continue;
 		int next_id = id + 1;
 		int next_prev = dig;
 		int next_mask = mask;
@@ -62,9 +64,10 @@ void calc() {
 	int ans = 0;
 	memset(dp, -1, sizeof(dp));
 
-	FOR(dig,0,9) {
+	FOR(dig, 0, 9) {
 		int first = s[0] - '0';
-		if (dig > first) continue;
+		if (dig > first)
+			continue;
 		int id = 1;
 		int prev = dig;
 		int mask = (dig > 0 ? (1 << dig) : 0);
@@ -78,9 +81,11 @@ void calc() {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
 	s = "1";
-	FOR(i,1,40) s += "0";
+	FOR(i, 1, 40) s += "0";
 	calc();
 }

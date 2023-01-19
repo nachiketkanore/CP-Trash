@@ -30,8 +30,7 @@ void solve() {
 	FOR(i, 1, N) {
 		FOR(j, i + 1, N) {
 			FOR(k, j + 1, N) {
-				ans = max(ans,
-				f(1, i - 1) - f(i + 1, j - 1) - f(j + 1, k - 1) + f(k + 1, N));
+				ans = max(ans, f(1, i - 1) - f(i + 1, j - 1) - f(j + 1, k - 1) + f(k + 1, N));
 			}
 		}
 	}

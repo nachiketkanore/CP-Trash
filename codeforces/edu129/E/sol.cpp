@@ -70,8 +70,7 @@ class seg_tree {
 		F0R(i, 2) F0R(j, 2) best[i][j] = INF;
 
 		F0R(from, 2) F0R(to, 2) F0R(i, 2) F0R(j, 2) {
-			best[from][to] = min(best[from][to],
-			left.dp[from][i] + dist[i][j][left.R] + right.dp[j][to]);
+			best[from][to] = min(best[from][to], left.dp[from][i] + dist[i][j][left.R] + right.dp[j][to]);
 		}
 
 		return node(left.L, right.R, best);
@@ -98,8 +97,7 @@ class seg_tree {
 		if (ql > mid)
 			return query(2 * u + 1, mid + 1, tr, ql, qr);
 
-		return unite(query(2 * u, tl, mid, ql, mid),
-		query(2 * u + 1, mid + 1, tr, mid + 1, qr));
+		return unite(query(2 * u, tl, mid, ql, mid), query(2 * u + 1, mid + 1, tr, mid + 1, qr));
 	}
 
 	node query(int L, int R) {
@@ -125,8 +123,7 @@ int32_t main() {
 		// dist[2][2][i] denotes calculations
 		// for going from level[i] to level[i + 1]
 		F0R(from, 2) F0R(to, 2) {
-			dist[from][to][i] =
-			1 + manhattan_distance(next_door[from][i], doors[to][i + 1]);
+			dist[from][to][i] = 1 + manhattan_distance(next_door[from][i], doors[to][i + 1]);
 		}
 	}
 

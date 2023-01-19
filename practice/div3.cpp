@@ -2,14 +2,15 @@
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = L; i <= R; i++)
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
 
 void test() {
-	#define endl '\n'
-	int T; cin >> T;
+#define endl '\n'
+	int T;
+	cin >> T;
 	while (T--) {
 		int n, sum = 0;
 		cin >> n;
@@ -25,9 +26,12 @@ void test() {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
 
-	int T;	cin >> T;
+	int T;
+	cin >> T;
 	while (T--) {
 		int cnt = 2;
 		int n, x;
@@ -42,18 +46,21 @@ int32_t main() {
 		while (lo <= hi) {
 			int mid = (lo + hi) >> 1;
 			int cnt = 0;
-			if (mid == 1) cnt = 2;
+			if (mid == 1)
+				cnt = 2;
 			else {
 				cnt = 2 + (mid - 1) * x;
 			}
 			if (cnt <= n) {
 				ans = mid;
 				lo = mid + 1;
-			} else hi = mid - 1;
+			} else
+				hi = mid - 1;
 		}
 		assert(~ans);
 		int get = (ans - 1) * x + 2;
-		if (get < n) ++ans;
+		if (get < n)
+			++ans;
 		cout << ans << '\n';
 	}
 }

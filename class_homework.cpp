@@ -24,7 +24,7 @@ bool ok(const string& S) {
 void solve() {
 	string S;
 	cin >> S;
-	const int N	  = sz(S);
+	const int N = sz(S);
 	long long ans = -1;
 	FOR(i, 0, N - 4) {
 		FOR(j, i + 1, N - 3) {

@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 25 September 2022 06:29:40 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -21,32 +21,32 @@ const int MX = 303, N = 150005, INF = 1e18;
 int n, m, d, a[MX], b[MX], t[MX];
 vector<int> dp;
 
-struct sparse_table{
-    public:
-        int RMQ[20][N];
-        int floorlog[N];
+struct sparse_table {
+	public:
+	int RMQ[20][N];
+	int floorlog[N];
 
-        void build(int n) {
-            for(int i=0;(1<<i)<N;i++) {
-                for(int j=(1<<i);j<N && j<(1<<(i+1)); j++)
-                    floorlog[j]=i;
-            }
+	void build(int n) {
+		for (int i = 0; (1 << i) < N; i++) {
+			for (int j = (1 << i); j < N && j < (1 << (i + 1)); j++)
+				floorlog[j] = i;
+		}
 
-            for(int i=n;i>=1;i--) {
-                RMQ[0][i]=dp[i]; //leaf value
-                int mxj=floorlog[n-i+1]; //2^j <= n-i+1
-                int pw=1;
-                for(int j=1;j<=mxj;j++) {
-                    RMQ[j][i] = max(RMQ[j-1][i], RMQ[j-1][i+pw]); //operation
-                    pw<<=1;
-                }
-            }   
-        }
+		for (int i = n; i >= 1; i--) {
+			RMQ[0][i] = dp[i];			   // leaf value
+			int mxj = floorlog[n - i + 1]; // 2^j <= n-i+1
+			int pw = 1;
+			for (int j = 1; j <= mxj; j++) {
+				RMQ[j][i] = max(RMQ[j - 1][i], RMQ[j - 1][i + pw]); // operation
+				pw <<= 1;
+			}
+		}
+	}
 
-        int query(int L, int R) {
-            int k=floorlog[R-L+1]; //2^k <= R-L+1
-            return max(RMQ[k][L], RMQ[k][R - (1<<k) +1]); //operation
-        }
+	int query(int L, int R) {
+		int k = floorlog[R - L + 1];					 // 2^k <= R-L+1
+		return max(RMQ[k][L], RMQ[k][R - (1 << k) + 1]); // operation
+	}
 } ST;
 
 int32_t main() {
@@ -77,15 +77,17 @@ int32_t main() {
 
 	// not optimized
 	cin >> n >> m >> d;
-	FOR (i,1,m) { cin >> a[i] >> b[i] >> t[i]; }
-	dp = vector<int> (n + 1);
-	FOR (i,1,m) {
+	FOR(i, 1, m) {
+		cin >> a[i] >> b[i] >> t[i];
+	}
+	dp = vector<int>(n + 1);
+	FOR(i, 1, m) {
 		ST.build(n);
 		vector<int> ndp(n + 1, -INF);
-		FOR (pos,1,n) {
+		FOR(pos, 1, n) {
 			int T = t[i] - t[i - 1];
-			int L = max(int(1), pos - T*d);
-			int R = min(n, pos + T*d);
+			int L = max(int(1), pos - T * d);
+			int R = min(n, pos + T * d);
 			/* FOR (npos, max(int(1), pos - T*d), min(n, pos + T*d)) {
 				ndp[npos] = max(ndp[npos], b[i] - abs(a[i] - npos) + dp[pos]);
 			} */

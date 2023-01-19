@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 25 September 2022 08:06:46 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -20,14 +20,14 @@ using namespace std;
 void solve() {
 	int N, C;
 	cin >> N >> C;
-	map<int,int> cnt;
-	FOR (i,1,N) {
+	map<int, int> cnt;
+	FOR(i, 1, N) {
 		int o;
 		cin >> o;
 		cnt[o]++;
 	}
 	int ans = 0;
-	for (auto [k, v]: cnt) {
+	for (auto [k, v] : cnt) {
 		int one = C;
 		int two = v;
 		ans += min(one, two);

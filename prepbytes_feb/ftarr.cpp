@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Saturday 12 February 2022 12:05:22 AM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;

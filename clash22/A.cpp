@@ -18,8 +18,8 @@ void solve() {
 	string S;
 	cin >> S;
 	const string want = "credenz";
-	int ans			  = 0;
-	int pi			  = -1;
+	int ans = 0;
+	int pi = -1;
 	F0R(i, N) {
 		int j = i + sz(want) - 1;
 		if (j < N) {

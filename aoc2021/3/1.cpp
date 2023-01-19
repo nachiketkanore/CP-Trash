@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 03 December 2021 04:40:16 PM IST
-**/
+ **/
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -21,15 +21,16 @@
 
 using namespace std;
 
-template <class T>
-bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template <class T>
-bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 int ones[100], zeros[100];
 
-int32_t main()
-{
+int32_t main() {
 	string S;
 	int most = 0, least = 0;
 	int BITS = -1;

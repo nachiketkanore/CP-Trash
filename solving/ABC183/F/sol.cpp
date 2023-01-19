@@ -3,25 +3,25 @@ Author: Nachiket Kanore
 Created: Sunday 15 November 2020 05:25:22 PM IST
 (ツ) The biggest adventure you can ever take is to live the life of your dreams.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <map>
 #include <cstring>
+#include <iostream>
+#include <map>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
 
 int n, Q, c[N], par[N], sizes[N];
-map<int,int> f[N];
+map<int, int> f[N];
 
 int find(int u) {
 	if (u == par[u])
@@ -31,23 +31,25 @@ int find(int u) {
 
 void unite(int u, int v) {
 	u = find(u), v = find(v);
-	if (u == v) return;
+	if (u == v)
+		return;
 	if (sz(f[u]) < sz(f[v]))
 		swap(u, v);
 	// merge smaller to larger, u > v
 	par[v] = u;
-	for (auto &it : f[v]) {
+	for (auto& it : f[v]) {
 		f[u][it.first] += it.second;
 	}
 	f[v].clear();
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> Q;
 
-	FOR (i,1,n) {
+	FOR(i, 1, n) {
 		cin >> c[i];
 		par[i] = i;
 		sizes[i] = 1;
@@ -55,7 +57,8 @@ int32_t main() {
 	}
 
 	while (Q--) {
-		int type;	cin >> type;
+		int type;
+		cin >> type;
 		if (type == 1) {
 			int a, b;
 			cin >> a >> b;
@@ -66,5 +69,5 @@ int32_t main() {
 			x = find(x);
 			cout << f[x][y] << "\n";
 		}
-	}	
+	}
 }

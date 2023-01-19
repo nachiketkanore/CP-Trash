@@ -1,19 +1,38 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 20 March 2022 05:41:09 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
 
 const int inf = 1e18;
 
-template<typename T> ostream& operator<<(ostream &os, const vector<T> &v) { os << '{'; string sep; for (const auto &x : v) os << sep << x, sep = ", "; return os << '}'; }
-template<typename T, size_t size> ostream& operator<<(ostream &os, const array<T, size> &arr) { os << '{'; string sep; for (const auto &x : arr) os << sep << x, sep = ", "; return os << '}'; }
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template <typename T> ostream& operator<<(ostream& os, const vector<T>& v) {
+	os << '{';
+	string sep;
+	for (const auto& x : v)
+		os << sep << x, sep = ", ";
+	return os << '}';
+}
+template <typename T, size_t size> ostream& operator<<(ostream& os, const array<T, size>& arr) {
+	os << '{';
+	string sep;
+	for (const auto& x : arr)
+		os << sep << x, sep = ", ";
+	return os << '}';
+}
+template <typename A, typename B> ostream& operator<<(ostream& os, const pair<A, B>& p) {
+	return os << '(' << p.first << ", " << p.second << ')';
+}
 
-void dbg_out() { cerr << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+void dbg_out() {
+	cerr << endl;
+}
+template <typename Head, typename... Tail> void dbg_out(Head H, Tail... T) {
+	cerr << ' ' << H;
+	dbg_out(T...);
+}
 
 #ifdef DEBUG
 #define see(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
@@ -22,14 +41,17 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 #endif
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	string S, T;
 	for (int i = 0; i < 3; i++) {
-		char ch; cin >> ch;
+		char ch;
+		cin >> ch;
 		S += ch;
 	}
 	for (int i = 0; i < 3; i++) {
-		char ch; cin >> ch;
+		char ch;
+		cin >> ch;
 		T += ch;
 	}
 	if (S == T) {
@@ -49,11 +71,13 @@ int32_t main() {
 	int dist[6][6];
 	for (int i = 0; i < 6; i++) {
 		for (int j = 0; j < 6; j++) {
-			if (i == j) dist[i][j] = 0;
-			else dist[i][j] = inf;
+			if (i == j)
+				dist[i][j] = 0;
+			else
+				dist[i][j] = inf;
 		}
 	}
-	for (string p: all) {
+	for (string p : all) {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < i; j++) {
 				string pd = p;

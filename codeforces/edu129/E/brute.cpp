@@ -47,11 +47,9 @@ int go(int curr_level, int curr_door, int final_level, int final_door) {
 		int nx0 = up[curr_level + 1].first, ny0 = up[curr_level + 1].second;
 		int nx1 = down[curr_level + 1].first, ny1 = down[curr_level + 1].second;
 
-		int c1 = 1 + manhattan_distance(x + 1, y, nx0, ny0) +
-		go(curr_level + 1, 0, final_level, final_door);
+		int c1 = 1 + manhattan_distance(x + 1, y, nx0, ny0) + go(curr_level + 1, 0, final_level, final_door);
 
-		int c2 = 1 + manhattan_distance(x + 1, y, nx1, ny1) +
-		go(curr_level + 1, 1, final_level, final_door);
+		int c2 = 1 + manhattan_distance(x + 1, y, nx1, ny1) + go(curr_level + 1, 1, final_level, final_door);
 
 		ans = min(ans, c1);
 		ans = min(ans, c2);
@@ -62,11 +60,9 @@ int go(int curr_level, int curr_door, int final_level, int final_door) {
 		int nx0 = up[curr_level + 1].first, ny0 = up[curr_level + 1].second;
 		int nx1 = down[curr_level + 1].first, ny1 = down[curr_level + 1].second;
 
-		int c1 = 1 + manhattan_distance(x, y + 1, nx0, ny0) +
-		go(curr_level + 1, 0, final_level, final_door);
+		int c1 = 1 + manhattan_distance(x, y + 1, nx0, ny0) + go(curr_level + 1, 0, final_level, final_door);
 
-		int c2 = 1 + manhattan_distance(x, y + 1, nx1, ny1) +
-		go(curr_level + 1, 1, final_level, final_door);
+		int c2 = 1 + manhattan_distance(x, y + 1, nx1, ny1) + go(curr_level + 1, 1, final_level, final_door);
 
 		ans = min(ans, c1);
 		ans = min(ans, c2);
@@ -108,9 +104,7 @@ int32_t main() {
 				swap(level1, level2);
 			}
 
-			auto reset_dp = [&]() {
-				FOR(i, level1, level2) F0R(j, 2) dp[j][i] = -1;
-			};
+			auto reset_dp = [&]() { FOR(i, level1, level2) F0R(j, 2) dp[j][i] = -1; };
 
 			reset_dp();
 			int cost00 = go(level1, 0, level2 - 1, 0);
@@ -123,17 +117,13 @@ int32_t main() {
 
 			int best = INF;
 
-			int c00 = manhattan_distance(x1, y1, up[level1]) + cost00 + 1 +
-			manhattan_distance(up[level2 - 1].first + 1, up[level2 - 1].second, x2, y2);
+			int c00 = manhattan_distance(x1, y1, up[level1]) + cost00 + 1 + manhattan_distance(up[level2 - 1].first + 1, up[level2 - 1].second, x2, y2);
 
-			int c01 = manhattan_distance(x1, y1, up[level1]) + cost01 + 1 +
-			manhattan_distance(down[level2 - 1].first, down[level2 - 1].second + 1, x2, y2);
+			int c01 = manhattan_distance(x1, y1, up[level1]) + cost01 + 1 + manhattan_distance(down[level2 - 1].first, down[level2 - 1].second + 1, x2, y2);
 
-			int c10 = manhattan_distance(x1, y1, down[level1]) + cost10 + 1 +
-			manhattan_distance(up[level2 - 1].first + 1, up[level2 - 1].second, x2, y2);
+			int c10 = manhattan_distance(x1, y1, down[level1]) + cost10 + 1 + manhattan_distance(up[level2 - 1].first + 1, up[level2 - 1].second, x2, y2);
 
-			int c11 = manhattan_distance(x1, y1, down[level1]) + cost11 + 1 +
-			manhattan_distance(down[level2 - 1].first, down[level2 - 1].second + 1, x2, y2);
+			int c11 = manhattan_distance(x1, y1, down[level1]) + cost11 + 1 + manhattan_distance(down[level2 - 1].first, down[level2 - 1].second + 1, x2, y2);
 
 			best = min({ c00, c01, c10, c11 });
 			assert(best ^ INF);

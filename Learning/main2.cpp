@@ -7,7 +7,7 @@ int32_t get_int() {
 }
 
 int* test() {
-	// compiler throws warning for this one 
+	// compiler throws warning for this one
 	int val = 32;
 	return nullptr;
 }
@@ -20,17 +20,37 @@ int* test2() {
 	// no compile warning for this
 }
 
-class A                     { public: int val = 21; void eat(){ cout<<"A\n";} }; 
-class B: virtual public A   { public: void eat(){ cout<<"B\n";} }; 
-class C: virtual public A   { public: void eat(){ cout<<"C\n";} }; 
-class D: public         B,C { public: void eat(){ cout << val << endl;} }; 
+class A {
+	public:
+	int val = 21;
+	void eat() {
+		cout << "A\n";
+	}
+};
+class B : virtual public A {
+	public:
+	void eat() {
+		cout << "B\n";
+	}
+};
+class C : virtual public A {
+	public:
+	void eat() {
+		cout << "C\n";
+	}
+};
+class D : public B, C {
+	public:
+	void eat() {
+		cout << val << endl;
+	}
+};
 
 int32_t main() {
-    A *a = new D(); 
-    a->eat(); 
+	A* a = new D();
+	a->eat();
 	cout << a->val << endl;
 	return 0;
-
 
 	int* ptr;
 	int val = 21;
@@ -43,11 +63,11 @@ int32_t main() {
 	// because it points to variable which is deleted
 	cout << ptr << endl;
 	try {
-		if (ptr == nullptr) throw "dangling pointer\n";
+		if (ptr == nullptr)
+			throw "dangling pointer\n";
 		cout << *ptr << endl;
-	} catch (const char *error) {
+	} catch (const char* error) {
 		cout << "FOUND ERROR: ";
 		cout << error << endl;
 	}
 }
-

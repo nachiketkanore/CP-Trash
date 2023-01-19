@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 07 October 2022 08:10:17 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -20,13 +20,14 @@ using namespace std;
 void solve() {
 	int N, K;
 	cin >> N >> K;
-	string S; cin >> S;
-	int f[26] = {0};
-	for (char ch: S) {
-		f[ch-'a']++;
+	string S;
+	cin >> S;
+	int f[26] = { 0 };
+	for (char ch : S) {
+		f[ch - 'a']++;
 	}
 	string ans;
-	F0R (i,K) {
+	F0R(i, K) {
 		int take = N / K;
 		int curr = 0;
 		while (take--) {

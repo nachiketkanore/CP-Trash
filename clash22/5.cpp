@@ -27,7 +27,7 @@ int main() {
 			ll a, b, c, d, f1, f2;
 			tie(f1, a, b) = sol(x[it[0]], x[it[1]], x[it[2]], x[it[3]]);
 			tie(f2, c, d) = sol(y[it[0]], y[it[2]], y[it[1]], y[it[3]]);
-			ret			  = min(ret, f1 + f2 + 2 * max({ 0ll, a - d, c - b }));
+			ret = min(ret, f1 + f2 + 2 * max({ 0ll, a - d, c - b }));
 		} while (next_permutation(it, it + n));
 		cout << ret << endl;
 	}

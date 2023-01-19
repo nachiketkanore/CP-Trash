@@ -2,7 +2,7 @@
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = L; i <= R; i++)
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e13;
@@ -21,19 +21,22 @@ void add(int L, int R, int val) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
-	int T;	cin >> T;
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	int T;
+	cin >> T;
 	while (T--) {
-		cin >> n;	
-		FOR(i,1,n) {
+		cin >> n;
+		FOR(i, 1, n) {
 			cin >> a[i];
 			b[i] = a[i];
 			a[i] += a[i - 1];
 			ans[0] = ans[i] = 0;
 		}
 
-		FOR(i,1,n) {
+		FOR(i, 1, n) {
 
 			int right = i;
 			int lo = i + 1, hi = n;
@@ -70,10 +73,11 @@ int32_t main() {
 				assert(left <= i - 1);
 				add(left, i - 1, 1);
 			}
-		}		
-		FOR(i,1,n) {
+		}
+		FOR(i, 1, n) {
 			ans[i] += ans[i - 1];
 			cout << ans[i] << ' ';
-		}	cout << '\n';
+		}
+		cout << '\n';
 	}
 }

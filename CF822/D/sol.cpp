@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 23 September 2022 06:46:18 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -18,16 +18,18 @@ using namespace std;
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 bool solve() {
-	int N, K; cin >> N >> K;
+	int N, K;
+	cin >> N >> K;
 	vector<int> A(N + 1);
-	FOR (i,1,N) {
+	FOR(i, 1, N) {
 		cin >> A[i];
 	}
 	int S = A[K];
 	int cL = K, cR = K;
 	while (true) {
 		assert(S >= 0);
-		if (cL == 1 || cR == N) return true;
+		if (cL == 1 || cR == N)
+			return true;
 		int L = cL;
 		int left = S;
 		int best_left = S;
@@ -52,14 +54,16 @@ bool solve() {
 				best_right_pos = R;
 			}
 		}
-		if (L == 1 || R == N) return true;
-		if (L == cL && R == cR) return false;
+		if (L == 1 || R == N)
+			return true;
+		if (L == cL && R == cR)
+			return false;
 
 		if (best_left > S && best_right > S) {
 			// take the maximum ? or anyone would do?
 			// if (best_left > best_right) {
-				cL = best_left_pos;
-				S = best_left;
+			cL = best_left_pos;
+			S = best_left;
 			// } else {
 			// 	cR = best_right_pos;
 			// 	S = best_right;

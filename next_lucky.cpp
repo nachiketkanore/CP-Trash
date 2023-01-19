@@ -22,7 +22,7 @@ bool go(int id, bool big) {
 	int8_t& ans = dp[big][id];
 	if (~ans)
 		return ans;
-	ans		 = 0;
+	ans = 0;
 	int curr = S[id] - '0';
 	int L = curr, R = 9;
 	if (big)
@@ -58,7 +58,7 @@ void trace(int id, bool big) {
 void solve() {
 	cin >> S;
 	memset(dp, -1, sizeof(dp));
-	N		   = S.size();
+	N = S.size();
 	bool found = go(0, 0);
 	if (found) {
 		trace(0, 0);

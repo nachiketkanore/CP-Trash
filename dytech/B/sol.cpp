@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 07 October 2022 08:36:32 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 

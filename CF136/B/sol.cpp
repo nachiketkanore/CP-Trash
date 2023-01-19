@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 29 September 2022 08:13:04 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -18,9 +18,11 @@ using namespace std;
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 void solve() {
-	int N; cin >> N;
+	int N;
+	cin >> N;
 	vector<int> D(N);
-	for (int &x: D) cin >> x;
+	for (int& x : D)
+		cin >> x;
 	vector<int> A(N);
 	A[0] = D[0];
 	for (int i = 1; i < N; i++) {
@@ -32,7 +34,7 @@ void solve() {
 		}
 		A[i] = choice2;
 	}
-	for (int x: A) {
+	for (int x : A) {
 		cout << x << ' ';
 	}
 	cout << '\n';

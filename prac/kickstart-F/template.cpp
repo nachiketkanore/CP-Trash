@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 18 September 2022 10:27:31 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -27,7 +27,7 @@ int32_t main() {
 	int T;
 	cin >> T;
 
-	FOR (tc, 1, T) {
+	FOR(tc, 1, T) {
 		cout << "Case #" << tc << ": ";
 		solve();
 	}
