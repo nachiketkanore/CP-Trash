@@ -2,7 +2,7 @@
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = L; i <= R; i++)
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e13;
@@ -15,16 +15,19 @@ int get(int median) {
 	for (int i = n; i >= 1; i--) {
 		ret += max(0LL, median - a[i]);
 		have++;
-		if (have == want) break;
+		if (have == want)
+			break;
 	}
 	return ret;
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
 	cin >> n >> k;
-	FOR(i,1,n) cin >> a[i];
+	FOR(i, 1, n) cin >> a[i];
 	sort(a + 1, a + n + 1);
 
 	int lo = 0, hi = inf;
@@ -44,7 +47,7 @@ int32_t main() {
 /*
 1 2 3 4 5
 
-make x as median 
+make x as median
 cnt = (n + 1) / 2
 no of elements >= x should be >= cnt
 */

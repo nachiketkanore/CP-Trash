@@ -3,16 +3,25 @@
 #define int int64_t
 #define pb push_back
 #define sz(x) (int)(x.size())
-#define ALL(x) (x).begin(),(x).end()
-#define F0R(i,R) for(int i = (0); i < (R); ++i)
-#define FOR(i,L,R) for(int i = (L); i <= (R); ++i)
+#define ALL(x) (x).begin(), (x).end()
+#define F0R(i, R) for (int i = (0); i < (R); ++i)
+#define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 using namespace std;
 
-struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
+struct $ {
+	$() {
+		ios::sync_with_stdio(0);
+		cin.tie(0);
+	}
+} $;
 
-template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 const int inf = 1e18;
 const int N = 5e5 + 5;
@@ -39,7 +48,7 @@ int*** gen_3d_matrix(int N, int M, int W) {
 		mat[i] = new int*[M];
 		for (int j = 0; j < M; j++) {
 			mat[i][j] = new int[W];
-			for (int k = 0; k < W; k++) 
+			for (int k = 0; k < W; k++)
 				mat[i][j][k] = default_value;
 		}
 	}
@@ -66,7 +75,8 @@ void solve() {
 		while (m--) {
 			int u, v;
 			cin >> u >> v;
-			if (u > v) ans++;
+			if (u > v)
+				ans++;
 		}
 		cout << ans << endl;
 	}
@@ -75,12 +85,12 @@ void solve() {
 int32_t main() {
 	solve();
 	return 0;
-    int T;
-    cin >> T;
-    while (T--) {
-        int n;
-        cin >> n;
-        vector<int> a(n);
-        F0R (i,n) cin >> a[i];
-    }
+	int T;
+	cin >> T;
+	while (T--) {
+		int n;
+		cin >> n;
+		vector<int> a(n);
+		F0R(i, n) cin >> a[i];
+	}
 }

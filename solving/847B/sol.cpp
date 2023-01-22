@@ -3,28 +3,28 @@ Author: Nachiket Kanore
 Created: Wednesday 21 October 2020 04:10:18 PM IST
 (ツ) The grand essentials of happiness are: something to do, something to love, and something to hope for.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <set>
 #include <cstring>
+#include <iostream>
+#include <set>
+#include <vector>
 
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 2e9;
 
 int n, a[N], tree[N << 2];
 
-
 void put(int tl, int tr, int node, int id, int val) {
-	if (tl > tr) return;
-	
+	if (tl > tr)
+		return;
+
 	if (tl == tr) {
 		tree[node] = val;
 		return;
@@ -41,7 +41,7 @@ void put(int tl, int tr, int node, int id, int val) {
 }
 
 int get(int tl, int tr, int node, int ql, int qr) {
-	if (tl > tr || ql > qr) 
+	if (tl > tr || ql > qr)
 		return -inf;
 	if (tl == ql && tr == qr)
 		return tree[node];
@@ -63,18 +63,19 @@ int getMax(int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		cin >> a[i];
 		upd(i, a[i]);
 	}
 
 	set<int> available;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		available.insert(i);
 	}
 
@@ -110,7 +111,7 @@ int32_t main() {
 		}
 
 		assert(sz(taken));
-		for (int id : taken) 
+		for (int id : taken)
 			cout << a[id] << ' ';
 		cout << "\n";
 

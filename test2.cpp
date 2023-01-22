@@ -32,4 +32,3 @@ int32_t main() {
 	cout << best;
 	return 0;
 }
-

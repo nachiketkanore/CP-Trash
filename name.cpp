@@ -15,7 +15,7 @@ using namespace std;
 void solve() {
 	string a, b, c;
 	cin >> a >> b >> c;
-	const int mn	  = min({ sz(a), sz(b), sz(c) });
+	const int mn = min({ sz(a), sz(b), sz(c) });
 	auto generate_all = [&](const string& S) {
 		set<string> ret;
 		const int N = S.size();

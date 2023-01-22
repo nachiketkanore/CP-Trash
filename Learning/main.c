@@ -1,9 +1,9 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
 
 int* get_arr(int size) {
-	int* ret = (int*) malloc(size * sizeof(int));
+	int* ret = (int*)malloc(size * sizeof(int));
 	for (int i = 0; i < size; i++) {
 		ret[i] = i;
 	}
@@ -16,7 +16,7 @@ void* test(int N) {
 
 int main() {
 	int N = 20;
-	int *arr = get_arr(N);
+	int* arr = get_arr(N);
 	for (int i = 0; i < N; i++) {
 		printf("%d ", arr[i]);
 	}

@@ -22,30 +22,34 @@
 using namespace std;
 
 struct $ {
-  $() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-  }
+	$() {
+		ios::sync_with_stdio(0);
+		cin.tie(0);
+	}
 } $;
 
-template <class T> bool cmin(T &a, const T &b) { return b < a ? a = b, 1 : 0; }
-template <class T> bool cmax(T &a, const T &b) { return a < b ? a = b, 1 : 0; }
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 int c2(int x, int r = 2) {
-  if (x < 2)
-    return 0;
-  return x * (x - 1) / 2;
+	if (x < 2)
+		return 0;
+	return x * (x - 1) / 2;
 }
 
 int32_t main() {
-  int T;
-  cin >> T;
-  while (T--) {
-    int x, y;
-    cin >> x >> y;
-	assert(x > 0 && y > 0);
-	assert(x <= 1e9 && y <= 1e9);
-    int ans = c2(x, 2) * y + c2(y, 2) * x + x * y;
-    cout << ans << '\n';
-  }
+	int T;
+	cin >> T;
+	while (T--) {
+		int x, y;
+		cin >> x >> y;
+		assert(x > 0 && y > 0);
+		assert(x <= 1e9 && y <= 1e9);
+		int ans = c2(x, 2) * y + c2(y, 2) * x + x * y;
+		cout << ans << '\n';
+	}
 }

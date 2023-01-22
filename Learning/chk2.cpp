@@ -3,19 +3,18 @@ using namespace std;
 
 class nachiket {
 	public:
-		int x;
-		nachiket() {
-			x = 21;
-		}
-		nachiket(nachiket& other) {
-			this->x = other.x;
-		}
-		void test() {
-			cout << "TEST\n";
-		}
-		void test2() {
-			
-		}
+	int x;
+	nachiket() {
+		x = 21;
+	}
+	nachiket(nachiket& other) {
+		this->x = other.x;
+	}
+	void test() {
+		cout << "TEST\n";
+	}
+	void test2() {
+	}
 };
 
 void test() {
@@ -30,4 +29,3 @@ int32_t main() {
 	nachiket two(one);
 	cout << two.x << endl;
 }
-

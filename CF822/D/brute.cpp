@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 23 September 2022 06:46:18 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -20,15 +20,17 @@ using namespace std;
 int N, K, A[100];
 
 bool go(int L, int R, int curr) {
-	if (curr < 0) return false;
-	if (L == -1 || R == N) return true;
+	if (curr < 0)
+		return false;
+	if (L == -1 || R == N)
+		return true;
 	return go(L - 1, R, curr + A[L]) | go(L, R + 1, curr + A[R]);
 }
 
 bool solve() {
 	cin >> N >> K;
 	K -= 1;
-	F0R (i, N) cin >> A[i];
+	F0R(i, N) cin >> A[i];
 	return go(K - 1, K + 1, A[K]);
 }
 

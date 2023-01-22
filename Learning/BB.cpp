@@ -1,30 +1,39 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 05 August 2021 12:49:18 AM IST
-**/
-#include <iostream>
+ **/
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <array>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int int64_t
 #define sz(x) (int)(x.size())
-#define ALL(x) (x).begin(),(x).end()
-#define F0R(i,R) for(int i = (0); i < (R); ++i)
-#define FOR(i,L,R) for(int i = (L); i <= (R); ++i)
+#define ALL(x) (x).begin(), (x).end()
+#define F0R(i, R) for (int i = (0); i < (R); ++i)
+#define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 using namespace std;
 
-struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
+struct $ {
+	$() {
+		ios::sync_with_stdio(0);
+		cin.tie(0);
+	}
+} $;
 
-template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 const int N = 1e6;
 
@@ -49,7 +58,7 @@ int pref(int id) {
 
 int32_t main() {
 	cin >> n >> x;
-	FOR (i,1,n) {
+	FOR(i, 1, n) {
 		cin >> a[i];
 		if (a[i] == x) {
 			upd(i, 1);
@@ -74,8 +83,10 @@ int32_t main() {
 			while (lo <= hi) {
 				int mid = (lo + hi) / 2;
 				int val = pref(mid) - behind;
-				if (val >= k) ans = mid, hi = mid - 1;
-				else lo = mid + 1;
+				if (val >= k)
+					ans = mid, hi = mid - 1;
+				else
+					lo = mid + 1;
 			}
 			assert(~ans);
 			assert(L <= ans && ans <= R);

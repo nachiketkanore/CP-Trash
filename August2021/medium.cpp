@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 	int N;
 	cin >> N;
-	map<int,int> cnt;
+	map<int, int> cnt;
 	for (int i = 0; i < N; i++) {
 		int x;
 		cin >> x;
@@ -15,9 +15,9 @@ int main() {
 	while (Q--) {
 		int add;
 		cin >> add;
-		map<int,int> new_cnt;
+		map<int, int> new_cnt;
 		int ans = 0;
-		map<int,int>::iterator it = cnt.begin();
+		map<int, int>::iterator it = cnt.begin();
 		while (it != cnt.end()) {
 			int val = it->first;
 			int freq = it->second;

@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Wednesday 21 October 2020 12:47:21 PM IST
 (ツ) What we think determines what happens to us, so if we want to change our lives, we need to stretch our minds.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 200, inf = 1e18;
@@ -27,8 +27,8 @@ int dp[26][26][N];
 int go(int id, char prev1, char prev2) {
 	if (id == n)
 		return 1;
-	
-	int &ans = dp[prev1 - 'a'][prev2 - 'a'][id];
+
+	int& ans = dp[prev1 - 'a'][prev2 - 'a'][id];
 	if (~ans)
 		return ans;
 	ans = 0;
@@ -44,7 +44,7 @@ int go(int id, char prev1, char prev2) {
 
 void trace(int id, char prev1, char prev2) {
 	if (id == n)
-		return ;
+		return;
 	int ans = go(id, prev1, prev2);
 	assert(ans);
 
@@ -65,16 +65,17 @@ void trace(int id, char prev1, char prev2) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> s;
 
 	memset(dp, -1, sizeof(dp));
-	int poss = go(0,'a','a');
+	int poss = go(0, 'a', 'a');
 	if (!poss) {
 		cout << "NO\n";
 	} else {
 		cout << "YES\n";
-		trace(0,'a','a');
+		trace(0, 'a', 'a');
 	}
 }

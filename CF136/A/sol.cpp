@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 29 September 2022 08:07:08 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -23,10 +23,10 @@ int Y[8] = { 1, 2, 2, 1, -1, -2, -2, -1 };
 void solve() {
 	int n, m;
 	cin >> n >> m;
-	FOR (i,1,n) {
-		FOR (j,1,m) {
+	FOR(i, 1, n) {
+		FOR(j, 1, m) {
 			bool ok = true;
-			F0R (id,8) {
+			F0R(id, 8) {
 				int ni = i + X[id], nj = j + Y[id];
 				ok &= !(ni >= 1 && ni <= n && nj >= 1 && nj <= m);
 			}

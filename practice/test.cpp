@@ -14,5 +14,4 @@ int main() {
 		}
 		cout << "Sum of elements = " << sum << "\n";
 	}
-
 }

@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Tuesday 15 March 2022 10:14:59 AM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -11,29 +11,29 @@ int N, A[_], cnt[_], ans;
 vector<int> g[_];
 
 struct BIT {
-    vector<int> bit;  // binary indexed tree
-    int n;
+	vector<int> bit; // binary indexed tree
+	int n;
 
-    void init(int n) {
-        this->n = n + 5;
-		bit = vector<int> (this->n, 0);
-    }
+	void init(int n) {
+		this->n = n + 5;
+		bit = vector<int>(this->n, 0);
+	}
 
-    int sum(int r) {
-        int ret = 0;
-        for (; r >= 0; r = (r & (r + 1)) - 1)
-            ret += bit[r];
-        return ret;
-    }
+	int sum(int r) {
+		int ret = 0;
+		for (; r >= 0; r = (r & (r + 1)) - 1)
+			ret += bit[r];
+		return ret;
+	}
 
-    int sum(int l, int r) {
-        return sum(r) - sum(l - 1);
-    }
+	int sum(int l, int r) {
+		return sum(r) - sum(l - 1);
+	}
 
-    void add(int idx, int delta) {
-        for (; idx < n; idx = idx | (idx + 1))
-            bit[idx] += delta;
-    }
+	void add(int idx, int delta) {
+		for (; idx < n; idx = idx | (idx + 1))
+			bit[idx] += delta;
+	}
 } values;
 
 void dfs(int u, int par) {
@@ -54,8 +54,8 @@ void dfs(int u, int par) {
 	}
 	assert(~mex);
 	ans = max(ans, mex);
-	for (int v: g[u]) {
-		if (v^par) {
+	for (int v : g[u]) {
+		if (v ^ par) {
 			dfs(v, u);
 		}
 	}
@@ -66,7 +66,8 @@ void dfs(int u, int par) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int T;
 	cin >> T;
 	while (T--) {

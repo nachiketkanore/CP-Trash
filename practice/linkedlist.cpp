@@ -1,36 +1,45 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 12 September 2021 03:23:45 PM IST
-**/
-#include <iostream>
+ **/
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <array>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int int64_t
 #define sz(x) (int)(x.size())
-#define ALL(x) (x).begin(),(x).end()
-#define F0R(i,R) for(int i = (0); i < (R); ++i)
-#define FOR(i,L,R) for(int i = (L); i <= (R); ++i)
+#define ALL(x) (x).begin(), (x).end()
+#define F0R(i, R) for (int i = (0); i < (R); ++i)
+#define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 using namespace std;
 
-struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
+struct $ {
+	$() {
+		ios::sync_with_stdio(0);
+		cin.tie(0);
+	}
+} $;
 
-template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 struct linked_list {
 	struct node {
 		int val;
 		node* next;
-		node(int val): val(val) {
+		node(int val) : val(val) {
 			next = NULL;
 		}
 		node() {
@@ -46,7 +55,7 @@ struct linked_list {
 		if (head == NULL) {
 			head = new node(val);
 			return;
-		} 
+		}
 		node* curr = head;
 		while (curr->next != NULL)
 			curr = curr->next;
@@ -60,7 +69,8 @@ struct linked_list {
 		}
 	}
 	void print_reverse(node* curr) {
-		if (curr == NULL) return;
+		if (curr == NULL)
+			return;
 		print_reverse(curr->next);
 		cout << curr->val << ' ';
 	}
@@ -72,7 +82,7 @@ struct linked_list {
 		node* curr = head;
 		while (curr) {
 			node* to = curr->next;
-			delete(curr);
+			delete (curr);
 			curr = to;
 		}
 		head = NULL;
@@ -84,20 +94,24 @@ int32_t main() {
 	cin >> N;
 	linked_list list;
 	int old = -1;
-	FOR (i,1,N) {
+	FOR(i, 1, N) {
 		int val;
 		cin >> val;
 		if (old == -1 || (old % 2 == val % 2)) {
 			list.push_back(val);
 		} else {
 			assert(~old);
-			if (old % 2 == 1) list.print();
-			else list.print_reverse();
+			if (old % 2 == 1)
+				list.print();
+			else
+				list.print_reverse();
 			list.clear();
 			list.push_back(val);
 		}
 		old = val % 2;
 	}
-	if (old % 2 == 1) list.print();
-	else list.print_reverse();
+	if (old % 2 == 1)
+		list.print();
+	else
+		list.print_reverse();
 }

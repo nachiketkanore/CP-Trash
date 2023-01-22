@@ -3,35 +3,37 @@ Author: Nachiket Kanore
 Created: Friday 16 October 2020 01:35:42 PM IST
 (ツ) Through perseverance many people win success out of what seemed destined to be certain failure.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <map>
 #include <cstring>
+#include <iostream>
+#include <map>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 1e3 + 5, mod = 998244353;
 
 int n, k;
-map<int,int> cnt;
+map<int, int> cnt;
 std::vector<int> freqs;
 int dp[N][N];
 
 int go(int id, int taken) {
-	if (taken > k) return 0;
+	if (taken > k)
+		return 0;
 	if (id == sz(freqs)) {
 		return (taken == k ? 1 : 0);
 	}
-	int &ans = dp[id][taken];
-	if (~ans) return ans;
+	int& ans = dp[id][taken];
+	if (~ans)
+		return ans;
 	ans = 0;
 
 	int c1 = freqs[id] * go(id + 1, taken + 1);
@@ -45,10 +47,11 @@ int go(int id, int taken) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> k;
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		int val;
 		cin >> val;
 		cnt[val]++;
@@ -69,4 +72,3 @@ int32_t main() {
 	int ans = go(0, 0);
 	cout << ans << '\n';
 }
-

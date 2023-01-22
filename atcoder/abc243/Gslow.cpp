@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Saturday 19 March 2022 12:40:55 AM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -11,7 +11,8 @@ const int N = 1e6;
 int dp[N], pref_dp[N];
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	dp[1] = pref_dp[1] = 1;
 	for (int i = 2; i < N; i++) {
 		int m = sqrt(i);

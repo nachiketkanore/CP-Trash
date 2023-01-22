@@ -12,7 +12,7 @@
 
 using namespace std;
 const int MOD = 1e9 + 7;
-const int SZ  = 105;
+const int SZ = 105;
 
 int add(int a, int b) {
 	int res = a + b;
@@ -97,7 +97,7 @@ int32_t main() {
 		A.arr[u][v] = 1;
 		A.arr[v][u] = 1;
 	}
-	A		= power(A, K);
+	A = power(A, K);
 	int ans = A.arr[H][H] % MOD;
 	cout << ans;
 	return 0;

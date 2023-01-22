@@ -86,8 +86,7 @@ template <long long mod> struct modular {
 template <long long mod> string to_string(const modular<mod>& x) {
 	return to_string(x.value);
 }
-template <long long mod>
-ostream& operator<<(ostream& stream, const modular<mod>& x) {
+template <long long mod> ostream& operator<<(ostream& stream, const modular<mod>& x) {
 	return stream << x.value;
 }
 template <long long mod> istream& operator>>(istream& stream, modular<mod>& x) {

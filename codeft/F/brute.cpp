@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const int _	  = 105;
+const int _ = 105;
 const int MOD = 1e9 + 7;
 set<int> g[_];
 int N, M, K, H;

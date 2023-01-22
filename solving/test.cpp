@@ -13,8 +13,9 @@ void test() {
 	for (int i = 0; i < n; i++) {
 	}
 	print();
-	for() {
-	:}
+	for () {
+	:
+	}
 }
 
 int hello() {

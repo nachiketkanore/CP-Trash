@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Wednesday 21 October 2020 10:21:54 PM IST
 (ツ) If you're in a bad situation, don't worry it'll change. If you're in a good situation, don't worry it'll change.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int M = 3e5 + 5;
@@ -56,9 +56,8 @@ void build(int tl, int tr, int node) {
 	pull(node);
 }
 
-
 void upd(int tl, int tr, int node, int ql, int qr) {
-	if (tl > tr || ql > qr || tree[node].mx <= 2) 
+	if (tl > tr || ql > qr || tree[node].mx <= 2)
 		return;
 
 	if (tl == tr) {
@@ -72,7 +71,7 @@ void upd(int tl, int tr, int node, int ql, int qr) {
 	upd(tl, mid, 2 * node, ql, min(mid, qr));
 	upd(mid + 1, tr, 2 * node + 1, max(mid + 1, ql), qr);
 
-	pull(node); 
+	pull(node);
 }
 
 void REPLACE(int L, int R) {
@@ -80,7 +79,7 @@ void REPLACE(int L, int R) {
 }
 
 int get(int tl, int tr, int node, int ql, int qr) {
-	if (tl > tr || ql > qr) 
+	if (tl > tr || ql > qr)
 		return 0;
 
 	if (tl == ql && tr == qr)
@@ -99,8 +98,9 @@ int SUM(int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	pre();
 
 	cin >> n >> Q;

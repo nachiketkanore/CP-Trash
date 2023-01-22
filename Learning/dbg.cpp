@@ -5,7 +5,7 @@ using namespace std;
 #define see(x) cerr << #x << " = " << x << '\n'
 
 class school {
-public:
+	public:
 	// garbage `val`
 	int val;
 	~school() {
@@ -29,4 +29,3 @@ int32_t main() {
 	school abc;
 	cout << abc.val << endl;
 }
-

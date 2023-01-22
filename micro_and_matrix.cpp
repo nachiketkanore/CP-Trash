@@ -21,9 +21,7 @@ void solve() {
 		cin >> mat[i][j];
 		pref[i][j] = mat[i][j] + pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1];
 	}
-	auto get_sum = [&](int r1, int r2, int c1, int c2) {
-		return pref[r2][c2] - pref[r2][c1 - 1] - pref[r1 - 1][c2] + pref[r1 - 1][c1 - 1];
-	};
+	auto get_sum = [&](int r1, int r2, int c1, int c2) { return pref[r2][c2] - pref[r2][c1 - 1] - pref[r1 - 1][c2] + pref[r1 - 1][c1 - 1]; };
 	int ans = -1;
 	FOR(i, 1, N) {
 		FOR(j, 1, N) {
@@ -36,7 +34,7 @@ void solve() {
 				int want = mat[i][j] * mid * mid;
 				if (get_sum(r1, r2, c1, c2) == want) {
 					best = mid;
-					lo	 = mid + 1;
+					lo = mid + 1;
 				} else {
 					hi = mid - 1;
 				}

@@ -3,13 +3,16 @@
 using namespace std;
 
 int32_t main() {
-	int N, M; cin >> N >> M;
-	int freq[M][26]; memset(freq, 0, sizeof(freq));
+	int N, M;
+	cin >> N >> M;
+	int freq[M][26];
+	memset(freq, 0, sizeof(freq));
 	for (int i = 0; i < N; i++) {
-		string S; cin >> S;
+		string S;
+		cin >> S;
 		assert((int)S.size() == M);
 		for (int j = 0; j < M; j++) {
-			freq[j][S[j]-'A']++;
+			freq[j][S[j] - 'A']++;
 		}
 	}
 	int hamming_dist = 0;

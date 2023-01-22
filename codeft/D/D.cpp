@@ -22,8 +22,8 @@ bool go(int x, char dx, int y, char dy, int who) {
 	if (vis[who][dx == 'L'][dy == 'L'][x][y])
 		return dp[who][dx == 'L'][dy == 'L'][x][y];
 	vis[who][dx == 'L'][dy == 'L'][x][y] = true;
-	bool& yes							 = dp[who][dx == 'L'][dy == 'L'][x][y];
-	yes									 = false;
+	bool& yes = dp[who][dx == 'L'][dy == 'L'][x][y];
+	yes = false;
 
 	FOR(r, 1, 3) {
 		// atleast one false

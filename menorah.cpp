@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Wednesday 16 March 2022 04:39:38 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -11,7 +11,8 @@ string A, B;
 const int inf = 1e9;
 
 int go(int id) {
-	if (id == N) return 0;
+	if (id == N)
+		return 0;
 	int ans = inf;
 	if (A[id] == '1') {
 		// take
@@ -31,13 +32,15 @@ int go(int id) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int T;
 	cin >> T;
 	while (T--) {
 		cin >> N >> A >> B;
 		int ans = go(0);
-		if (ans >= inf) ans = -1;
+		if (ans >= inf)
+			ans = -1;
 		cout << ans << '\n';
 	}
 	return 0;

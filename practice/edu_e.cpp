@@ -2,43 +2,43 @@
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = L; i <= R; i++)
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
 vector<int> pos[26], npos[26];
 
 struct FenwickTree {
-    vector<int> bit;  // binary indexed tree
-    int n;
+	vector<int> bit; // binary indexed tree
+	int n;
 
-    FenwickTree(int n) {
-        this->n = n;
-        bit.assign(n, 0);
-    }
+	FenwickTree(int n) {
+		this->n = n;
+		bit.assign(n, 0);
+	}
 
-    FenwickTree(vector<int> a) : FenwickTree(a.size()) {
-        for (size_t i = 0; i < a.size(); i++)
-            add(i, a[i]);
-    }
+	FenwickTree(vector<int> a) : FenwickTree(a.size()) {
+		for (size_t i = 0; i < a.size(); i++)
+			add(i, a[i]);
+	}
 
-    int sum(int r) {
-        int ret = 0;
-        for (; r >= 0; r = (r & (r + 1)) - 1)
-            ret += bit[r];
-        return ret;
-    }
+	int sum(int r) {
+		int ret = 0;
+		for (; r >= 0; r = (r & (r + 1)) - 1)
+			ret += bit[r];
+		return ret;
+	}
 
-    int sum(int l, int r) {
-        return sum(r) - sum(l - 1);
-    }
+	int sum(int l, int r) {
+		return sum(r) - sum(l - 1);
+	}
 
-    void add(int idx, int delta) {
-        for (; idx < n; idx = idx | (idx + 1))
-            bit[idx] += delta;
-    }
+	void add(int idx, int delta) {
+		for (; idx < n; idx = idx | (idx + 1))
+			bit[idx] += delta;
+	}
 };
 
-int inversions(vector<int> &a) {
+int inversions(vector<int>& a) {
 	const int n = a.size();
 	FenwickTree tree(n + 5);
 
@@ -52,12 +52,15 @@ int inversions(vector<int> &a) {
 	return ans;
 }
 
-
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
-	int n;	cin >> n;
-	string s;	cin >> s;
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	int n;
+	cin >> n;
+	string s;
+	cin >> s;
 
 	for (int i = 0; i < n; i++) {
 		pos[s[i] - 'a'].push_back(i);

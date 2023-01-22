@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 23 September 2022 05:51:47 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -20,9 +20,10 @@ using namespace std;
 vector<vector<int>> ans;
 
 void solve() {
-	int N; cin >> N;
-	F0R (lvl, N) {
-		for (int x: ans[lvl]) {
+	int N;
+	cin >> N;
+	F0R(lvl, N) {
+		for (int x : ans[lvl]) {
 			cout << x << ' ';
 		}
 		cout << '\n';
@@ -33,7 +34,7 @@ int32_t main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
-	ans.push_back({1});
+	ans.push_back({ 1 });
 	FOR(len, 2, 505) {
 		vector<int> put(len, 0);
 		put[0] = put[len - 1] = 1;

@@ -1,14 +1,15 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 04 February 2022 03:55:51 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
 
-inline int rand(int l, int r){
-    static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
-    std::uniform_int_distribution<int> uid(l, r); return uid(rng);
+inline int rand(int l, int r) {
+	static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+	std::uniform_int_distribution<int> uid(l, r);
+	return uid(rng);
 }
 
 int32_t main() {
@@ -17,7 +18,8 @@ int32_t main() {
 	while (T--) {
 		int N = rand(2, 200);
 		cin >> N;
-		int B[N], cnt[2]; cnt[0] = cnt[1] = 0;
+		int B[N], cnt[2];
+		cnt[0] = cnt[1] = 0;
 		for (int i = 0; i < N; i++) {
 			B[i] = rand(0, 10000);
 			cin >> B[i];
@@ -25,11 +27,13 @@ int32_t main() {
 			cnt[B[i]]++;
 		}
 		if (cnt[1] >= 1) {
-			vector<pair<int,int>> ans;
+			vector<pair<int, int>> ans;
 			int got = 1e9;
 			for (int start = 0; start < 2; start++) {
-				vector<pair<int,int>> best;
-				int A[N]; for (int i = 0; i < N; i++) A[i] = B[i];
+				vector<pair<int, int>> best;
+				int A[N];
+				for (int i = 0; i < N; i++)
+					A[i] = B[i];
 				int one_pos = -1;
 				int make[N];
 				for (int i = 0; i < N; i++) {
@@ -47,7 +51,8 @@ int32_t main() {
 				}
 				assert(~one_pos);
 				for (int i = 0; i < N; i++) {
-					if (i == one_pos) continue;
+					if (i == one_pos)
+						continue;
 					if (make[i] ^ A[i]) {
 						best.push_back(make_pair(i, one_pos));
 						A[i] ^= 1;
@@ -75,7 +80,7 @@ int32_t main() {
 				}
 			}
 			cout << ans.size() << '\n';
-			for (auto pair: ans) {
+			for (auto pair : ans) {
 				cout << pair.first + 1 << ' ' << pair.second + 1 << '\n';
 			}
 

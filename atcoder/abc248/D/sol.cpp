@@ -33,9 +33,7 @@ int32_t main() {
 		int L, R, X;
 		cin >> L >> R >> X;
 
-		cout << (upper_bound(ALL(pos[X]), R) - pos[X].begin()) -
-		(lower_bound(ALL(pos[X]), L) - pos[X].begin())
-			 << '\n';
+		cout << (upper_bound(ALL(pos[X]), R) - pos[X].begin()) - (lower_bound(ALL(pos[X]), L) - pos[X].begin()) << '\n';
 	}
 
 	return 0;

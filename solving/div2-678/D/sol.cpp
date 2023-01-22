@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Saturday 24 October 2020 08:10:34 PM IST
 (ツ) I think somehow we learn who we really are and then live with that decision.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
@@ -42,26 +42,27 @@ void dfs(int curr, int sum) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n;
 
-	FOR(i,2,n) {
+	FOR(i, 2, n) {
 		int to;
 		cin >> to;
 		g[to].push_back(i);
 	}
 
 	memset(val, -1, sizeof(val));
-	FOR(i,1,n) cin >> a[i];
+	FOR(i, 1, n) cin >> a[i];
 
-	dfs(1,a[1]);
+	dfs(1, a[1]);
 
-	FOR(i,1,n) cout << val[i] << " \n"[i == n];
+	FOR(i, 1, n) cout << val[i] << " \n"[i == n];
 
 	int ans = 0;
 
-	FOR(i,1,n) if (~val[i]) {
+	FOR(i, 1, n) if (~val[i]) {
 		ans = max(ans, val[i]);
 	}
 

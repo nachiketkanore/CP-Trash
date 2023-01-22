@@ -23,7 +23,7 @@ int maxWater(vector<int> arr, int n) {
 
 	// To store previous wall's index
 	int prev_index = 0;
-	int water	   = 0;
+	int water = 0;
 
 	// To store the water until a larger wall
 	// is found, if there are no larger walls
@@ -37,7 +37,7 @@ int maxWater(vector<int> arr, int n) {
 		// index as previous wall's index
 		// for the subsequent loops
 		if (arr[i] >= prev) {
-			prev	   = arr[i];
+			prev = arr[i];
 			prev_index = i;
 
 			// Because larger or same

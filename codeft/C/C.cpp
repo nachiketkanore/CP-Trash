@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const int _	  = 5e5 + 5;
+const int _ = 5e5 + 5;
 const int INF = 1e15;
 int N, A[_], dp[4][_];
 bool vis[4][_];
@@ -25,8 +25,8 @@ int go(int id, int which) {
 	}
 	if (vis[which][id])
 		return dp[which][id];
-	int& ans	   = dp[which][id];
-	ans			   = -INF;
+	int& ans = dp[which][id];
+	ans = -INF;
 	vis[which][id] = true;
 	if (which == 0) {
 		ans = max(ans, +A[id] + go(id + 1, 0));

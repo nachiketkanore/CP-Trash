@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Saturday 12 February 2022 12:47:42 AM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -13,7 +13,8 @@ int32_t main() {
 	int n, k;
 	cin >> n >> k;
 	for (int i = 0; i < n; i++) {
-		char ch; cin >> ch;
+		char ch;
+		cin >> ch;
 		a[i] = int(ch - '0');
 	}
 	auto ok = [&](int len) {
@@ -23,21 +24,25 @@ int32_t main() {
 		for (int i = 0; i < len; i++) {
 			if (window.empty()) {
 				window.push_back(a[i]);
-				if (a[i] == 0) ++groups;
+				if (a[i] == 0)
+					++groups;
 			} else {
-				if (window.back() == 1 && a[i] == 0) ++groups;
+				if (window.back() == 1 && a[i] == 0)
+					++groups;
 				window.push_back(a[i]);
 			}
 		}
 		found |= groups <= k;
 		for (int i = len; i < n; i++) {
 			assert(!window.empty());
-			if (window.back() == 1 && a[i] == 0) ++groups;
+			if (window.back() == 1 && a[i] == 0)
+				++groups;
 			window.push_back(a[i]);
 			int first = window.front();
 			window.pop_front();
 			assert(!window.empty());
-			if (first == 0 && window.front() == 1) --groups;
+			if (first == 0 && window.front() == 1)
+				--groups;
 			found |= groups <= k;
 		}
 		return found;

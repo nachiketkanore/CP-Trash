@@ -1,42 +1,50 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 13 August 2021 03:59:05 PM IST
-**/
-#include <iostream>
+ **/
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <array>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int int64_t
 #define sz(x) (int)(x.size())
-#define ALL(x) (x).begin(),(x).end()
-#define F0R(i,R) for(int i = (0); i < (R); ++i)
-#define FOR(i,L,R) for(int i = (L); i <= (R); ++i)
+#define ALL(x) (x).begin(), (x).end()
+#define F0R(i, R) for (int i = (0); i < (R); ++i)
+#define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 using namespace std;
 
-struct ${ $() { ios::sync_with_stdio(0); cin.tie(0); } } $;
+struct $ {
+	$() {
+		ios::sync_with_stdio(0);
+		cin.tie(0);
+	}
+} $;
 
-template<class T> bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; } 
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
 class Name {
-public:
+	public:
 	string fname, lname;
-	Name(const string& fname, const string& lname): fname(fname), lname(lname) {}
+	Name(const string& fname, const string& lname) : fname(fname), lname(lname) {
+	}
 	void print() {
 		cout << "First Name: " << fname << '\n';
 		cout << "Second Name: " << lname << '\n';
 	}
 };
-
-
 
 void Tests() {
 	cout << "HELLO WORLD\n";
@@ -48,8 +56,8 @@ void test3() {
 			Node* next;
 			Node* prev;
 			int value;
-			Node(int value, Node* next, Node* prev):
-				next(next), prev(prev), value(value) {}
+			Node(int value, Node* next, Node* prev) : next(next), prev(prev), value(value) {
+			}
 		};
 		Node* root;
 		LinkedList() {
@@ -71,15 +79,14 @@ void test() {
 	cin >> n;
 	int A[n];
 	memset(A, -1, sizeof(A));
-	for (int i = 0; i < n; i++)
-	{
+	for (int i = 0; i < n; i++) {
 		cin >> A[i];
 	}
 }
 
 int32_t main() {
 	srand(time(0));
-	pair<int,int> f = make_pair(20, 21);
+	pair<int, int> f = make_pair(20, 21);
 	auto [one, two] = f;
 	cout << one << ' ' << two << endl;
 }

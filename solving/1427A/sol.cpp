@@ -7,7 +7,7 @@ Created: Monday 26 October 2020 04:09:02 PM IST
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
@@ -15,8 +15,9 @@ const int N = 2e5 + 5, inf = 1e18;
 static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	int T;
 	cin >> T;
 	while (T--) {
@@ -24,7 +25,7 @@ int32_t main() {
 		vector<int> a;
 
 		cin >> n;
-		FOR (i,1,n) {
+		FOR(i, 1, n) {
 			int u;
 			cin >> u;
 			a.push_back(u);
@@ -46,8 +47,9 @@ int32_t main() {
 
 		if (done) {
 			cout << "YES\n";
-			for (int x : a) cout << x << " ";	
-				cout << "\n";
+			for (int x : a)
+				cout << x << " ";
+			cout << "\n";
 		} else {
 			cout << "NO\n";
 		}

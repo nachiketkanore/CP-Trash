@@ -6,13 +6,10 @@
 using namespace std;
 using namespace __gnu_pbds;
 
-template <class T>
-using ordered_set =
-tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 template <class key, class value, class cmp = std::less<key>>
-using ordered_map =
-tree<key, value, cmp, rb_tree_tag, tree_order_statistics_node_update>;
+using ordered_map = tree<key, value, cmp, rb_tree_tag, tree_order_statistics_node_update>;
 // find_by_order(k)  returns iterator to kth element starting from 0;
 // order_of_key(k) returns count of elements strictly smaller than k;
 
@@ -20,8 +17,7 @@ template <class T> using min_heap = priority_queue<T, vector<T>, greater<T>>;
 
 /*/---------------------------IO(Debugging)----------------------/*/
 
-template <typename T_container,
-typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
 istream& operator>>(istream& is, T_container& v) {
 	for (T& x : v)
 		is >> x;
@@ -59,13 +55,11 @@ istream& operator>>(istream& is, __int128& T) {
 }
 #endif
 
-template <typename A, typename B>
-ostream& operator<<(ostream& os, const pair<A, B>& p) {
+template <typename A, typename B> ostream& operator<<(ostream& os, const pair<A, B>& p) {
 	return os << '(' << p.first << ", " << p.second << ')';
 }
 
-template <typename T_container,
-typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
 ostream& operator<<(ostream& os, const T_container& v) {
 	os << '{';
 	string sep;
@@ -73,8 +67,7 @@ ostream& operator<<(ostream& os, const T_container& v) {
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <class P, class Q = vector<P>, class R = less<P>>
-ostream& operator<<(ostream& out, priority_queue<P, Q, R> const& M) {
+template <class P, class Q = vector<P>, class R = less<P>> ostream& operator<<(ostream& out, priority_queue<P, Q, R> const& M) {
 	static priority_queue<P, Q, R> U;
 	U = M;
 	out << "{ ";
@@ -101,8 +94,7 @@ template <class P> ostream& operator<<(ostream& out, queue<P> const& M) {
 template <typename Arg1> void __f(const char* name, Arg1&& arg1) {
 	cerr << name << " : " << arg1 << endl;
 }
-template <typename Arg1, typename... Args>
-void __f(const char* names, Arg1&& arg1, Args&&... args) {
+template <typename Arg1, typename... Args> void __f(const char* names, Arg1&& arg1, Args&&... args) {
 	int count_open = 0, len = 1;
 	for (int k = 1;; ++k) {
 		char cur = *(names + k);
@@ -126,7 +118,7 @@ inline int64_t random_long(long long l = LLONG_MIN, long long r = LLONG_MAX) {
 	uniform_int_distribution<int64_t> generator(l, r);
 	return generator(rng);
 }
-struct custom_hash { // Credits: https://codeforces.com/blog/entry/62393
+struct custom_hash {						 // Credits: https://codeforces.com/blog/entry/62393
 	static uint64_t splitmix64(uint64_t x) { // http://xorshift.di.unimi.it/splitmix64.c
 		x += 0x9e3779b97f4a7c15;
 		x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;
@@ -134,14 +126,11 @@ struct custom_hash { // Credits: https://codeforces.com/blog/entry/62393
 		return x ^ (x >> 31);
 	}
 	size_t operator()(uint64_t x) const {
-		static const uint64_t FIXED_RANDOM =
-		chrono::steady_clock::now().time_since_epoch().count();
+		static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
 		return splitmix64(x + FIXED_RANDOM);
 	}
-	template <typename L, typename R>
-	size_t operator()(pair<L, R> const& Y) const {
-		static const uint64_t FIXED_RANDOM =
-		chrono::steady_clock::now().time_since_epoch().count();
+	template <typename L, typename R> size_t operator()(pair<L, R> const& Y) const {
+		static const uint64_t FIXED_RANDOM = chrono::steady_clock::now().time_since_epoch().count();
 		return splitmix64(Y.first * 31ull + Y.second + FIXED_RANDOM);
 	}
 };
@@ -151,19 +140,13 @@ struct custom_hash { // Credits: https://codeforces.com/blog/entry/62393
 #define all(v) (v).begin(), (v).end()
 
 namespace Geometry {
-template <typename T>
-inline typename enable_if<!is_floating_point<T>::value, bool>::type
-less_compare(const T& a, const T& b) {
+template <typename T> inline typename enable_if<!is_floating_point<T>::value, bool>::type less_compare(const T& a, const T& b) {
 	return a < b;
 }
-template <typename T>
-inline typename enable_if<!is_floating_point<T>::value, bool>::type
-equal_compare(const T& a, const T& b) {
+template <typename T> inline typename enable_if<!is_floating_point<T>::value, bool>::type equal_compare(const T& a, const T& b) {
 	return a == b;
 }
-template <typename T>
-inline typename enable_if<!is_floating_point<T>::value, bool>::type
-greater_compare(const T& a, const T& b) {
+template <typename T> inline typename enable_if<!is_floating_point<T>::value, bool>::type greater_compare(const T& a, const T& b) {
 	return a > b;
 }
 
@@ -171,19 +154,13 @@ constexpr long double __eps = 1e-10;
 constexpr long double __INF = 1e100;
 constexpr long double __PI = acosl(-1.0);
 
-template <typename T>
-inline typename enable_if<is_floating_point<T>::value, bool>::type
-less_compare(const T& a, const T& b) {
+template <typename T> inline typename enable_if<is_floating_point<T>::value, bool>::type less_compare(const T& a, const T& b) {
 	return a + __eps < b;
 }
-template <typename T>
-inline typename enable_if<is_floating_point<T>::value, bool>::type
-equal_compare(const T& a, const T& b) {
+template <typename T> inline typename enable_if<is_floating_point<T>::value, bool>::type equal_compare(const T& a, const T& b) {
 	return fabs(a - b) < __eps;
 }
-template <typename T>
-inline typename enable_if<is_floating_point<T>::value, bool>::type
-greater_compare(const T& a, const T& b) {
+template <typename T> inline typename enable_if<is_floating_point<T>::value, bool>::type greater_compare(const T& a, const T& b) {
 	return a > b + __eps;
 }
 
@@ -200,12 +177,10 @@ template <> inline constexpr __int128_t numeric_max() {
 }
 #endif
 
-template <typename T>
-inline constexpr typename enable_if<!is_floating_point<T>::value, T>::type numeric_inf() {
+template <typename T> inline constexpr typename enable_if<!is_floating_point<T>::value, T>::type numeric_inf() {
 	return numeric_max<T>();
 }
-template <typename T>
-inline constexpr typename enable_if<is_floating_point<T>::value, T>::type numeric_inf() {
+template <typename T> inline constexpr typename enable_if<is_floating_point<T>::value, T>::type numeric_inf() {
 	return static_cast<T>(__INF);
 }
 
@@ -214,8 +189,7 @@ template <typename T> struct point {
 	T x, y;
 	point(T _x = T{}, T _y = T{}) : x(_x), y(_y) {
 	}
-	point(const initializer_list<T>& _a)
-	: x(*_a.begin()), y(*(_a.begin() + 1)) {
+	point(const initializer_list<T>& _a) : x(*_a.begin()), y(*(_a.begin() + 1)) {
 		assert(_a.size() == 2);
 	}
 
@@ -245,8 +219,7 @@ template <typename T> struct point {
 	template <typename U> point operator*(const U& c) const {
 		return point(x * c, y * c);
 	}
-	template <typename U>
-	friend point operator*(const U& c, const point<T>& p) {
+	template <typename U> friend point operator*(const U& c, const point<T>& p) {
 		return point(p.x * c, p.y * c);
 	}
 	template <typename U> point& operator*=(const U& c) {
@@ -273,36 +246,28 @@ template <typename T> struct point {
 	}
 	template <typename U, typename Q> point<U> rotateCCW(const Q& _angle) {
 		Q cosine = cos(_angle), sine = sin(_angle);
-		return point<U>(static_cast<U>(x * cosine - y * sine),
-		static_cast<U>(x * sine + y * cosine));
+		return point<U>(static_cast<U>(x * cosine - y * sine), static_cast<U>(x * sine + y * cosine));
 	}
-	template <typename U>
-	inline typename enable_if<is_floating_point<U>::value, U>::type norm() const {
-		return sqrtl(static_cast<U>(x) * static_cast<U>(x) +
-		static_cast<U>(y) * static_cast<U>(y));
+	template <typename U> inline typename enable_if<is_floating_point<U>::value, U>::type norm() const {
+		return sqrtl(static_cast<U>(x) * static_cast<U>(x) + static_cast<U>(y) * static_cast<U>(y));
 	}
 	template <typename U> inline U abs() const {
-		return (static_cast<U>(x) * static_cast<U>(x) +
-		static_cast<U>(y) * static_cast<U>(y));
+		return (static_cast<U>(x) * static_cast<U>(x) + static_cast<U>(y) * static_cast<U>(y));
 	}
 	template <typename U> inline U dist2(const point& p) const {
-		return (static_cast<U>(p.x - x) * static_cast<U>(p.x - x) +
-		static_cast<U>(p.y - y) * static_cast<U>(p.y - y));
+		return (static_cast<U>(p.x - x) * static_cast<U>(p.x - x) + static_cast<U>(p.y - y) * static_cast<U>(p.y - y));
 	}
 	template <typename U> inline U dist(const point& p) const {
 		return sqrtl(this->dist2<U>(p));
 	}
 	template <typename U> inline U dot(const point& p) const {
-		return static_cast<U>(x) * static_cast<U>(p.x) +
-		static_cast<U>(y) * static_cast<U>(p.y);
+		return static_cast<U>(x) * static_cast<U>(p.x) + static_cast<U>(y) * static_cast<U>(p.y);
 	}
 	template <typename U> inline U cross(const point<T>& p) const {
-		return static_cast<U>(x) * static_cast<U>(p.y) -
-		static_cast<U>(p.x) * static_cast<U>(y);
+		return static_cast<U>(x) * static_cast<U>(p.y) - static_cast<U>(p.x) * static_cast<U>(y);
 	}
 	inline bool operator<(const point& p) const {
-		return less_compare<T>(x, p.x) ||
-		(equal_compare<T>(x, p.x) && less_compare<T>(y, p.y));
+		return less_compare<T>(x, p.x) || (equal_compare<T>(x, p.x) && less_compare<T>(y, p.y));
 	}
 	inline bool operator==(const point& p) const {
 		return equal_compare<T>(x, p.x) && equal_compare<T>(y, p.y);
@@ -311,8 +276,7 @@ template <typename T> struct point {
 		return !equal_compare<T>(x, p.x) || !equal_compare<T>(y, p.y);
 	}
 	inline bool operator>(const point& p) const {
-		return greater_compare<T>(x, p.x) ||
-		(equal_compare<T>(x, p.x) && greater_compare<T>(y, p.y));
+		return greater_compare<T>(x, p.x) || (equal_compare<T>(x, p.x) && greater_compare<T>(y, p.y));
 	}
 	inline bool operator<=(const point& p) const {
 		return !(*this > p);
@@ -327,16 +291,13 @@ template <typename T> struct point {
 		return os << "(" << p.x << ", " << p.y << ")";
 	}
 
-	template <typename U = long double>
-	inline U polar_angle() const { // Not using epsilon for comparison here.
+	template <typename U = long double> inline U polar_angle() const { // Not using epsilon for comparison here.
 		return (y == 0 && x == 0) ? 0 : atan2l(y, x) + (y < 0 ? 2 * __PI : 0);
 	}
 };
 
 // returns 1 if p to q is counterclock wise (wrt origin). 0 if collinear, -1 otherwise.
-template <typename U>
-inline typename enable_if<is_floating_point<U>::value, int32_t>::type
-ccw(const point<U>& p, const point<U>& q) {
+template <typename U> inline typename enable_if<is_floating_point<U>::value, int32_t>::type ccw(const point<U>& p, const point<U>& q) {
 	U cross_prod = p.template cross<U>(q);
 	return less_compare<U>(cross_prod, 0) ? -1 : (equal_compare<U>(cross_prod, 0) ? 0 : 1);
 }
@@ -359,8 +320,7 @@ inline int32_t ccw(const point<int64_t>& p, const point<int64_t>& q) {
 	return uint64_value >> 63 ? -1 : 1;
 #endif
 }
-template <typename U>
-inline int32_t ccw(const point<U>& p, const point<U>& q, const point<U>& origin) {
+template <typename U> inline int32_t ccw(const point<U>& p, const point<U>& q, const point<U>& origin) {
 	return ccw(p - origin, q - origin);
 }
 
@@ -385,11 +345,9 @@ template <typename T> struct Line {
 
 	Line() : a(), ab() {
 	}
-	Line(const point<T>& a, const point<T>& b, bool twoPoints = true)
-	: a(a), ab(twoPoints ? b - a : b) {
+	Line(const point<T>& a, const point<T>& b, bool twoPoints = true) : a(a), ab(twoPoints ? b - a : b) {
 	}
-	Line(const T& _a, const T& _b, const T& _c)
-	: ab(_b, -_a) { // ax + by + c = 0.
+	Line(const T& _a, const T& _b, const T& _c) : ab(_b, -_a) { // ax + by + c = 0.
 		assert(!equal_compare<T>(_a, 0) || !equal_compare<T>(_b, 0));
 		a = (!equal_compare<T>(_a, 0) ? point<T>(-_c / _a, 0) : point<T>(0, -_c / _b));
 	}
@@ -397,8 +355,7 @@ template <typename T> struct Line {
 		return Line<U>(static_cast<point<U>>(a), static_cast<point<U>>(ab), false);
 	}
 
-	template <typename U>
-	inline array<U, 3> equation() const { // ax + by + c = 0.
+	template <typename U> inline array<U, 3> equation() const { // ax + by + c = 0.
 		U _a = ab.y, _b = -ab.x;
 		U _c = -(_a * static_cast<U>(a.x) + _b * static_cast<U>(a.y));
 		return { _a, _b, _c };
@@ -469,17 +426,14 @@ template <typename T> struct Line {
 		}
 		return abs(((q - a).template cross<U>(ab))) / (ab.template norm<U>());
 	}
-	template <typename U>
-	inline point<U> projectOnLine(const point<T>& q) const {
+	template <typename U> inline point<U> projectOnLine(const point<T>& q) const {
 		point<U> ans = static_cast<point<U>>(a);
 		if (ab != point<T>()) {
-			ans += static_cast<point<U>>(ab) *
-			(((q - a).template dot<U>(ab)) / (ab.template abs<U>()));
+			ans += static_cast<point<U>>(ab) * (((q - a).template dot<U>(ab)) / (ab.template abs<U>()));
 		}
 		return ans;
 	}
-	template <typename U>
-	inline point<U> projectOnSegment(const point<T>& q) const {
+	template <typename U> inline point<U> projectOnSegment(const point<T>& q) const {
 		point<U> ans = projectOnLine<U>(q);
 		if (ans <= static_cast<point<U>>(min(a, a + ab))) {
 			return static_cast<point<U>>(min(a, a + ab));
@@ -488,11 +442,9 @@ template <typename T> struct Line {
 		}
 		return ans;
 	}
-	template <typename U>
-	inline point<U> projectOnRay(const point<T>& q) const {
+	template <typename U> inline point<U> projectOnRay(const point<T>& q) const {
 		point<U> ans = projectOnLine<U>(q);
-		if ((ans < point<U>(a) && point<T>() <= ab) ||
-		(ans > point<U>(a) && point<T>() >= ab)) {
+		if ((ans < point<U>(a) && point<T>() <= ab) || (ans > point<U>(a) && point<T>() >= ab)) {
 			return static_cast<point<U>>(a);
 		}
 		return ans;
@@ -507,8 +459,7 @@ template <typename T> struct Line {
 	// inline with ray guidelines. Lot of work -- should likely be slow -- when
 	// collinear lines. Write custom code for collinear if TLE? -- less generic.
 	// UNTESTED!! -- non-collinear copied; should be correct.
-	template <int LA, int LB, int RA, int RB, typename Q>
-	inline pair<bool, Line<Q>> intersection(const Line<T>& q) const {
+	template <int LA, int LB, int RA, int RB, typename Q> inline pair<bool, Line<Q>> intersection(const Line<T>& q) const {
 		assert(ab != point<T>() && q.ab != point<T>());
 		Q value = ab.template cross<Q>(q.ab);
 		if (equal_compare<Q>(value, 0)) {
@@ -586,8 +537,7 @@ template <typename T> struct Line {
 		if (less_compare<Q>(value, 0)) {
 			value = -value, ls = -ls, rs = -rs;
 		}
-		bool intersect = EndpointChecker<LA>()(static_cast<Q>(0), 0) &&
-		EndpointChecker<LB>()(ls, value) &&
+		bool intersect = EndpointChecker<LA>()(static_cast<Q>(0), 0) && EndpointChecker<LB>()(ls, value) &&
 		EndpointChecker<RA>()(static_cast<Q>(0), rs) && EndpointChecker<RB>()(rs, value);
 
 		if (intersect) {
@@ -596,43 +546,34 @@ template <typename T> struct Line {
 		return make_pair(false, Line<Q>{});
 	}
 
-	template <typename Q>
-	inline pair<bool, Line<Q>> LineIntersectLine(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> LineIntersectLine(const Line<T>& q) const {
 		return intersection<0, 0, 0, 0, Q>(q);
 	}
-	template <typename Q>
-	inline pair<bool, Line<Q>> LineIntersectRay(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> LineIntersectRay(const Line<T>& q) const {
 		return intersection<0, 0, 1, 0, Q>(q);
 	}
-	template <typename Q>
-	inline pair<bool, Line<Q>> LineIntersectSegment(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> LineIntersectSegment(const Line<T>& q) const {
 		return intersection<0, 0, 1, 1, Q>(q);
 	}
 
-	template <typename Q>
-	inline pair<bool, Line<Q>> RayIntersectLine(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> RayIntersectLine(const Line<T>& q) const {
 		return intersection<1, 0, 0, 0, Q>(q);
 	}
-	template <typename Q>
-	inline pair<bool, Line<Q>> RayIntersectRay(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> RayIntersectRay(const Line<T>& q) const {
 		return intersection<1, 0, 1, 0, Q>(q);
 	}
 
-	template <typename Q>
-	inline pair<bool, Line<Q>> RayIntersectSegment(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> RayIntersectSegment(const Line<T>& q) const {
 		return intersection<1, 0, 1, 1, Q>(q);
 	}
 
-	template <typename Q>
-	inline pair<bool, Line<Q>> SegmentIntersectLine(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> SegmentIntersectLine(const Line<T>& q) const {
 		return intersection<1, 1, 0, 0, Q>(q);
 	}
-	template <typename Q>
-	inline pair<bool, Line<Q>> SegmentIntersectRay(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> SegmentIntersectRay(const Line<T>& q) const {
 		return intersection<1, 1, 1, 0, Q>(q);
 	}
-	template <typename Q>
-	inline pair<bool, Line<Q>> SegmentIntersectSegment(const Line<T>& q) const {
+	template <typename Q> inline pair<bool, Line<Q>> SegmentIntersectSegment(const Line<T>& q) const {
 		return intersection<1, 1, 1, 1, Q>(q);
 	}
 };
@@ -673,8 +614,7 @@ template <typename T> struct Polygon {
 			}
 			int j = (i + 1 == n ? 0 : i + 1);
 			if (equal_compare(a[i].y, q.y) && equal_compare(a[j].y, q.y)) {
-				if (!greater_compare(min(a[i].x, a[j].x), q.x) &&
-				!less_compare(max(a[i].x, a[j].x), q.x)) {
+				if (!greater_compare(min(a[i].x, a[j].x), q.x) && !less_compare(max(a[i].x, a[j].x), q.x)) {
 					return INT_MAX;
 				}
 			} else {
@@ -734,8 +674,7 @@ template <typename T> struct Polygon {
 		point<U> ans(0, 0);
 		for (int i = 0; i < n; ++i) {
 			int j = (i == n - 1 ? 0 : i + 1);
-			ans +=
-			static_cast<point<U>>((a[i] + a[j])) * (a[i].template cross<U>(a[j]));
+			ans += static_cast<point<U>>((a[i] + a[j])) * (a[i].template cross<U>(a[j]));
 		}
 		return ans / scale;
 	}
@@ -744,8 +683,7 @@ template <typename T> struct Polygon {
 	bool is_ccw() const {
 		int n = static_cast<int>(a.size());
 		int i = static_cast<int>(min_element(a.begin(), a.end()) - a.begin());
-		int orient =
-		ccw(a[(i == 0 ? n - 1 : i - 1)], a[(i + 1 == n ? 0 : i + 1)], a[i]);
+		int orient = ccw(a[(i == 0 ? n - 1 : i - 1)], a[(i + 1 == n ? 0 : i + 1)], a[i]);
 		assert(n <= 2 || orient != 0);
 		return (n <= 2 || orient < 0);
 	}
@@ -769,8 +707,7 @@ template <typename T> struct ConvexPolygon : public Polygon<T> {
 		for (int phase = 0; phase < 2; ++phase) {
 			size_t original = hull.size();
 			for (const auto& pt : this->a) {
-				while (hull.size() >= original + 2 &&
-				ccw(hull[hull.size() - 2], hull.back(), pt) <= 0)
+				while (hull.size() >= original + 2 && ccw(hull[hull.size() - 2], hull.back(), pt) <= 0)
 					hull.pop_back();
 				hull.push_back(pt);
 			}
@@ -793,18 +730,15 @@ template <typename T> struct ConvexPolygon : public Polygon<T> {
 	public:
 	int top;
 
-	ConvexPolygon(const vector<point<T>>& _a, const bool is_sorted = false)
-	: Polygon<T>(_a) {
+	ConvexPolygon(const vector<point<T>>& _a, const bool is_sorted = false) : Polygon<T>(_a) {
 		setup(is_sorted);
 	}
 	ConvexPolygon(int n = 0) : Polygon<T>(n) {
 	}
-	ConvexPolygon(const initializer_list<point<T>>& _a, const bool is_sorted = false)
-	: Polygon<T>(_a) {
+	ConvexPolygon(const initializer_list<point<T>>& _a, const bool is_sorted = false) : Polygon<T>(_a) {
 		setup(is_sorted);
 	}
-	ConvexPolygon(const Polygon<T>& _a, const bool is_sorted = false)
-	: Polygon<T>(_a) {
+	ConvexPolygon(const Polygon<T>& _a, const bool is_sorted = false) : Polygon<T>(_a) {
 		setup(is_sorted);
 	}
 
@@ -823,13 +757,11 @@ template <typename T> struct ConvexPolygon : public Polygon<T> {
 			return ccw(point, itDown[0], itDown[-1]);
 		} else {
 			auto itUp = upper_bound(this->a.rbegin(), this->a.rend() - top - 1, point);
-			return ccw(
-			itUp[0], point, (itUp == this->a.rbegin() ? this->a[0] : itUp[-1]));
+			return ccw(itUp[0], point, (itUp == this->a.rbegin() ? this->a[0] : itUp[-1]));
 		}
 	}
 
-	template <typename U>
-	pair<pair<point<T>, point<T>>, U> diameter() const { // UNTESTED
+	template <typename U> pair<pair<point<T>, point<T>>, U> diameter() const { // UNTESTED
 		const int n = static_cast<int>(this->a.size());
 		U best = 0;
 		point<T> x = this->a[0], y = this->a[0];
@@ -887,8 +819,7 @@ template <typename T> struct ConvexPolygon : public Polygon<T> {
 	inline ConvexPolygon<T> minkowski_sum(const ConvexPolygon<T>& other) const {
 		ConvexPolygon<T> final;
 		final.a = minkowski_sum_vec(other.a);
-		final.top = static_cast<int>(
-		max_element(final.a.begin(), final.a.end()) - final.a.begin());
+		final.top = static_cast<int>(max_element(final.a.begin(), final.a.end()) - final.a.begin());
 		return final;
 	}
 
@@ -897,8 +828,7 @@ template <typename T> struct ConvexPolygon : public Polygon<T> {
 		int lo = 0, hi = top;
 		while (lo < hi) {
 			int mid = (lo + hi) >> 1;
-			if (less_compare(this->a[mid].template dot<U>(cur),
-				this->a[mid + 1].template dot<U>(cur))) {
+			if (less_compare(this->a[mid].template dot<U>(cur), this->a[mid + 1].template dot<U>(cur))) {
 				hi = mid;
 			} else {
 				lo = mid + 1;
@@ -912,8 +842,7 @@ template <typename T> struct ConvexPolygon : public Polygon<T> {
 		int lo = top, hi = static_cast<int>(this->a.size()) - 1;
 		while (lo < hi) {
 			int mid = (lo + hi) >> 1;
-			if (greater_compare(this->a[mid].template dot<U>(cur),
-				this->a[mid + 1].template dot<U>(cur))) {
+			if (greater_compare(this->a[mid].template dot<U>(cur), this->a[mid + 1].template dot<U>(cur))) {
 				hi = mid;
 			} else {
 				lo = mid + 1;

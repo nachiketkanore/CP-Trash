@@ -92,21 +92,17 @@ vector<point> convexhull(vector<point> p, bool vertex_only = true) {
 	if (n <= 2) {
 		return p;
 	}
-	sort(p.begin(), p.end(), [&](point i, point j) {
-		return (abs(i.x - j.x) < eps ? i.y < j.y : i.x < j.x);
-	});
+	sort(p.begin(), p.end(), [&](point i, point j) { return (abs(i.x - j.x) < eps ? i.y < j.y : i.x < j.x); });
 	p.resize(unique(p.begin(), p.end()) - p.begin());
 	vector<point> res(2 * n);
 	for (int i = 0; i < n; i++) { // lower_hull
-		while (k > 1 &&
-		cross(res[k - 1] - res[k - 2], p[i] - res[k - 1]) <= (vertex_only ? eps : -eps)) {
+		while (k > 1 && cross(res[k - 1] - res[k - 2], p[i] - res[k - 1]) <= (vertex_only ? eps : -eps)) {
 			k--;
 		}
 		res[k++] = p[i];
 	}
 	for (int i = n - 2, t = k; i >= 0; i--) { // upper_hull
-		while (k > t &&
-		cross(res[k - 1] - res[k - 2], p[i] - res[k - 1]) <= (vertex_only ? eps : -eps)) {
+		while (k > t && cross(res[k - 1] - res[k - 2], p[i] - res[k - 1]) <= (vertex_only ? eps : -eps)) {
 			k--;
 		}
 		res[k++] = p[i];

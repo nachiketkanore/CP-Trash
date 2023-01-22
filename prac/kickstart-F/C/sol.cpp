@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 18 September 2022 10:27:31 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -26,12 +26,15 @@ vector<vegie> A;
 int dp[20][1 << 15];
 
 int go(int mask, int day) {
-	if (day > N) return 0;
-	int &ans = dp[day][mask];
-	if (~ans) return ans;
+	if (day > N)
+		return 0;
+	int& ans = dp[day][mask];
+	if (~ans)
+		return ans;
 	ans = 0;
-	F0R (j,N) {
-		if (mask >> j & 1) continue;
+	F0R(j, N) {
+		if (mask >> j & 1)
+			continue;
 		bool can = day + A[j].l - 1 < D;
 		if (can) {
 			ans = max(ans, A[j].v + go(mask | (1 << j), day + 1));
@@ -44,7 +47,7 @@ void solve() {
 	memset(dp, -1, sizeof(dp));
 	cin >> D >> N >> X;
 	A.resize(N);
-	for (vegie &v: A) {
+	for (vegie& v : A) {
 		cin >> v.q >> v.l >> v.v;
 	}
 	int ans = go(0, 1);
@@ -58,7 +61,7 @@ int32_t main() {
 	int T;
 	cin >> T;
 
-	FOR (tc, 1, T) {
+	FOR(tc, 1, T) {
 		cout << "Case #" << tc << ": ";
 		solve();
 	}

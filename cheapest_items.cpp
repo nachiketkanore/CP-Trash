@@ -12,7 +12,7 @@
 
 using namespace std;
 
-const int _	  = 1005;
+const int _ = 1005;
 const int INF = 1e17;
 int N, V[_], P[_], dp[_][_];
 

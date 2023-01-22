@@ -6,7 +6,6 @@ using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
 
-
 int info[1005];
 int n, k, mod;
 int pow10[1005];
@@ -41,7 +40,7 @@ int go(int id, int modulo, bool taken) {
 	if (~ans)
 		return ans;
 	ans = 0;
-	
+
 	int start = ;
 
 	for (int d = (id == n ? 1 : 0); d < 10; d++) {
@@ -53,8 +52,10 @@ int go(int id, int modulo, bool taken) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
 	cin >> n >> k >> mod;
 	pre();
 	memset(dp, -1, sizeof(dp));

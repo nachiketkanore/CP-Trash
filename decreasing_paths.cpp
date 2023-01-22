@@ -12,10 +12,10 @@
 
 using namespace std;
 
-const int _	  = 1002;
+const int _ = 1002;
 const int MOD = 1e9 + 7;
-int dx[]	  = { 0, 0, -1, 1 };
-int dy[]	  = { -1, 1, 0, 0 };
+int dx[] = { 0, 0, -1, 1 };
+int dy[] = { -1, 1, 0, 0 };
 int N, mat[_][_], dp[_][_];
 
 int go(int i, int j) {

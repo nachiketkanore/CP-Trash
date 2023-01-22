@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Wednesday 21 October 2020 07:18:19 PM IST
 (ツ) If you would take, you must first give, this is the beginning of intelligence.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 1e5 + 5, inf = 1e18;
@@ -57,7 +57,6 @@ int getSum(int tl, int tr, int node, int ql, int qr) {
 
 	return (left + right);
 }
-
 
 int getSum(int L, int R) {
 	return getSum(1, n, 1, L, R);
@@ -106,11 +105,12 @@ void pointUpdate(int id, int val) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> Q;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		cin >> a[i];
 	}
 

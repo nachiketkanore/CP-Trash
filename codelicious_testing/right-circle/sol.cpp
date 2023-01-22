@@ -19,16 +19,14 @@ template <typename T> ostream& operator<<(ostream& os, const vector<T>& v) {
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <typename T, size_t size>
-ostream& operator<<(ostream& os, const array<T, size>& arr) {
+template <typename T, size_t size> ostream& operator<<(ostream& os, const array<T, size>& arr) {
 	os << '{';
 	string sep;
 	for (const auto& x : arr)
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <typename A, typename B>
-ostream& operator<<(ostream& os, const pair<A, B>& p) {
+template <typename A, typename B> ostream& operator<<(ostream& os, const pair<A, B>& p) {
 	return os << '(' << p.first << ", " << p.second << ')';
 }
 
@@ -68,10 +66,8 @@ void findCircle(int x1, int y1, int x2, int y2, int x3, int y3) {
 	int sx21 = pow(x2, 2) - pow(x1, 2);
 	int sy21 = pow(y2, 2) - pow(y1, 2);
 
-	int f = ((sx13) * (x12) + (sy13) * (x12) + (sx21) * (x13) + (sy21) * (x13)) /
-	(2 * ((y31) * (x12) - (y21) * (x13)));
-	int g = ((sx13) * (y12) + (sy13) * (y12) + (sx21) * (y13) + (sy21) * (y13)) /
-	(2 * ((x31) * (y12) - (x21) * (y13)));
+	int f = ((sx13) * (x12) + (sy13) * (x12) + (sx21) * (x13) + (sy21) * (x13)) / (2 * ((y31) * (x12) - (y21) * (x13)));
+	int g = ((sx13) * (y12) + (sy13) * (y12) + (sx21) * (y13) + (sy21) * (y13)) / (2 * ((x31) * (y12) - (x21) * (y13)));
 
 	int c = -pow(x1, 2) - pow(y1, 2) - 2 * g * x1 - 2 * f * y1;
 
@@ -96,8 +92,7 @@ void solve() {
 	F0R(i, N) {
 		cin >> A[i].first >> A[i].second;
 	}
-	findCircle(
-	A[0].first, A[0].second, A[1].first, A[1].second, A[2].first, A[2].second);
+	findCircle(A[0].first, A[0].second, A[1].first, A[1].second, A[2].first, A[2].second);
 	// assert(false);
 }
 

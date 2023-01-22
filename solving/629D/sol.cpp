@@ -3,19 +3,19 @@ Author: Nachiket Kanore
 Created: Wednesday 21 October 2020 03:24:11 PM IST
 (ツ) You may be deceived if you trust too much, but you will live in torment if you don't trust enough.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const double PI = (double)acos(-1);
@@ -25,7 +25,8 @@ int n, vol[N], tree[N << 2];
 int new_vol[N];
 
 void put(int tl, int tr, int node, int id, int val) {
-	if (tl > tr) return;
+	if (tl > tr)
+		return;
 	if (tl == tr) {
 		tree[node] = max(tree[node], val);
 		return;
@@ -40,9 +41,9 @@ void put(int tl, int tr, int node, int id, int val) {
 }
 
 int get(int tl, int tr, int node, int ql, int qr) {
-	if (tl > tr || ql > qr) 
+	if (tl > tr || ql > qr)
 		return -inf;
-	if (tl == ql && tr == qr) 
+	if (tl == ql && tr == qr)
 		return tree[node];
 	int mid = (tl + tr) >> 1;
 	int left = get(tl, mid, 2 * node, ql, min(qr, mid));
@@ -61,24 +62,25 @@ int getMax(int L, int R) {
 void compress() {
 	vector<int> vals;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		vals.push_back(vol[i]);
 	}
 
 	sort(vals.begin(), vals.end());
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		new_vol[i] = (lower_bound(vals.begin(), vals.end(), vol[i]) - vals.begin() + 2);
 		assert(new_vol[i] >= 1);
 	}
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		int r, h;
 		cin >> r >> h;
 		vol[i] = r * r * h;
@@ -88,7 +90,7 @@ int32_t main() {
 
 	int ans = 0;
 
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		int id = new_vol[i];
 		int currBest = vol[i] + getMax(1, id - 1);
 		upd(id, currBest);

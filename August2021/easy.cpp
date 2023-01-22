@@ -14,7 +14,8 @@ int main() {
 		}
 		for (int mask = 0; mask < (1 << N); mask++) {
 			int bits = __builtin_popcount(mask);
-			if (bits < 2) continue;
+			if (bits < 2)
+				continue;
 			int mn = INF, mx = -INF, diff = 0;
 			for (int i = 0; i < N; i++) {
 				if (mask >> i & 1) {

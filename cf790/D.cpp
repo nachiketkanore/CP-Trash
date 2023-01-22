@@ -18,8 +18,7 @@ void solve() {
 	int mat[N][M];
 	F0R(i, N) F0R(j, M) cin >> mat[i][j];
 	int ans = 0;
-	auto inside = [&](
-				  int i, int j) { return i >= 0 && i < N && j >= 0 && j < M; };
+	auto inside = [&](int i, int j) { return i >= 0 && i < N && j >= 0 && j < M; };
 	F0R(i, N) {
 		F0R(j, M) {
 			int get = mat[i][j];

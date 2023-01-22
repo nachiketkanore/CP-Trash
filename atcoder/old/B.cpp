@@ -1,6 +1,6 @@
+#include <cassert>
 #include <iostream>
 #include <map>
-#include <cassert>
 using namespace std;
 
 void test() {
@@ -14,7 +14,7 @@ int A[500500];
 struct segment_tree {
 	static const int N = 1e5 + 5;
 	static int n;
-	int *st;
+	int* st;
 	segment_tree(int n) {
 		this->n = n;
 		st = new int[n << 2];
@@ -35,7 +35,7 @@ struct segment_tree {
 }
 
 class Trie {
-private:
+	private:
 	struct node {
 		char ch;
 		node* to[26];
@@ -48,24 +48,24 @@ private:
 		}
 		void add_child(char child) {
 			assert(this->is_end == false);
-			to[child-'a'] = new node(child);
+			to[child - 'a'] = new node(child);
 		}
 	};
-public:
+
+	public:
 	node* root;
 	Trie() {
 		root = new node('$');
 	}
 	void test() {
-
 	}
-	void add(const string &add) {
+	void add(const string& add) {
 		node* curr = root;
-		for (const char& ch: add) {
-			if (curr->to[ch-'a'] == nullptr) {
-				curr->to[ch-'a'] = new node(ch);
+		for (const char& ch : add) {
+			if (curr->to[ch - 'a'] == nullptr) {
+				curr->to[ch - 'a'] = new node(ch);
 			}
-			curr = curr->to[ch-'a'];
+			curr = curr->to[ch - 'a'];
 		}
 		curr->is_end = true;
 	}
@@ -85,10 +85,9 @@ vector<int> test(int n) {
 void pattern(int n) {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			if (i == 0 || j == 0 || i == n-1 || j == n-1) {
+			if (i == 0 || j == 0 || i == n - 1 || j == n - 1) {
 				cout << "#";
-			}
-			else {
+			} else {
 				cout << "_";
 			}
 		}
@@ -102,4 +101,3 @@ int main() {
 		cout << endl;
 	}
 }
-

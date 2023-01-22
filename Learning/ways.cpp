@@ -5,11 +5,12 @@ int n, m, k;
 int dp[105][105];
 
 int countWays(int index, int cnt) {
-	if (index == n) 
+	if (index == n)
 		return cnt == k;
 
-	int &ans = dp[index][cnt];
-	if (~ans) return ans;
+	int& ans = dp[index][cnt];
+	if (~ans)
+		return ans;
 	ans = 0;
 
 	ans += countWays(index + 1, cnt);

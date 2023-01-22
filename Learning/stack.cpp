@@ -2,7 +2,7 @@
 using namespace std;
 
 int get_sum(int* a, int l, int r) {
-	return a[r] - (l ? a[l-1]: 0);
+	return a[r] - (l ? a[l - 1] : 0);
 }
 
 int main() {
@@ -15,9 +15,9 @@ int main() {
 		for (int i = 0; i < n; i++) {
 			cin >> a[i];
 			if (i > 0) {
-				a[i] += a[i-1];
+				a[i] += a[i - 1];
 			}
 		}
-		cout << get_sum(a, 0, n-1);
+		cout << get_sum(a, 0, n - 1);
 	}
 }

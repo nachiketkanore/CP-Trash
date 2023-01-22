@@ -122,9 +122,9 @@ mi go(int id, int rem) {
 	if (vis[id][rem])
 		return dp[id][rem];
 	vis[id][rem] = true;
-	mi& ans		 = dp[id][rem];
-	ans			 = 0;
-	int curr	 = S[id] - '0';
+	mi& ans = dp[id][rem];
+	ans = 0;
+	int curr = S[id] - '0';
 	FOR(put, curr - 1, curr + 1) {
 		if (put < 0 || put > 9)
 			continue;

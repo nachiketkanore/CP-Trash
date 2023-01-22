@@ -1,13 +1,14 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 17 March 2022 10:30:55 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int N;
 	cin >> N;
 	int A[N], B[N], first = 0, second = 0;
@@ -16,10 +17,12 @@ int32_t main() {
 	}
 	for (int i = 0; i < N; i++) {
 		cin >> B[i];
-		if (A[i] == B[i]) ++first;
+		if (A[i] == B[i])
+			++first;
 		for (int j = 0; j < N; j++) {
 			if (i ^ j) {
-				if (A[j] == B[i]) ++second;
+				if (A[j] == B[i])
+					++second;
 			}
 		}
 	}

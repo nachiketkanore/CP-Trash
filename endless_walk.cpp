@@ -22,7 +22,7 @@ bool check_cycle(int u) {
 		in_stack[u] = false;
 		return false;
 	}
-	vis[u]		= true;
+	vis[u] = true;
 	in_stack[u] = true;
 	for (int v : g[u]) {
 		if (!vis[v] && check_cycle(v)) {

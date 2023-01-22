@@ -86,8 +86,7 @@ template <long long mod> struct modular {
 template <long long mod> string to_string(const modular<mod>& x) {
 	return to_string(x.value);
 }
-template <long long mod>
-ostream& operator<<(ostream& stream, const modular<mod>& x) {
+template <long long mod> ostream& operator<<(ostream& stream, const modular<mod>& x) {
 	return stream << x.value;
 }
 template <long long mod> istream& operator>>(istream& stream, modular<mod>& x) {
@@ -234,8 +233,7 @@ vector<mint>& operator*=(vector<mint>& a, const vector<mint>& b) {
 	return a = a * b;
 }
 
-template <typename T, typename U>
-vector<T> power(const vector<T>& a, const U& b) {
+template <typename T, typename U> vector<T> power(const vector<T>& a, const U& b) {
 	assert(b >= 0);
 	vector<U> binary;
 	U bb = b;

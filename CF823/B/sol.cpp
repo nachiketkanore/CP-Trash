@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 25 September 2022 08:10:06 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -17,14 +17,19 @@ using namespace std;
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 void solve() {
-	int N; cin >> N;
-	vector<pair<int,int>> A(N);
-	for (auto &it: A) { cin >> it.first; }
-	for (auto &it: A) { cin >> it.second; }
+	int N;
+	cin >> N;
+	vector<pair<int, int>> A(N);
+	for (auto& it : A) {
+		cin >> it.first;
+	}
+	for (auto& it : A) {
+		cin >> it.second;
+	}
 
 	auto f = [&](double x0) {
 		double ans = -1e18;
-		for (const auto &[x, t]: A) {
+		for (const auto& [x, t] : A) {
 			ans = max(ans, t + abs((double)x - x0));
 		}
 		return ans;

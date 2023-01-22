@@ -2,18 +2,21 @@
 Author: Nachiket Kanore
 Created: Thursday 22 July 2021 11:29:16 PM IST
 */
-#include <vector>
-#include <iostream>
 #include <algorithm>
-#include <set>
+#include <iostream>
 #include <map>
+#include <set>
+#include <vector>
 
 using namespace std;
 
-template <typename T> void println(T x) { cout << x << '\n'; }
+template <typename T> void println(T x) {
+	cout << x << '\n';
+}
 
 void hello_main() {
-	int x; cin >> x;
+	int x;
+	cin >> x;
 	println(x);
 }
 
@@ -28,7 +31,8 @@ struct hello {
 		map<HELLO, int> f;
 	} here;
 	int x, y, z;
-	hello(int x, int y, int z): x(x), y(y), z(z) {}
+	hello(int x, int y, int z) : x(x), y(y), z(z) {
+	}
 } A(1, 1, 1);
 
 void test(int a, int b, int c, int d) {
@@ -42,13 +46,13 @@ int teej(int x, int y, int z) {
 	return x + y + z;
 }
 
-pair<string,string> get_name(const string& S) {
+pair<string, string> get_name(const string& S) {
 	{
 		A.here.f.clear();
 		A.here.f.clear();
 		int SZ = A.here.f.size();
 	}
-	pair<int,int> it = make_pair(21, 22);
+	pair<int, int> it = make_pair(21, 22);
 	const int one = it.first;
 	const int two = it.second;
 	string curr;
@@ -82,7 +86,7 @@ void test() {
 
 void hello_world() {
 	cout << "HELLO WORLD\n";
-	pair<string,string> full_name = get_name("nachiket kanore");
+	pair<string, string> full_name = get_name("nachiket kanore");
 	const string name = full_name.first;
 	const string surname = full_name.second;
 
@@ -109,11 +113,11 @@ struct Map {
 	new_map my_map;
 };
 
-void print(const set<pair<int,int>>& A) {
-	for (const pair<int,int> a: A) {
+void print(const set<pair<int, int>>& A) {
+	for (const pair<int, int> a : A) {
 		cout << a.first << ' ' << a.second;
 		Map map;
-		map.my_map.f.push_back({1, 2, 3});
+		map.my_map.f.push_back({ 1, 2, 3 });
 	}
 	Map nachiket;
 	set<int> val = nachiket.my_map.f.back();
@@ -121,7 +125,7 @@ void print(const set<pair<int,int>>& A) {
 }
 
 void map_stuff() {
-	set<pair<int,int>> f;
+	set<pair<int, int>> f;
 	f.clear();
 	int n;
 	cin >> n;
@@ -134,7 +138,8 @@ void map_stuff() {
 }
 
 int Main() {
-	int _; cin >> _;
+	int _;
+	cin >> _;
 	return 0;
 }
 
@@ -158,20 +163,24 @@ void test3() {
 }
 
 void Rest() {
-	int N; cin >> N; int A[N]; for (int i = 0; i < N; i++) cin >> A[i];
+	int N;
+	cin >> N;
+	int A[N];
+	for (int i = 0; i < N; i++)
+		cin >> A[i];
 	sort(A, A + N);
 	for (int i = 1; i < N; i++) {
-		A[i] += A[i-1];
+		A[i] += A[i - 1];
 	}
-	cout << A[N-1] - A[0] << endl;
+	cout << A[N - 1] - A[0] << endl;
 }
 
 void Test() {
 	vector<int> A;
-	pair<int,int> old = {0, 0};
+	pair<int, int> old = { 0, 0 };
 	for (int i = 0; i < 100000; i++) {
 		A.push_back(i);
-		pair<int,int> neww = make_pair(A.size(), A.capacity());
+		pair<int, int> neww = make_pair(A.size(), A.capacity());
 		if (old.second != neww.second) {
 			cout << neww.first << ' ' << neww.second << '\n';
 		}
@@ -197,32 +206,44 @@ void teest() {
 	for (int i = 0; i < N; i++) {
 		for (int j = i + 1; j < N; j++) {
 			cin >> mat[i][j];
-			if (mat[i][j] >= 0) { positive_sum += mat[i][j]; }
-			else { negative_sum += mat[i][j]; }
+			if (mat[i][j] >= 0) {
+				positive_sum += mat[i][j];
+			} else {
+				negative_sum += mat[i][j];
+			}
 		}
 	}
 }
 
-void read(int &x, int &y) { cin >> x >> y; }
-void read(int &x) { cin >> x; }
+void read(int& x, int& y) {
+	cin >> x >> y;
+}
+void read(int& x) {
+	cin >> x;
+}
 
 struct state {
 	int A, B, C;
 	static const int default_value = -1;
-	state(int A, int B, int C): A(A), B(B), C(C) {}
-	state() { A = B = C = default_value; }
-	state(int x) { A = B = C = x; }
+	state(int A, int B, int C) : A(A), B(B), C(C) {
+	}
+	state() {
+		A = B = C = default_value;
+	}
+	state(int x) {
+		A = B = C = x;
+	}
 };
 
 state solve(int x, int y, int z) {
-	return {x, y, z};
+	return { x, y, z };
 }
 
 int solve() {
 	int N, ans = 0;
 	cin >> N;
 	vector<int> A(N);
-	for (int &x: A) {
+	for (int& x : A) {
 		cin >> x;
 	}
 	for (int i = 0; i < N; i++) {
@@ -288,18 +309,22 @@ void testing_main() {
 	}
 	char ch = getchar();
 	auto test = [&](int x) {
-		if (x == 1) return 0;
-		if (x == 2) return 1;
-		if (x == 3) return 2;
+		if (x == 1)
+			return 0;
+		if (x == 2)
+			return 1;
+		if (x == 3)
+			return 2;
 		return x + 1;
 	};
 }
 int f(int n) {
-	if (n % 2 == 0) return f(n - 1);
+	if (n % 2 == 0)
+		return f(n - 1);
 	return 1;
 }
 int main() {
-	array<int,3> x = {1, 2, 3};
+	array<int, 3> x = { 1, 2, 3 };
 	auto [a, b, c] = x;
 	cout << f(5) << '\n';
 	return 0;
@@ -307,15 +332,17 @@ int main() {
 	return 0;
 	Test();
 	return 0;
-	vector<int> chk = {2, 3, 3, 3, 1};
+	vector<int> chk = { 2, 3, 3, 3, 1 };
 	reverse(chk.begin() + 3, chk.end());
-	for (int x: chk) cout << x << ' '; cout << endl;
+	for (int x : chk)
+		cout << x << ' ';
+	cout << endl;
 	return 0;
 	int n;
 	cin >> n;
 	vector<int> cnt(32);
 	int ans = 0;
-	for (int i = 0; i < n; i++){ 
+	for (int i = 0; i < n; i++) {
 		int u;
 		cin >> u;
 		for (int j = 0; j < 32; j++) {

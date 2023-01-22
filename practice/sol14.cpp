@@ -1,12 +1,12 @@
-#pragma GCC target ("avx2")
-#pragma GCC optimization ("O3")
-#pragma GCC optimization ("unroll-loops")
+#pragma GCC target("avx2")
+#pragma GCC optimization("O3")
+#pragma GCC optimization("unroll-loops")
 
 #include "bits/stdc++.h"
 
 // #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = L; i <= R; i++)
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
 const int N = 4e5 + 5, inf = 1e9;
@@ -17,7 +17,8 @@ vector<int> all;
 
 int getPower(int val) {
 	for (int i = 0; i < 31; i++) {
-		if (val <= (1LL << i)) return i;
+		if (val <= (1LL << i))
+			return i;
 	}
 	assert(false);
 	return ceil(log2(val));
@@ -46,7 +47,6 @@ int getDistinct(int L, int R) {
 			lo = mid + 1;
 		}
 	}
-
 
 	if (~lId) {
 		assert(~rId);
@@ -78,11 +78,13 @@ int getChanges(int L, int R) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
 	cin >> n >> I;
 	I <<= 3;
-	FOR(i,1,n) {
+	FOR(i, 1, n) {
 		cin >> a[i];
 		dist.insert(a[i]);
 	}
@@ -96,14 +98,15 @@ int32_t main() {
 		// iterating on L
 		// now BS on R
 		int lo = i, hi = sz(all) - 1;
-		if (getChanges(L, all.back()) >= ans) break;
+		if (getChanges(L, all.back()) >= ans)
+			break;
 		int right = -1;
 
 		while (lo <= hi) {
 			int mid = (lo + hi) / 2;
 			int mid_id = mid;
 			mid = all[mid];
-			
+
 			int K = getDistinct(L, mid);
 			int k = getPower(K);
 			int mem = n * k;
@@ -119,7 +122,6 @@ int32_t main() {
 			int changes = getChanges(L, right);
 			ans = min(ans, changes);
 		}
-
 	}
 	assert(ans != inf);
 	cout << ans;

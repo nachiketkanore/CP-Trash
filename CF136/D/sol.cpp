@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Thursday 29 September 2022 08:33:20 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -22,15 +22,15 @@ void solve() {
 	cin >> N >> K;
 	vector<vector<int>> adj(N + 1);
 	vector<int> cnt(N + 1);
-	FOR (i, 2, N) {
+	FOR(i, 2, N) {
 		int par;
 		cin >> par;
 		adj[par].push_back(i);
 	}
-	
+
 	function<void(int, int, int)> dfs = [&](int u, int p, int dep) {
 		cnt[dep]++;
-		for (int v: adj[u]) {
+		for (int v : adj[u]) {
 			if (p ^ v) {
 				dfs(v, u, dep + 1);
 			}

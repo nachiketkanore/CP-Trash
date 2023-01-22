@@ -41,8 +41,7 @@ int main() {
 	Dfs(0, -1);
 	vector<int> order(n);
 	iota(order.begin(), order.end(), 0);
-	sort(order.begin(), order.end(),
-	[&](int i, int j) { return depth[i] > depth[j]; });
+	sort(order.begin(), order.end(), [&](int i, int j) { return depth[i] > depth[j]; });
 	long long ans = 0;
 	for (int i : order) {
 		if (leaf[i]) {

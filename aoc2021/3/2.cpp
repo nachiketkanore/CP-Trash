@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 03 December 2021 04:52:06 PM IST
-**/
+ **/
 #include <algorithm>
 #include <array>
 #include <cassert>
@@ -21,13 +21,14 @@
 
 using namespace std;
 
-template <class T>
-bool cmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template <class T>
-bool cmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
+template <class T> bool cmin(T& a, const T& b) {
+	return b < a ? a = b, 1 : 0;
+}
+template <class T> bool cmax(T& a, const T& b) {
+	return a < b ? a = b, 1 : 0;
+}
 
-int calculate_O2(vector<string> vals)
-{
+int calculate_O2(vector<string> vals) {
 	const int M = vals[0].size();
 	for (int bit = 0; bit < M && sz(vals) != 1; bit++) {
 		int ones = 0, zeros = 0;
@@ -64,8 +65,7 @@ int calculate_O2(vector<string> vals)
 	return ans;
 }
 
-int calculate_CO2(vector<string> vals)
-{
+int calculate_CO2(vector<string> vals) {
 	const int M = vals[0].size();
 	for (int bit = 0; bit < M && sz(vals) != 1; bit++) {
 		int ones = 0, zeros = 0;
@@ -102,8 +102,7 @@ int calculate_CO2(vector<string> vals)
 	return ans;
 }
 
-int32_t main()
-{
+int32_t main() {
 	string S;
 	vector<string> vals;
 	while (cin >> S) {

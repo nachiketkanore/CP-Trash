@@ -7,7 +7,7 @@ string magiclamp(vector<int> wish) {
 		return A + B > B + A;
 	});
 	string ans;
-	for (int a: wish) {
+	for (int a : wish) {
 		ans += to_string(a);
 	}
 	reverse(ans.begin(), ans.end());
@@ -20,7 +20,7 @@ string magiclamp(vector<int> wish) {
 
 int main() {
 	// vector<int> A{ 13, 65, 9, 20 };
-	vector<int> A{0, 0, 0, 0};
+	vector<int> A{ 0, 0, 0, 0 };
 	cout << magiclamp(A);
 	return 0;
 }

@@ -3,20 +3,20 @@ Author: Nachiket Kanore
 Created: Friday 30 October 2020 01:15:43 PM IST
 (ツ) With courage you will dare to take risks, have the strength to be compassionate, and the wisdom to be humble. Courage is the foundation of integrity.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
-using pii = pair<int,int>;
+using pii = pair<int, int>;
 
 const int N = 1e5 + 5, inf = 2e9;
 
@@ -26,7 +26,7 @@ pii tree[N << 2];
 void upd(int tl, int tr, int node, int id, int val) {
 	if (tl == tr) {
 		assert(tl == id);
-		tree[node] = {val, id};
+		tree[node] = { val, id };
 	} else {
 		int mid = (tl + tr) >> 1;
 
@@ -45,7 +45,7 @@ void put(int id, int val) {
 
 pii getMax(int tl, int tr, int node, int ql, int qr) {
 	if (tl > tr || ql > qr)
-		return {-inf, -inf};
+		return { -inf, -inf };
 	if (tl == ql && tr == qr)
 		return tree[node];
 
@@ -68,7 +68,7 @@ int getMaxId(int L, int R) {
 int goLeft(int id) {
 	if (id == 0)
 		return 0;
-	int &ans = dpLeft[id];
+	int& ans = dpLeft[id];
 	if (~ans)
 		return ans;
 	ans = 1;
@@ -82,7 +82,7 @@ int goLeft(int id) {
 int goRight(int id) {
 	if (id == n + 1)
 		return 0;
-	int &ans = dpRight[id];
+	int& ans = dpRight[id];
 	if (~ans)
 		return ans;
 	ans = 1;
@@ -94,32 +94,33 @@ int goRight(int id) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	cin >> n >> m;
 
 	memset(dpLeft, -1, sizeof(dpLeft));
 	memset(dpRight, -1, sizeof(dpRight));
 	a[0] = inf, a[n + 1] = inf;
-	FOR (i,1,n) {
+	FOR(i, 1, n) {
 		cin >> a[i];
 		put(i, a[i]);
 	}
 
-	FOR (i,1,n) {
+	FOR(i, 1, n) {
 		goLeft(i);
-		goRight(i);		
+		goRight(i);
 	}
 
-	FOR (i,1,m) {
+	FOR(i, 1, m) {
 		int L, R;
 		cin >> L >> R;
 		int maxId = getMaxId(L, R);
 		int wantLeft = maxId - L + 1, wantRight = R - maxId + 1;
 
-		if (wantLeft <= goLeft(maxId) && wantRight <= goRight(maxId)) 
+		if (wantLeft <= goLeft(maxId) && wantRight <= goRight(maxId))
 			cout << "Yes\n";
-		else 
+		else
 			cout << "No\n";
 	}
 }

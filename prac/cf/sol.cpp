@@ -3,11 +3,12 @@
 using namespace std;
 
 void test() {
-	return ;
+	return;
 }
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	for (int n = 30; n <= 30; n++) {
 		int ans = 0;
 		for (int a = 1; a <= n; ++a) {
@@ -22,4 +23,3 @@ int32_t main() {
 	}
 	return 0;
 }
-

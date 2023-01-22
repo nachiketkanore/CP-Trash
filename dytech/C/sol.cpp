@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Friday 07 October 2022 09:24:51 PM IST
-**/
+ **/
 #include "bits/stdc++.h"
 using namespace std;
 
@@ -17,33 +17,32 @@ using namespace std;
 #define F0R(i, R) for (int i = (0); i < (R); ++i)
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
-const int dx[] = {-1, 0, 1, 0};
-const int dy[] = {0, 1, 0, -1};
+const int dx[] = { -1, 0, 1, 0 };
+const int dy[] = { 0, 1, 0, -1 };
 
 void solve(int tc) {
-	int N; cin >> N;
-	vector<pair<int,int>> A(3);
-	for (auto &[x, y]: A) { 
+	int N;
+	cin >> N;
+	vector<pair<int, int>> A(3);
+	for (auto& [x, y] : A) {
 		cin >> x >> y;
 	}
 	int X, Y;
 	cin >> X >> Y;
 
-	auto inside = [&](int x, int y) {
-		return 1 <= x && x <= N && 1 <= y && y <= N;
-	};
-	
+	auto inside = [&](int x, int y) { return 1 <= x && x <= N && 1 <= y && y <= N; };
+
 	int which = -1;
-	F0R (i,3) {
-		vector<pair<int,int>> other;
-		F0R (j,3) if (i^j) other.push_back(A[j]);
+	F0R(i, 3) {
+		vector<pair<int, int>> other;
+		F0R(j, 3) if (i ^ j) other.push_back(A[j]);
 		sort(ALL(other));
 		int x = A[i].first, y = A[i].second;
-		F0R (id,4) {
+		F0R(id, 4) {
 			int nx1 = x + dx[id], ny1 = y + dy[id];
 			int nx2 = x + dx[(id + 1) % 4], ny2 = y + dy[(id + 1) % 4];
 			if (inside(nx1, ny1) && inside(nx2, ny2)) {
-				vector<pair<int, int>> chk = {make_pair(nx1, ny1), make_pair(nx2, ny2)};
+				vector<pair<int, int>> chk = { make_pair(nx1, ny1), make_pair(nx2, ny2) };
 				sort(ALL(chk));
 				if (other == chk) {
 					which = i;
@@ -51,7 +50,8 @@ void solve(int tc) {
 				}
 			}
 		}
-		if (~which) break;
+		if (~which)
+			break;
 	}
 	assert(~which);
 	// see(tc, A[which]);
@@ -86,7 +86,7 @@ int32_t main() {
 	int T;
 	cin >> T;
 
-	FOR (tc, 1, T) {
+	FOR(tc, 1, T) {
 		solve(tc);
 	}
 

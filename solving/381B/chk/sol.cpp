@@ -9,6 +9,6 @@ Created: Saturday 20 February 2021 12:43:29 AM IST
 using namespace std;
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
 }

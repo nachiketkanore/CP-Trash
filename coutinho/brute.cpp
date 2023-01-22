@@ -19,16 +19,14 @@ template <typename T> ostream& operator<<(ostream& os, const vector<T>& v) {
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <typename T, size_t size>
-ostream& operator<<(ostream& os, const array<T, size>& arr) {
+template <typename T, size_t size> ostream& operator<<(ostream& os, const array<T, size>& arr) {
 	os << '{';
 	string sep;
 	for (const auto& x : arr)
 		os << sep << x, sep = ", ";
 	return os << '}';
 }
-template <typename A, typename B>
-ostream& operator<<(ostream& os, const pair<A, B>& p) {
+template <typename A, typename B> ostream& operator<<(ostream& os, const pair<A, B>& p) {
 	return os << '(' << p.first << ", " << p.second << ')';
 }
 

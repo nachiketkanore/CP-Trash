@@ -3,26 +3,27 @@ Author: Nachiket Kanore
 Created: Sunday 18 October 2020 12:23:36 AM IST
 (ツ) It is impossible to feel grateful and depressed in the same moment.
 */
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
 	string s, t;
 	cin >> s >> t;
 	assert(s < t);
@@ -42,7 +43,8 @@ int32_t main() {
 	}
 
 	int i = 0;
-	while (i < n && s[i] == t[i]) ++i;
+	while (i < n && s[i] == t[i])
+		++i;
 
 	assert(i < n);
 	assert(s[i] < t[i]);
@@ -51,8 +53,10 @@ int32_t main() {
 	s[i] = nxt;
 
 	assert(s[i] <= 'z');
-	FOR(j,i+1,n-1) s[j] = 'a';
+	FOR(j, i + 1, n - 1) s[j] = 'a';
 
-	if (s < t) cout << s;
-	else cout << "No such string\n";
+	if (s < t)
+		cout << s;
+	else
+		cout << "No such string\n";
 }

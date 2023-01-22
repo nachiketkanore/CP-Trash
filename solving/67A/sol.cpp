@@ -1,18 +1,18 @@
-#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <vector>
-#include <set>
-#include <map>
-#include <cassert>
-#include <string>
 #include <cstring>
+#include <iostream>
+#include <map>
+#include <set>
+#include <string>
+#include <vector>
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = L; i <= R; i++)
+#define FOR(i, L, R) for (int i = L; i <= R; i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
@@ -23,13 +23,14 @@ string s;
 int dp[2][K + 5][K + 5];
 
 int go(int id, int prev, int same) {
-	if (prev < 1 || prev > K) 
+	if (prev < 1 || prev > K)
 		return inf;
 	if (id == sz(s))
 		return 0;
 
-	int &ans = dp[same][id][prev];
-	if (~ans) return ans;
+	int& ans = dp[same][id][prev];
+	if (~ans)
+		return ans;
 	ans = inf;
 
 	if (s[id] == '=') {
@@ -41,7 +42,7 @@ int go(int id, int prev, int same) {
 		if (same) {
 			int ch1 = prev + go(id + 1, prev, 0);
 			int ch2 = go(id, prev - 1, 1);
-			ans = min({ans, ch1, ch2});
+			ans = min({ ans, ch1, ch2 });
 		} else {
 			int get = go(id, prev - 1, 1);
 			ans = min(ans, get);
@@ -52,7 +53,7 @@ int go(int id, int prev, int same) {
 		if (same) {
 			int ch1 = prev + go(id + 1, prev, 0);
 			int ch2 = go(id, prev + 1, 1);
-			ans = min({ans, ch1, ch2});
+			ans = min({ ans, ch1, ch2 });
 		} else {
 			int get = go(id, prev + 1, 1);
 			ans = min(ans, get);
@@ -62,14 +63,13 @@ int go(int id, int prev, int same) {
 	return ans;
 }
 
-
 void trace(int id, int prev, int same) {
 	if (prev < 1 || prev > K) {
 		assert(0);
 		return;
 	}
 	if (id == sz(s))
-		return ;
+		return;
 
 	int ans = go(id, prev, same);
 
@@ -118,24 +118,24 @@ void trace(int id, int prev, int same) {
 			}
 		}
 	}
-
 }
 
-
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-	
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
 	cin >> n;
 	cin >> s;
 	int ans = inf;
 
 	memset(dp, -1, sizeof(dp));
-	FOR(give,1,K) {
+	FOR(give, 1, K) {
 		int get = give + go(0, give, 0);
 		ans = min(ans, get);
 	}
 
-	FOR(give,1,K) {
+	FOR(give, 1, K) {
 		int get = give + go(0, give, 0);
 		if (get == ans) {
 			cout << give << ' ';

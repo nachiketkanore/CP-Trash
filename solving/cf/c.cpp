@@ -4,6 +4,5 @@ for (int i = 0; i < n; i++) {
 	while (T--) {
 		int n;
 		cin >> n;
-
 	}
 }

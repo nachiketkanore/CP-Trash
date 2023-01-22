@@ -7,7 +7,7 @@ Created: Tuesday 24 November 2020 08:31:57 PM IST
 
 #define int long long
 #define sz(x) (int)(x.size())
-#define FOR(i,L,R) for(int i = (L); i <= (R); i++)
+#define FOR(i, L, R) for (int i = (L); i <= (R); i++)
 using namespace std;
 
 const int N = 2e5 + 5, inf = 1e18;
@@ -19,8 +19,9 @@ std::vector<int> ret;
 
 int go(int id) {
 	assert(id >= 0 && id < sz(a));
-	int &ans = dp[id];
-	if (~ans) return ans;
+	int& ans = dp[id];
+	if (~ans)
+		return ans;
 	ans = 0;
 
 	for (int i = id + 1; i < sz(a); i++) {
@@ -45,9 +46,10 @@ void trace(int id) {
 	}
 }
 
-inline int rand(int l, int r){
-    static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
-    std::uniform_int_distribution<int> uid(l, r); return uid(rng);
+inline int rand(int l, int r) {
+	static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+	std::uniform_int_distribution<int> uid(l, r);
+	return uid(rng);
 }
 
 void solve() {
@@ -57,16 +59,18 @@ void solve() {
 
 	a.clear();
 
-	for (int d = 2; d * d <= n; d++) if (n % d == 0) {
-		while (n % d == 0) {
-			a.push_back(d);
-			n /= d;
+	for (int d = 2; d * d <= n; d++)
+		if (n % d == 0) {
+			while (n % d == 0) {
+				a.push_back(d);
+				n /= d;
+			}
 		}
-	}
-	if (n > 1) a.push_back(n);
+	if (n > 1)
+		a.push_back(n);
 	sort(a.begin(), a.end());
 
-	FOR (i,0,min(N,sz(a)*2)) dp[i] = -1;
+	FOR(i, 0, min(N, sz(a) * 2)) dp[i] = -1;
 
 	int ans = 0;
 	for (int i = 0; i < sz(a); i++) {
@@ -77,7 +81,6 @@ void solve() {
 	ret.clear();
 
 	taken = 1;
-
 
 	for (int i = 0; i < sz(a); i++) {
 		int get = 1 + go(i);
@@ -94,13 +97,18 @@ void solve() {
 	ret.back() *= orig / taken;
 
 	int all = 1;
-	for (int x : ret) cout << x << " ", all *= x;
-		cout << "\n";
+	for (int x : ret)
+		cout << x << " ", all *= x;
+	cout << "\n";
 	assert(all == orig);
 }
 
 int32_t main() {
-	ios::sync_with_stdio(0); cin.tie(0);
-	
-	int T;	cin >> T;	while (T--) solve();
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	int T;
+	cin >> T;
+	while (T--)
+		solve();
 }

@@ -1,7 +1,7 @@
 /**
  *    Author: Nachiket Kanore
  *    Created: Sunday 20 March 2022 05:51:54 PM IST
-**/
+ **/
 #include <bits/stdc++.h>
 #define int int64_t
 using namespace std;
@@ -16,10 +16,11 @@ int go(int id, int prev, int mod) {
 	if (id == K + 1) {
 		return prev == T && mod % 2 == 0;
 	}
-	int &ans = dp[mod % 2][id][prev];
-	if (~ans) return ans;
+	int& ans = dp[mod % 2][id][prev];
+	if (~ans)
+		return ans;
 	ans = 0;
-	for (int nxt: g[prev]) {
+	for (int nxt : g[prev]) {
 		ans += go(id + 1, nxt, mod + (nxt == X));
 		if (ans >= MOD)
 			ans -= MOD;
@@ -28,7 +29,8 @@ int go(int id, int prev, int mod) {
 }
 
 int32_t main() {
-	ios::sync_with_stdio(false); cin.tie(0);
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	memset(dp, -1, sizeof(dp));
 	cin >> N >> M >> K >> S >> T >> X;
 	for (int i = 0, u, v; i < M; i++) {
