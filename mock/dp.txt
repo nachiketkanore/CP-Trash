@@ -1,0 +1,19 @@
+1. dp[u][len] = number of paths from u
+	to node2 with length len
+2. dp[u][len] = u -> child
+		len + 1: path length
+dp[u][len] -> dp[child][len + 1]
+
+u -> child
+v -> child -> dp[child][len + 1] =
+		sum(dp[u | v | w][len])
+w -> child
+
+
+dp[u][len] = sum(dp[child][len - 1])
+3. base cases
+	dp[node2][0] = 1
+
+for each query:
+	n1, k
+	dp[n1][k]

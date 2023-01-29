@@ -1,0 +1,9 @@
+yash sonawane
+- explain while coding?
+- thinking on own without feedback
+- take incremental steps
+- fundamentals not clear
+- variable naming very bad
+- note down points(derivations, time complexity)
+- note down observations
+- clarifications regarding question
