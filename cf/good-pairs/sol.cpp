@@ -107,7 +107,7 @@ struct segtree {
 	void build(int u, int L, int R) {
 		if (L == R) {
 			// Leaf value
-			st[u] = node(INF, 0, 0);
+			st[u] = node(0, 0, 0);
 			return;
 		}
 		int M = (L + R) / 2;
@@ -182,10 +182,10 @@ void solve() {
 	auto compute = [&]() {
 		vector<int> dp(N + 1);
 		int ret = 0;
-		for (int i = N; i >= 1; i--) {
-			int j = index_finder.query(A[i] + 1, A[i] + K).mn;
-			if (j > i && j <= N) {
-				dp[i] = dp[j] + frequencies.rsum(A[i] + 1, A[j]);
+		FOR(i, 1, N) {
+			int j = index_finder.query(A[i] - K, A[i] - 1).mx;
+			if (1 <= j && j < i) {
+				dp[i] = dp[j] + frequencies.rsum(A[j], A[i] - 1);
 			} else {
 				dp[i] = 0;
 			}
@@ -194,7 +194,7 @@ void solve() {
 			ret += dp[i];
 		}
 		FOR(i, 1, N) {
-			index_finder.update(A[i], INF);
+			index_finder.update(A[i], -INF);
 			frequencies.update(A[i], -1);
 		}
 		return ret;
