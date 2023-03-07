@@ -17,66 +17,14 @@ using namespace std;
 #define F0R(i, R) for (int i = (0); i < (R); ++i)
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
-const int _ = 2e5 + 5, INF = 1e16;
+const int _ = 2e5 + 5, INF = 1e9;
 int N, A[_], dp[_], dp_pref_max[_], ans;
-int best_mx = -INF;
-bool found;
-
-// Implicit segment tree node
-// Each node is some range in [1, N]
-// Point updates with RangeMax queries
-struct node {
-	int mx;
-	node* left;
-	node* right;
-
-	node() {
-		mx = -INF;
-		left = NULL;
-		right = NULL;
-	}
-
-	node* upd(int l, int r, int id, int val) {
-		mx = max(mx, val);
-		if (l < r) {
-			int mid = (l + r) >> 1;
-			if (id <= mid) {
-				if (left == NULL)
-					left = new node();
-				left = left->upd(l, mid, id, val);
-			} else {
-				if (right == NULL)
-					right = new node();
-				right = right->upd(mid + 1, r, id, val);
-			}
-		}
-		return this;
-	}
-
-	void get_max(int tl, int tr, int ql, int qr) {
-		if (tl > qr || tr < ql)
-			return;
-		if (ql <= tl && tr <= qr) {
-			found = true;
-			best_mx = max(best_mx, mx);
-			return;
-		}
-		int mid = (tl + tr) / 2;
-		if (left != NULL)
-			left->get_max(tl, mid, ql, qr);
-		if (right != NULL)
-			right->get_max(mid + 1, tr, ql, qr);
-	}
-};
-
-node* root;
 
 int32_t main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
 
 	cin >> N;
-	root = new node();
 
 	/* // O(N*N*N)
 	FOR(i, 1, N) {
@@ -139,44 +87,27 @@ int32_t main() {
 			which can retrieve range maximums quickly
 	*/
 	// TODO
-	// vector<pair<int, int>> my_data_structure;
-	// my_data_structure.push_back({ 0, 0 });
-	const int OFFSET = 1e15;
-	root = root->upd(-INF, INF, 0 + OFFSET, 0);
-
+	vector<pair<int, int>> my_data_structure;
+	my_data_structure.push_back({ 0, 0 });
 	FOR(i, 1, N) {
 		cin >> A[i];
 		A[i] += A[i - 1];
-		// we need some range max retrieval data structure
-		// to optimize this
-		/* for (auto [key, value] : my_data_structure) {
+		int best = -INF;
+		bool found = false;
+		for (auto [key, value] : my_data_structure) {
 			if (key <= A[i]) {
 				best = max(best, value);
 				found = true;
 			}
-		} */
-		found = false;
-		best_mx = -INF;
-		root->get_max(-INF, INF, -INF + OFFSET, A[i] + OFFSET);
-
-		if (found) {
-			// see(best_mx);
-			// see("range: -inf to ", A[i], found, best_mx);
-			dp[i] = i + best_mx;
 		}
-		dp[i] = max(dp[i], dp_pref_max[i - 1]);
-		// see(dp[i]);
+		if (found) {
+			dp[i] = i + best;
+		}
 		dp_pref_max[i] = max(dp_pref_max[i - 1], dp[i]);
-		// my_data_structure.push_back(make_pair(A[i], dp_pref_max[i] - i));
-		// see("updating", A[i]);
-		root = root->upd(-INF, INF, A[i] + OFFSET, dp_pref_max[i] - i);
+		my_data_structure.push_back(make_pair(A[i], dp_pref_max[i] - i));
 		ans = max(ans, dp[i]);
 	}
 
-	// testcase
-	// 3
-	// 0 -14 1
-	// see(dp_pref_max[N]);
 	cout << ans;
 
 	return 0;
