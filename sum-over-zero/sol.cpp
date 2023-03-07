@@ -23,7 +23,7 @@ int best_mx = -INF;
 bool found;
 
 // Implicit segment tree node
-// Each node is some range in [1, N]
+// Each node is some range in [1, INF]?
 // Point updates with RangeMax queries
 struct node {
 	int mx;
@@ -90,7 +90,9 @@ int32_t main() {
 			}
 		}
 		ans = max(ans, dp[i]);
-	} */
+	}
+	cout << ans;
+	*/
 
 	// O(N*N)
 	/* FOR(i, 1, N) {
@@ -104,7 +106,9 @@ int32_t main() {
 		}
 		dp_pref_max[i] = max(dp_pref_max[i], dp[i]);
 		ans = max(ans, dp[i]);
-	} */
+	}
+	cout << ans;
+	*/
 
 	// Better solution?
 	/*
@@ -138,46 +142,66 @@ int32_t main() {
 			store key -> value in some data structure
 			which can retrieve range maximums quickly
 	*/
-	// TODO
-	// vector<pair<int, int>> my_data_structure;
-	// my_data_structure.push_back({ 0, 0 });
+
+	// Alternate solution: O(N*N)
+	/* vector<pair<int, int>> my_data_structure;
+	my_data_structure.push_back({ 0, 0 });
+	FOR(i, 1, N) {
+		cin >> A[i];
+		A[i] += A[i - 1];
+		int best = -INF;
+		bool found = false;
+		for (auto [key, value] : my_data_structure) {
+			if (key <= A[i]) {
+				best = max(best, value);
+				found = true;
+			}
+		}
+		if (found) {
+			dp[i] = i + best;
+		}
+		dp[i] = max(dp[i], dp_pref_max[i - 1]);
+
+		dp_pref_max[i] = max(dp_pref_max[i - 1], dp[i]);
+		my_data_structure.push_back(make_pair(A[i], dp_pref_max[i] - i));
+		ans = max(ans, dp[i]);
+	}
+	cout << ans;
+	*/
+
+	// Final solution in O(N*log(max_A[i]))
+	// This is to make sure that query ranges in implicit segment tree
+	// are positive values > 0
 	const int OFFSET = 1e15;
 	root = root->upd(-INF, INF, 0 + OFFSET, 0);
 
 	FOR(i, 1, N) {
 		cin >> A[i];
+		// prefix sum array
 		A[i] += A[i - 1];
-		// we need some range max retrieval data structure
-		// to optimize this
-		/* for (auto [key, value] : my_data_structure) {
-			if (key <= A[i]) {
-				best = max(best, value);
-				found = true;
-			}
-		} */
+
 		found = false;
 		best_mx = -INF;
 		root->get_max(-INF, INF, -INF + OFFSET, A[i] + OFFSET);
 
+		// choice 1: take A[i] in some subarray ending at i
 		if (found) {
-			// see(best_mx);
-			// see("range: -inf to ", A[i], found, best_mx);
 			dp[i] = i + best_mx;
 		}
+
+		// choice 2: don't take A[i] in any subarray
 		dp[i] = max(dp[i], dp_pref_max[i - 1]);
-		// see(dp[i]);
+
+		// prefix max array for dp computations
+		// refer above conclusions for how dp is calculated
+		// and what all things are stored for retrieval later
 		dp_pref_max[i] = max(dp_pref_max[i - 1], dp[i]);
-		// my_data_structure.push_back(make_pair(A[i], dp_pref_max[i] - i));
-		// see("updating", A[i]);
 		root = root->upd(-INF, INF, A[i] + OFFSET, dp_pref_max[i] - i);
+
 		ans = max(ans, dp[i]);
 	}
 
-	// testcase
-	// 3
-	// 0 -14 1
-	// see(dp_pref_max[N]);
-	cout << ans;
+	cout << ans << '\n';
 
 	return 0;
 }
