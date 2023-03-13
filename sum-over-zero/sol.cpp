@@ -18,7 +18,7 @@ using namespace std;
 #define FOR(i, L, R) for (int i = (L); i <= (R); ++i)
 
 const int _ = 2e5 + 5, INF = 1e16;
-int N, A[_], dp[_], dp_pref_max[_], ans;
+int N, A[_], dp[_], ans;
 int best_mx = -INF;
 bool found;
 
@@ -190,13 +190,13 @@ int32_t main() {
 		}
 
 		// choice 2: don't take A[i] in any subarray
-		dp[i] = max(dp[i], dp_pref_max[i - 1]);
+		dp[i] = max(dp[i], dp[i - 1]);
 
 		// prefix max array for dp computations
 		// refer above conclusions for how dp is calculated
 		// and what all things are stored for retrieval later
-		dp_pref_max[i] = max(dp_pref_max[i - 1], dp[i]);
-		root = root->upd(-INF, INF, A[i] + OFFSET, dp_pref_max[i] - i);
+		// dp_pref_max[i] = max(dp_pref_max[i - 1], dp[i]);
+		root = root->upd(-INF, INF, A[i] + OFFSET, dp[i] - i);
 
 		ans = max(ans, dp[i]);
 	}
