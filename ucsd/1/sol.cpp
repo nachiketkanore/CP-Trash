@@ -57,4 +57,3 @@ int32_t main() {
 	cout << go(0, -1, k);
 	return 0;
 }
-
