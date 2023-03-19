@@ -1,5 +1,4 @@
 #include "bits/stdc++.h"
-#include <ios>
 using namespace std;
 
 #ifdef DEBUG
@@ -7,9 +6,6 @@ using namespace std;
 #else
 #define see(...) ;
 #endif
-
-#include <chrono>
-#include <random>
 
 // A segment is defined by its start and end points
 struct Segment {
@@ -142,7 +138,7 @@ int main() {
 	const int MX = 1000;
 
 	for (int tc = 1;; tc++) {
-		int N = rand(15, 23), K = rand(1, N);
+		int N = rand(15, 19), K = rand(1, N);
 		vector<Segment> A;
 		for (int i = 0; i < N; i++) {
 			int l = rand(1, MX);
@@ -158,6 +154,8 @@ int main() {
 			cout.flush();
 		} else {
 			cout << "FAILED Test : " << tc << '\n';
+			cout << "my answer = " << my_solution << '\n';
+			cout << "best answer = " << best_solution << '\n';
 
 			for (Segment s : A) {
 				cout << s.start << ' ' << s.end << '\n';
