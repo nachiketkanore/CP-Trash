@@ -36,7 +36,7 @@ int solve1(int k, vector<Segment> ranges) {
 		vector<int> chosen = { i };
 		int rightmost = ranges[i].end;
 
-		while (true) {
+		while ((int)chosen.size() < k) {
 			int best_id = -1;
 			int id = chosen.back();
 			auto [L, R] = ranges[id];
@@ -56,11 +56,9 @@ int solve1(int k, vector<Segment> ranges) {
 			}
 		}
 		// see(chosen);
-		if (chosen.size() >= k) {
-			for (int lid = 0, rid = k - 1; rid < chosen.size(); lid++, rid++) {
-				int l = chosen[lid], r = chosen[rid];
-				ans = max(ans, ranges[r].end - ranges[l].start);
-			}
+		if ((int)chosen.size() == k) {
+			int l = chosen[0], r = chosen.back();
+			ans = max(ans, ranges[r].end - ranges[l].start);
 		} else {
 			assert(!chosen.empty());
 			int left = chosen[0], right = chosen.back();
