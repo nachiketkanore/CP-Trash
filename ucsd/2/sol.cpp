@@ -1,6 +1,8 @@
 #include "bits/stdc++.h"
 using namespace std;
 
+#define sz(x) (int)x.size()
+
 #ifdef DEBUG
 #include "debug.h"
 #else
@@ -61,19 +63,22 @@ int solve1(int k, vector<Segment> ranges) {
 			ans = max(ans, ranges[r].end - ranges[l].start);
 		} else {
 			assert(!chosen.empty());
-			int left = chosen[0], right = chosen.back();
-			if (right - left + 1 >= k) {
-				ans = max(ans, ranges[right].end - ranges[left].start);
-			} else {
-				int needed = k - (right - left + 1);
-				int from = chosen.back() + 1;
-				while (from < N && ranges[from].start <= ranges[right].end) {
-					needed--;
-					from++;
+			// sort(chosen.begin(), chosen.end()); it will be already sorted only
+
+			int UL = ranges[chosen[0]].start;
+			int UR = ranges[chosen.back()].end;
+			int required = k - (int)chosen.size();
+
+			// try adding `required` ranges that lie inside the union
+			for (int i = 0; i < N && required > 0; i++) {
+				if (!binary_search(chosen.begin(), chosen.end(), i)) {
+					if (UL <= ranges[i].start && ranges[i].end <= UR) {
+						required -= 1;
+					}
 				}
-				if (needed <= 0) {
-					ans = max(ans, ranges[right].end - ranges[left].start);
-				}
+			}
+			if (required == 0) {
+				ans = max(ans, UR - UL);
 			}
 		}
 	}
