@@ -1,4 +1,6 @@
- ## Case 1: Union of selected intervals might not be a single interval
+# Refer my stack overflow answer for detailed explanation https://cs.stackexchange.com/a/159228/106018
+
+## Case 1: Union of selected intervals might not be a single interval
 
 First of all, sort the intervals in increasing order of $I_i.start$
 
