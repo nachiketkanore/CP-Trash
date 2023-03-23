@@ -96,12 +96,15 @@ class segTree {
 	}
 };
 
-int solve(int k, vector<Segment> ranges) {
+int solve1(int k, vector<Segment> ranges) {
 	const int N = ranges.size();
+	// see(k);
 	sort(ranges.begin(), ranges.end(), [](Segment a, Segment b) { return a.start < b.start; });
 
+	vector<int> nxt(N, -1);
 	vector<vector<int>> adj(N, vector<int>());
 
+	// cout << "start\n";
 	segTree T;
 	T.init(N, ranges);
 
@@ -120,45 +123,71 @@ int solve(int k, vector<Segment> ranges) {
 			}
 		}
 
-		// all ranges in the range [i + 1, idx] start within the i-th segment
 		if (idx == -1)
 			continue;
 
 		auto [best_right, which] = T.query(i + 1, idx);
 
 		if (best_right >= R && which >= 1 && which <= N && (which - 1 != i)) {
+			nxt[i] = which - 1;
 			adj[which - 1].push_back(i);
+			// see(i, which - 1);
 		}
 	}
 
 	vector<int> parents;
 	vector<bool> vis(N, false);
 
-	int ans = 0;
+	vector<pair<int, int>> chk1, chk2;
+	int ans1 = 0;
 	function<void(int)> dfs = [&](int u) {
 		parents.push_back(u);
 		assert(!vis[u]);
 		vis[u] = true;
 
+		// see(u, parents);
+
 		// same process of updating the answer
 		int M = sz(parents);
 		if (M >= k) {
-			int l = parents[M - 1], r = parents[(M - 1) - k + 1];
-			ans = max(ans, ranges[r].end - ranges[l].start);
+			// int l = parents.back();
+			// int r = parents[(M - 1) - k + 1];
+			// chk1.push_back({ l, r });
+			int l = M - 1, r = (M - 1) - k + 1;
+			// see("index: ", l, r);
+			l = parents[l], r = parents[r];
+			// see("checking -> ", l, r);
+			ans1 = max(ans1, ranges[r].end - ranges[l].start);
+			// assert(l <= r);
+			// while (r >= 0) {
+			// 	ans1 = max(ans1, ranges[parents[r]].end - ranges[parents[l]].start);
+			// 	l--, r--;
+			// }
 		} else {
 			int l = parents.back();
 			int r = parents[0];
 			assert(l <= r);
 			assert(ranges[u] == ranges[l]);
-
+			// see("checking -> ", l, r);
+			// chk1.push_back({ l, r });
 			int required = k - M;
-
-			// try adding `in_between` ranges that lie inside the union and
-			// within indices [l, r] which we didn't choose in the subset
 			int in_between = (r - l + 1) - M;
-
+			required -= in_between;
+			// try adding `required` ranges that lie inside the union
+			auto checker = parents;
+			sort(checker.begin(), checker.end());
 			int UL = ranges[l].start;
 			int UR = ranges[r].end;
+
+			// count ranges after index `r` which lie in [UL, UR]
+			// we will optimize what this for loop is doing
+			/* for (int i = r + 1; i < N && required > 0; i++) {
+				if (!binary_search(checker.begin(), checker.end(), i)) {
+					if (UL <= ranges[i].start && ranges[i].end <= UR) {
+						required -= 1;
+					}
+				}
+			} */
 
 			int lo = r + 1, hi = N - 1;
 			int max_id = -1;
@@ -171,31 +200,83 @@ int solve(int k, vector<Segment> ranges) {
 					hi = mid - 1;
 				}
 			}
-			// all ranges from indices [r + 1, max_id] lie within our union UL...UR
 
-			int after_r = 0;
 			if (~max_id) {
-				after_r = (max_id - (r + 1) + 1);
+				int cnt = (max_id - (r + 1) + 1); // max_id - r
+				required -= cnt;
 			}
 
-			// if we have sufficient, update the answer
-			if (in_between + after_r >= required) {
-				ans = max(ans, UR - UL);
+			if (required <= 0) {
+				ans1 = max(ans1, UR - UL);
 			}
 		}
+
+		// same process of updating the answer
 
 		for (int nxt : adj[u]) {
 			dfs(nxt);
 		}
+
 		parents.pop_back();
 	};
 
 	for (int i = N - 1; i >= 0; i--) {
-		if (!vis[i])
+		if (!vis[i]) {
+			assert(parents.empty());
 			dfs(i);
+			// see("dfs: ", i);
+			// see(vis);
+		}
 	}
 
-	return ans;
+	int ans2 = 0;
+	for (int i = 0; i < N; i++) {
+		vector<int> chosen;
+		int curr = i;
+		while (curr != -1 && sz(chosen) < k) {
+			chosen.push_back(curr);
+			curr = nxt[curr];
+		}
+
+		int l = chosen[0], r = chosen.back();
+		// chk2.push_back({ l, r });
+
+		// notice that we only need the last element from `chosen` array
+		// we can find that using binary lifting technique
+
+		if (sz(chosen) == k) {
+			ans2 = max(ans2, ranges[r].end - ranges[l].start);
+		} else if (sz(chosen) < k) {
+			assert(!chosen.empty());
+			// sort(chosen.begin(), chosen.end()); it will be already sorted only
+
+			int UL = ranges[l].start;
+			int UR = ranges[r].end;
+			int required = k - sz(chosen);
+
+			int in_between = (r - l + 1) - sz(chosen);
+			required -= in_between;
+
+			// try adding `required` ranges that lie inside the union
+			for (int i = r + 1; i < N && required > 0; i++) {
+				if (!binary_search(chosen.begin(), chosen.end(), i)) {
+					if (UL <= ranges[i].start && ranges[i].end <= UR) {
+						required -= 1;
+					}
+				}
+			}
+			if (required <= 0) {
+				ans2 = max(ans2, UR - UL);
+			}
+		}
+	}
+
+	// sort(chk1.begin(), chk1.end());
+	// sort(chk2.begin(), chk2.end());
+	// see(chk1);
+	// see(chk2);
+	see(ans1, ans2);
+	return ans1;
 }
 
 vector<Segment> merge(vector<Segment> ins) {
@@ -245,7 +326,7 @@ int main() {
 		Segment(9, 12),
 	};
 
-	cout << solve(3, ranges) << '\n';
+	cout << solve1(3, ranges) << '\n';
 	return 0; */
 
 	// cout << solve2(3, ranges) << '\n';
@@ -262,7 +343,7 @@ int main() {
 			Segment add = Segment(l, r);
 			A.push_back(add);
 		}
-		int my_solution = solve(K, A);
+		int my_solution = solve1(K, A);
 		int best_solution = brute(A, K);
 
 		if (my_solution == best_solution) {
@@ -281,7 +362,7 @@ int main() {
 			return 0;
 		}
 
-		// cout << "Case #tc -> " << solve(K, A) << " " << brute(A, K) << '\n';
+		// cout << "Case #tc -> " << solve1(K, A) << " " << brute(A, K) << '\n';
 	}
 
 	return 0;
