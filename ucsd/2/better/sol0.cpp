@@ -27,52 +27,43 @@ int solve1(int k, vector<Segment> ranges) {
 	const int N = ranges.size();
 	sort(ranges.begin(), ranges.end(), [](Segment a, Segment b) { return a.start < b.start; });
 
-	/* for (Segment s : ranges) {
-		cout << s.start << ' ' << s.end << '\n';
-	} */
-
-	// cout << string(30, '-') << '\n';
 	int ans = 0;
+	vector<int> nxt(N, -1);
 
 	for (int i = 0; i < N; i++) {
-		vector<int> chosen = { i };
-		int rightmost = ranges[i].end;
-
-		while ((int)chosen.size() < k) {
-			int best_id = -1;
-			int id = chosen.back();
-			auto [L, R] = ranges[id];
-			for (int j = id + 1; j < N; j++) {
-				if (ranges[j].start <= R) {
-					// if there are multiple ranges with max
-					// right endpoint, we chose the one with
-					// max index 'j', this way our complexity
-					// for finding this `chosen` vector
-					// will be O(N)
-					if (ranges[j].end >= rightmost) {
-						rightmost = ranges[j].end;
-						best_id = j;
-					}
+		int which = -1, best_right = ranges[i].end;
+		int L = ranges[i].start, R = ranges[i].end;
+		for (int j = i + 1; j < N; j++) {
+			if (ranges[j].start <= R) {
+				if (best_right < ranges[j].end) {
+					best_right = ranges[j].end;
+					which = j;
 				}
-			}
-			if (best_id != -1) {
-				// see("choosing", best_id, " for ", id);
-				chosen.push_back(best_id);
-			} else {
+			} else
 				break;
-			}
 		}
-		// see(chosen);
-		if ((int)chosen.size() == k) {
-			int l = chosen[0], r = chosen.back();
-			ans = max(ans, ranges[r].end - ranges[l].start);
-		} else {
-			assert(!chosen.empty());
-			// sort(chosen.begin(), chosen.end()); it will be already sorted only
+		if (which != -1) {
+			nxt[i] = which;
+		}
+	}
 
-			int UL = ranges[chosen[0]].start;
-			int UR = ranges[chosen.back()].end;
-			int required = k - (int)chosen.size();
+	for (int i = 0; i < N; i++) {
+		vector<int> chosen;
+		int curr = i;
+		while (curr != -1 && sz(chosen) < k) {
+			chosen.push_back(curr);
+			curr = nxt[curr];
+		}
+
+		int l = chosen[0], r = chosen.back();
+
+		if (sz(chosen) == k) {
+			ans = max(ans, ranges[r].end - ranges[l].start);
+		} else if (sz(chosen) < k) {
+
+			int UL = ranges[l].start;
+			int UR = ranges[r].end;
+			int required = k - sz(chosen);
 
 			// try adding `required` ranges that lie inside the union
 			for (int i = 0; i < N && required > 0; i++) {
@@ -82,7 +73,7 @@ int solve1(int k, vector<Segment> ranges) {
 					}
 				}
 			}
-			if (required == 0) {
+			if (required <= 0) {
 				ans = max(ans, UR - UL);
 			}
 		}
@@ -143,7 +134,7 @@ int main() {
 
 	// cout << solve2(3, ranges) << '\n';
 
-	const int MX = 1000;
+	const int MX = 100;
 
 	for (int tc = 1;; tc++) {
 		int N = rand(15, 19), K = rand(1, N);
