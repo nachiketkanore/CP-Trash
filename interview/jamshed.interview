@@ -1,0 +1,29 @@
+- introduction too long -> keep it short and relevant to degree/courses/learnings/interests/software engineering
+- socket.io explanation wrong -> read about socket connections -> bidirectional client-server communication -> stateful APIs
+- prepare generic answers for common questions that can be asked at this stage for resume grilling
+
+problem 1: https://www.hackerrank.com/contests/pasc-educational-cp-round-1/challenges/tired-not-weak
+- not reading question out loud
+- question understood properly
+- directly giving out dp with bitmask solution
+ (interviewer may not know this term)
+- start with brute force solution first
+- could not write recurrence relation
+- explanation for dynamic programming is not up to the mark
+- wrote code inside recurrence relation
+- don't use template programs in interviews
+- talk and explain while writing code, this is not coding contest. interviewer may lose interest if you keep quiet
+- writing speed can be improved
+- bad variable naming
+- using CP #define is bad for interviews
+
+problem 2: https://www.hackerrank.com/contests/pasc-educational-cp-round-1/challenges/trailing-zeros-counter-advanced/problem
+- read out question loud
+- write approaches in editor
+- write important points about solution in editor
+- write down time and space complexity for each approach
+(so that interviewer is aware about what you spoke at last and give feedback accordingly)
+
+problem 3: https://www.hackerrank.com/contests/pasc-educational-cp-round-1/challenges/dynamic-connecting-rooms/problem
+- you should talk and explain what you are writing after writing each line so that the interviewer is on the same page
+- don't use those extensions for compiling and running code. use simpler and understandable ways wherever possible
