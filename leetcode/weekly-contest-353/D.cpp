@@ -36,4 +36,3 @@ int32_t main() {
 	cout << s.checkArray(A, 2) << '\n';
 	return 0;
 }
-
