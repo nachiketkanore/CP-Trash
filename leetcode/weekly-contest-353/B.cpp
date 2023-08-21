@@ -26,4 +26,3 @@ int32_t main() {
 	cout << S.maximumJumps(A, 2) << '\n';
 	return 0;
 }
-
