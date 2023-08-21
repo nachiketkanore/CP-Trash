@@ -71,4 +71,3 @@ int32_t main() {
 	// cout << s.maximizeTheProfit(3, A) << '\n';
 	return 0;
 }
-
