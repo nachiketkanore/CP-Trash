@@ -89,4 +89,3 @@ int32_t main() {
 	A = { 6, 6 };
 	cout << S.countPartitions(A, 2) << '\n';
 }
-

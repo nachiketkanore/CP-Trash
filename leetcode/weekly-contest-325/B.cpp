@@ -63,4 +63,3 @@ int32_t main() {
 	cout << s.takeCharacters("bcca", 1);
 	return 0;
 }
-
