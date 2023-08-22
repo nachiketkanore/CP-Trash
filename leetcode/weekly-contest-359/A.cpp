@@ -18,4 +18,3 @@ int32_t main() {
 	cin.tie(0);
 	return 0;
 }
-
