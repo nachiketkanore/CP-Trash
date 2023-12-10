@@ -43,4 +43,3 @@ int32_t main() {
 	cout << sol.countSubarrays({ 1, 4, 2, 1 }, 3) << endl;
 	return 0;
 }
-

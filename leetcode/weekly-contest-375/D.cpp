@@ -42,4 +42,3 @@ int32_t main() {
 	cout << sol.numberOfGoodPartitions({ 1, 1, 1, 1 }) << endl;
 	cout << sol.numberOfGoodPartitions({ 1, 2, 1, 3 }) << endl;
 }
-
