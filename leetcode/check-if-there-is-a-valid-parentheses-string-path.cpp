@@ -57,4 +57,3 @@ int32_t main() {
 	cout << solution.hasValidPath(mat) << endl;
 	return 0;
 }
-
