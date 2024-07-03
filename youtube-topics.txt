@@ -1,0 +1,39 @@
+Competitive Programming
+- segment trees
+- lazy segment trees
+- DSU
+- trie
+- merge sort tree
+- sparse table
+- suffix tree (check hackerearth)
+- sqrt decomposition
+- heavy light decomposition
+- centroid decomposition
+- fft
+- string hashing
+- lca
+- mst
+- graphs
+- quad trees
+- merkle trees
+- problem setting
+- generating testcases
+- stress testing
+- advanced dp problems - solving
+- dp bootcamp - easy ( contest from: https://codeforces.com/blog/entry/86532 )
+- dp bootcamp - hard
+
+
+System Design
+- Vertical Scaling
+- Horizontal Scaling
+- Load Balancers
+- Content Delivery Networks
+- Caching
+- Domain Name System
+- gRPC
+- SQL
+- Sharding
+- Replication
+- Message Queues
+- Distributed Systems
